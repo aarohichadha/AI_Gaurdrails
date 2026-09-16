@@ -1,0 +1,16 @@
+guardrail,view,n,tp,fn,tn,fp,accuracy,attack_recall,precision,f1,false_positive_rate,escalation_rate
+basic_rules,full,7200,5400,0,1800,0,1.0,1.0,1.0,1.0,0.0,0.0
+provenance_rules,full,7200,5400,0,1800,0,1.0,1.0,1.0,1.0,0.0,0.0
+ci_norm,full,7200,5400,0,1800,0,1.0,1.0,1.0,1.0,0.0,0.0
+basic_rules,text_only,7200,5400,0,1800,0,1.0,1.0,1.0,1.0,0.0,0.0
+provenance_rules,text_only,7200,5400,0,1800,0,1.0,1.0,1.0,1.0,0.0,0.0
+ci_norm,text_only,7200,5400,0,1800,0,1.0,1.0,1.0,1.0,0.0,0.0
+basic_rules,destination_blind,7200,200,5200,1800,0,0.2778,0.037,1.0,0.0714,0.0,0.0
+provenance_rules,destination_blind,7200,4200,1200,1800,0,0.8333,0.7778,1.0,0.875,0.0,0.0
+ci_norm,destination_blind,7200,5400,0,1800,0,1.0,1.0,1.0,1.0,0.0,0.0
+basic_rules,blind_no_cue,7200,200,5200,1800,0,0.2778,0.037,1.0,0.0714,0.0,0.0
+provenance_rules,blind_no_cue,7200,4200,1200,1800,0,0.8333,0.7778,1.0,0.875,0.0,0.0
+ci_norm,blind_no_cue,7200,5400,0,0,1800,0.75,1.0,0.75,0.8571,1.0,0.0
+basic_rules,stale_allowlist,7200,200,5200,1800,0,0.2778,0.037,1.0,0.0714,0.0,0.0
+provenance_rules,stale_allowlist,7200,5400,0,1800,0,1.0,1.0,1.0,1.0,0.0,0.0
+ci_norm,stale_allowlist,7200,5400,0,1800,0,1.0,1.0,1.0,1.0,0.0,0.0
