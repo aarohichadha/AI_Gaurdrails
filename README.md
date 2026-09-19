@@ -17,6 +17,7 @@ AI_Gaurdrails/
 │   └── evaluation.py      confusion matrix, breakdowns, formatting
 ├── deterministic/         🟨 C — rule-based guardrails (Tasks 10–13)   [done]
 ├── prompt/                🟦 B — prompt-defense agent (Tasks 7–9)      [foundation]
+├── classifiers/           🟧 D — existing ML classifiers (Task 15)     [done: 86M, 22M, full-context]
 └── results/               per-technique metrics land in <technique>/results/
 ```
 
@@ -63,3 +64,4 @@ techniques can be compared on their reasoning instead. See
 |---|---|---|
 | ✅ | [Deterministic guardrails](deterministic/README.md) | 10–13 |
 | 🟦 | [Prompt-defense agent](prompt/README.md) | 7–9 |
+| 🟧 | [ML classifiers — Prompt Guard 2](classifiers/README.md) | 15 |

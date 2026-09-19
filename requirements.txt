@@ -5,3 +5,11 @@ openpyxl>=3.1
 # provider used by tests and dry runs has no extra dependency.
 openai>=1.0
 pytest>=8.0
+
+# classifiers/ (Task 15 - Prompt Guard 2). The model is gated on Hugging Face:
+# accept Meta's licence, then `hf auth login`. Tests and --backend mock need only scikit-learn.
+torch>=2.1
+transformers>=4.45
+huggingface_hub>=0.25
+scikit-learn>=1.3
+sentencepiece>=0.2
