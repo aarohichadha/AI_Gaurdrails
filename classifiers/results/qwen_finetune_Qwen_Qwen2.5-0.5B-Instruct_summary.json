@@ -1,0 +1,20 @@
+{
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "epochs": 1,
+  "batch_size": 1,
+  "n_examples": 10,
+  "n_train": 9,
+  "n_validation": 1,
+  "max_length": 512,
+  "learning_rate": 0.0002,
+  "train_loss": 4.204048580593533,
+  "validation": {
+    "eval_loss": 2.694589376449585,
+    "eval_runtime": 1.1313,
+    "eval_samples_per_second": 0.884,
+    "eval_steps_per_second": 0.884,
+    "epoch": 1.0
+  },
+  "adapter_dir": "classifiers/results/qwen_lora_smoke",
+  "status": "trained_lora_adapter"
+}

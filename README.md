@@ -64,4 +64,6 @@ techniques can be compared on their reasoning instead. See
 |---|---|---|
 | ✅ | [Deterministic guardrails](deterministic/README.md) | 10–13 |
 | 🟦 | [Prompt-defense agent](prompt/README.md) | 7–9 |
-| 🟧 | [ML classifiers — Prompt Guard 2](classifiers/README.md) | 15 |
+| 🟧 | [ML classifiers — Prompt Guard 1 / 2](classifiers/README.md) | 14–15 |
+
+Prompt Guard 1 and 2 are both Hugging Face-gated models. The repository includes the Task 14 scaffold and the Task 15 baseline, but a valid HF token is required before the real model run can execute.

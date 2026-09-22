@@ -21,9 +21,10 @@ import time
 from dataclasses import dataclass
 from typing import Callable, List, Optional, Sequence
 
-#: Hugging Face ids. Both are gated: accept Meta's licence on the model page,
+#: Hugging Face ids. These are gated: accept Meta's licence on the model page,
 #: then `hf auth login` (or set HF_TOKEN) before the first download.
 MODELS = {
+    "pg1-86m": "meta-llama/Prompt-Guard-86M",
     "pg2-86m": "meta-llama/Llama-Prompt-Guard-2-86M",
     "pg2-22m": "meta-llama/Llama-Prompt-Guard-2-22M",
 }

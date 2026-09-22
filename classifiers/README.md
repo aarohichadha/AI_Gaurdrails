@@ -3,10 +3,42 @@
 | File | Task | What it does |
 |---|---|---|
 | [promptguard.py](promptguard.py) | — | Model-agnostic Prompt Guard scorer: batching, 512-token windowing, label mapping, latency timing |
+| [task14_promptguard1.py](task14_promptguard1.py) | 14 | Prompt Guard 1 baseline scaffold, mirroring the Task 15 benchmark flow |
 | [task15_promptguard2.py](task15_promptguard2.py) | 15 | Prompt Guard 2 baseline, with the contextual-attack analysis |
 | [tests/](tests/) | — | Pipeline tests. They don't need the gated model |
 
-Tasks 14, 16, 17 and 18 are not implemented here.
+Tasks 16, 17 and 18 are not implemented here.
+
+## Shared setup (both Prompt Guard models)
+
+Both Prompt Guard 1 and 2 are gated Hugging Face models. The real Prompt Guard 1 repo is `meta-llama/Prompt-Guard-86M`. Before any real run, do one of the following:
+
+```bash
+hf auth login
+# or
+export HF_TOKEN=hf_...
+```
+
+Then install the project dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Task 14 — Prompt Guard 1 baseline
+
+The Task 14 script mirrors the Task 15 runner and is intended to benchmark the older Prompt Guard 1 model on the same corpus, using the same evaluation protocol and metrics.
+
+### Running
+
+```bash
+python classifiers/task14_promptguard1.py                        # real model run, if HF access is configured
+python classifiers/task14_promptguard1.py --backend mock --limit 50   # dry run, no gated model needed
+python classifiers/task14_promptguard1.py --input full
+python classifiers/task14_promptguard1.py --reuse --threshold 0.1
+```
+
+This produces log and summary files in [results/](results/) with the same schema as Task 15. The script currently follows the same design as Task 15 so it can be validated end-to-end before the actual HF model is executed.
 
 ## Task 15 — Prompt Guard 2 baseline
 
