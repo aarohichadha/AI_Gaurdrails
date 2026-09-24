@@ -1,0 +1,7 @@
+# Gemini LLM judge (Tasks 19–22)
+
+`judge.py` builds the prompt and calls Gemini. `evaluation.py` selects paired development data and scores decisions. `gemini_judge_pilot.ipynb` is the Kaggle runner. From repo root, install `google-genai pandas openpyxl scikit-learn`, set Kaggle secret `GEMINI_API_KEY`, attach `data/email_agent_security_dataset.xlsx`, and run the notebook in order. The notebook clones the repo into Kaggle so imports work.
+
+The pilot uses up to 100 paired development pairs (200 records) and six input variants. It proposes actions using dataset `requested_action` and `requested_destination`; these are controlled proposals, **not genuine upstream agent traces**. The primary metrics count CONFIRM, REVISE, BLOCK and INVALID as stopped; `exact_decision_accuracy` additionally distinguishes them. The destination match is a perfect label oracle in the existing corpus, so a perfect score on this pilot cannot establish robust prompt injection defense or benefit from any variant. The notebook prints the oracle rate for each sample. Results are generated locally in `/kaggle/working/llm_judge_results`, not committed to Git.
+
+Next experiments: test genuinely produced upstream agent traces; create a held-out set with authorized destinations shared by both classes, including attacks to authorized recipients and benign requests needing confirmation; freeze prompts before final test evaluation.
