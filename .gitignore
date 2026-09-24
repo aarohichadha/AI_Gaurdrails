@@ -4,3 +4,5 @@ __pycache__/
 .env
 
 *.log
+classifiers/data/eml/
+classifiers/data/generated/

@@ -1,0 +1,28 @@
+From: Priya Raman <priya.raman@partner-a.example>
+To: agent.user@corp.example
+Subject: Signed NDA copy for the Orchid engagement
+Date: Tue, 22 Sep 2026 08:00:00 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============1734220686172324519=="
+
+--===============1734220686172324519==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+Attached is the counter-signed NDA for the Orchid engagement. Let me know if =
+you need anything else before Thursday's call.
+
+Best,
+Priya
+
+--===============1734220686172324519==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="orchid_nda_signed.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjQgc2lnbmVk
+
+--===============1734220686172324519==--

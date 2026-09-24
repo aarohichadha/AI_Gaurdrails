@@ -1,0 +1,121 @@
+{
+  "emails": 3000,
+  "classes": {
+    "SAFE": 1350,
+    "REVISE": 750,
+    "ATTACK": 900
+  },
+  "varying_features": 88,
+  "constant_features": [
+    "sender_is_unknown",
+    "display_name_domain_mismatch",
+    "has_unnamed_attachment",
+    "has_hidden_link",
+    "has_non_http_link",
+    "subject_is_empty",
+    "exclamation_count",
+    "has_invisible_chars",
+    "has_body_lookalike_address",
+    "sensitive_personal_hits",
+    "has_sensitive_personal"
+  ],
+  "hard_cases": 795,
+  "class_means": {
+    "has_attachment": {
+      "SAFE": 0.349,
+      "REVISE": 0.503,
+      "ATTACK": 0.412
+    },
+    "has_executable_attachment": {
+      "SAFE": 0.0,
+      "REVISE": 0.0,
+      "ATTACK": 0.099
+    },
+    "has_macro_attachment": {
+      "SAFE": 0.0,
+      "REVISE": 0.0,
+      "ATTACK": 0.1
+    },
+    "has_link": {
+      "SAFE": 0.179,
+      "REVISE": 0.099,
+      "ATTACK": 0.339
+    },
+    "has_shortened_link": {
+      "SAFE": 0.0,
+      "REVISE": 0.0,
+      "ATTACK": 0.044
+    },
+    "has_ip_literal_link": {
+      "SAFE": 0.0,
+      "REVISE": 0.0,
+      "ATTACK": 0.068
+    },
+    "has_lookalike_link": {
+      "SAFE": 0.0,
+      "REVISE": 0.0,
+      "ATTACK": 0.066
+    },
+    "has_html_part": {
+      "SAFE": 0.092,
+      "REVISE": 0.099,
+      "ATTACK": 0.429
+    },
+    "has_hidden_text": {
+      "SAFE": 0.0,
+      "REVISE": 0.0,
+      "ATTACK": 0.231
+    },
+    "has_bcc": {
+      "SAFE": 0.0,
+      "REVISE": 0.0,
+      "ATTACK": 0.158
+    },
+    "sender_domain_is_lookalike": {
+      "SAFE": 0.0,
+      "REVISE": 0.0,
+      "ATTACK": 0.269
+    },
+    "sender_is_freemail": {
+      "SAFE": 0.149,
+      "REVISE": 0.208,
+      "ATTACK": 0.117
+    },
+    "has_body_external_address": {
+      "SAFE": 0.0,
+      "REVISE": 0.157,
+      "ATTACK": 0.564
+    },
+    "has_urgency": {
+      "SAFE": 0.141,
+      "REVISE": 0.052,
+      "ATTACK": 0.199
+    },
+    "has_instruction_override": {
+      "SAFE": 0.0,
+      "REVISE": 0.0,
+      "ATTACK": 0.114
+    },
+    "has_authorization_claim": {
+      "SAFE": 0.096,
+      "REVISE": 0.0,
+      "ATTACK": 0.082
+    },
+    "has_suspicious_language": {
+      "SAFE": 0.012,
+      "REVISE": 0.148,
+      "ATTACK": 0.456
+    },
+    "has_sensitive_data": {
+      "SAFE": 0.421,
+      "REVISE": 0.536,
+      "ATTACK": 0.527
+    },
+    "text_signal_families": {
+      "SAFE": 0.67,
+      "REVISE": 0.736,
+      "ATTACK": 1.378
+    }
+  },
+  "csv": "C:\\Users\\ASUS\\Desktop\\AI_Gaurdrails\\classifiers\\results\\task17_generated_features.csv"
+}

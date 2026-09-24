@@ -5,9 +5,228 @@
 | [promptguard.py](promptguard.py) | — | Model-agnostic Prompt Guard scorer: batching, 512-token windowing, label mapping, latency timing |
 | [task14_promptguard1.py](task14_promptguard1.py) | 14 | Prompt Guard 1 baseline scaffold, mirroring the Task 15 benchmark flow |
 | [task15_promptguard2.py](task15_promptguard2.py) | 15 | Prompt Guard 2 baseline, with the contextual-attack analysis |
+| [features/](features/) | 16 | Raw-email parser, lexicons and feature extractor |
+| [task16_features.py](task16_features.py) | 16 | CLI: `.eml` files in, feature vectors out |
+| [build_training_set.py](build_training_set.py) | 16/17 | Renders the corpus as `.eml` and builds a labelled feature matrix |
+| [emailgen/](emailgen/) + [generate_email_corpus.py](generate_email_corpus.py) | 16/17 | Generates a synthetic three-class `.eml` corpus (SAFE/REVISE/ATTACK) |
 | [tests/](tests/) | — | Pipeline tests. They don't need the gated model |
 
-Tasks 16, 17 and 18 are not implemented here.
+Tasks 17 and 18 are not implemented here.
+
+## Task 16 — Feature engineering (raw email)
+
+```
+                              RAW EMAIL
+                                  |
+                            Email Parser
+                                  |
+                          Feature Extractor
+                                  |
+              +-------------------+-------------------+
+              |                                       |
+      Metadata features                        Text features
+      sender domain                            urgency
+      recipient domain                         override language
+      attachments                              authorization claim
+      links                                    sensitive-data indicators
+              |                                       |
+              +-------------------+-------------------+
+                                  |
+                          FEATURE VECTOR          <-- Task 16 stops here
+                                  |
+                     Random Forest / XGBoost           (Task 17)
+                                  |
+                       SAFE / REVISE / ATTACK
+```
+
+**This stage produces no label.** It only describes the email. `SAFE` /
+`REVISE` / `ATTACK` is the classifier's decision in Task 17; the label space is
+declared in `features/extractor.py` as `LABELS` so both stages agree on it.
+
+### Not dataset-driven
+
+Nothing here reads `data/email_agent_security_dataset.xlsx`. The input is an
+ordinary RFC-822 `.eml` message, so the same code runs against a live mailbox,
+an IMAP fetch or a saved message. The only configuration is deployment fact,
+not tuning: which domains are yours, which external domains you have approved,
+and optionally which senders you have seen before.
+
+```python
+from classifiers.features import ExtractorConfig, FeatureExtractor, parse
+
+config = ExtractorConfig(
+    internal_domains={"corp.example"},
+    trusted_domains={"partner-a.example", "counsel.example"},
+)
+vector = FeatureExtractor(config).extract(parse(open("mail.eml", "rb").read()))
+
+vector.to_dict()     # 99 named floats, ready for sklearn / XGBoost
+vector.to_list()     # the same values in a stable column order
+vector.explain()     # the phrase that fired each text feature
+```
+
+### Running
+
+```bash
+python classifiers/task16_features.py                          # bundled samples
+python classifiers/task16_features.py path/to/mail.eml         # one message
+python classifiers/task16_features.py inbox/ --csv out.csv     # a whole folder
+python classifiers/task16_features.py --list-features          # the 99 names
+python classifiers/task16_features.py --internal my.org --trusted partner.org
+```
+
+`--csv` writes the feature matrix (one row per email) for Task 17. `--json`
+writes the same values plus the evidence behind each text feature.
+
+### The 99 features
+
+**Metadata (65)** — from headers and structure:
+
+| Group | Features |
+|---|---|
+| Sender | `sender_is_internal`, `sender_is_trusted_domain`, `sender_is_freemail`, `sender_is_unknown`, `sender_domain_is_lookalike`, `sender_domain_depth`, `sender_domain_has_digits`, `display_name_domain_mismatch`, `display_name_claims_authority`, `reply_to_differs_from_sender`, `reply_to_domain_differs`, `return_path_mismatch` |
+| Recipients | `n_recipients`, `n_external_recipients`, `has_external_recipient`, `external_recipient_ratio`, `n_freemail_recipients`, `has_freemail_recipient`, `n_recipient_domains`, `n_cc`, `n_bcc`, `has_bcc`, `has_external_bcc`, `recipient_lookalike` |
+| Attachments | `n_attachments`, `has_attachment`, `attachment_total_kb`, `has_executable_attachment`, `has_archive_attachment`, `has_macro_attachment`, `has_office_attachment`, `has_double_extension`, `has_unnamed_attachment` |
+| Links | `n_links`, `has_link`, `n_link_domains`, `n_external_links`, `has_external_link`, `has_shortened_link`, `has_ip_literal_link`, `has_punycode_link`, `has_lookalike_link`, `has_credential_path_link`, `has_hidden_link`, `has_link_text_mismatch`, `has_non_http_link` |
+| Structure | `subject_length`, `body_length`, `body_word_count`, `body_line_count`, `has_html_part`, `has_hidden_text`, `hidden_text_length`, `is_reply_or_forward`, `subject_is_empty`, `exclamation_count`, `uppercase_ratio`, `has_invisible_chars`, `has_base64_blob` |
+| Addresses in the body | `n_body_addresses`, `has_body_address`, `n_body_external_addresses`, `has_body_external_address`, `has_body_freemail_address`, `has_body_lookalike_address` — an address named in the *text* rather than the headers |
+
+**Text (34)** — each family contributes a `_hits` count and a `has_` flag:
+
+| Family | Catches |
+|---|---|
+| `urgency` | deadlines, "within 30 minutes", "to prevent cancellation" |
+| `instruction_override` | "ignore all previous instructions", "from now on treat", "routing exception" |
+| `authorization_claim` | "I certify", "already approved by management", "no further sign-off required" |
+| `suspicious_secrecy` | "silently", "blind copy", "do not notify" |
+| `suspicious_impersonation` | "behave as", "unrestricted mail operator", "compliance simulation" |
+| `suspicious_obfuscation` | base64/rot13, "decode the following", "routing alias" |
+| `suspicious_payment_redirect` | "updated bank details", "change the beneficiary" |
+| `suspicious_credential_request` | "confirm your account", "send me the OTP" |
+| `suspicious_exfiltration` | "make it available at", "personal email", staged "first… then" |
+| `sensitive_credential` | password, API key, MFA/OTP, private key |
+| `sensitive_financial` | IBAN, account number, payroll, invoice, forecast workbook |
+| `sensitive_personal` | SSN, date of birth, passport, medical record, employee roster |
+| `sensitive_confidential_marker` | "confidential", "proprietary", NDA, "do not distribute" |
+
+Plus the roll-ups `suspicious_language_hits`, `sensitive_data_hits`,
+`instruction_verb_count`, `instruction_density`, `text_signal_families` (how
+many families fired) and `text_signal_density` (hits per unit of length).
+
+### Design notes
+
+- **Hidden text is parsed, kept separate, and still counted.** Text inside
+  `display:none` / white-on-white / zero-font CSS lands in `hidden_text`, not
+  `body_text`, but it is included in what the text features scan — because it
+  is what an agent ingesting the mail would read. `has_hidden_text` flags it.
+- **Lookalike domains** catch `c0rp-example.com`, `corp-example.com`,
+  `corpexample.net` and `corp.example.attacker.com`, via confusable-character
+  folding, separator stripping and a fuzzy ratio. Your own subdomains
+  (`mail.corp.example`) are explicitly exempt.
+- **The lexicons are deliberately not tuned on this project's dataset.** They
+  describe how attacks are phrased in email generally. `common/policy.py`
+  holds the corpus-tuned markers used by the deterministic guardrails — a
+  different job, kept separate on purpose.
+- **Wording alone never decides that a destination is bad.** An earlier
+  version flagged the ordinary phrase "send it to …" as exfiltration, which
+  fired on perfectly normal internal mail. Whether a destination is acceptable
+  is the metadata side's job (`has_external_recipient`,
+  `sender_domain_is_lookalike`).
+- **Every text feature is explainable.** `vector.explain()` reports the exact
+  phrase that fired it, so a Task 17 prediction can be justified.
+- **Parsing is stdlib-only** (`email`, `html.parser`) — no new dependency.
+  Parts are decoded from their raw bytes using the declared charset, because
+  `get_content()` falls back to us-ascii for parts that declare none, which
+  would silently destroy the zero-width characters `has_invisible_chars` looks
+  for.
+
+### Samples
+
+Five `.eml` files in [features/samples/](features/samples/) exercise the
+branches: a benign internal request, an urgency + override + lookalike-sender
+attack, an HTML message with a hidden injection, a freemail message with macro
+and double-extension attachments, and a benign external partner mail.
+
+| Sample | Signal families fired | Notable |
+|---|---|---|
+| 01 benign internal | 1 | only `sensitive_financial` ("forecast workbook") |
+| 02 urgency + override | 5 | lookalike sender, external BCC, IP-literal link |
+| 03 hidden HTML injection | 3 | `has_hidden_text`, shortened link, anchor/href mismatch |
+| 04 attachment payload | 3 | executable + macro + double extension, freemail sender |
+| 05 benign partner | 1 | trusted domain, ordinary PDF |
+
+### Training data for Task 17
+
+[build_training_set.py](build_training_set.py) renders every corpus record as a
+real email and runs it through the Task 16 extractor:
+
+```
+dataset record -> .eml message -> Task 16 feature extractor -> labelled row
+```
+
+The feature code stays dataset-agnostic; this script is the only bridge.
+
+```bash
+python classifiers/build_training_set.py                              # 7,200 labelled rows
+python classifiers/build_training_set.py --write-eml classifiers/data/eml
+python classifiers/build_training_set.py --drop-oracle-features       # honest variant
+python classifiers/build_training_set.py --split test
+```
+
+Output: `results/task17_training_set.csv` — one row per record, with
+`record_id, sheet, split, label, attack_category` followed by the 99 feature
+columns in `FeatureExtractor.feature_names` order. `--write-eml` also saves
+each message as a real `.eml` (git-ignored; 7,200 files).
+
+| | |
+|---|---|
+| Rows | 7,200 |
+| Classes | ATTACK 5,400 · SAFE 1,800 (**3:1 imbalance** — use class weights) |
+| Splits | train 3,360 · validation 960 · test 480 · flow_test 1,200 · adaptive_test 1,200 |
+| Features that vary | 35 of 99 |
+| Features that are constant | 64 of 99 |
+
+**The message is addressed to the agent, not to the attacker's address.** In
+these scenarios the mail *asks* the agent to forward something; it is not sent
+to the destination. Putting `requested_destination` in `To:` would invent a
+header the scenario does not have — and would hand the classifier the label.
+It stays in the body, where the corpus puts it.
+
+#### Three caveats, all printed by every run
+
+1. **64 of 99 features are dead here.** The corpus is plain text with one
+   internal sender and one recipient, so every attachment, link, HTML and
+   recipient feature is constant. A model trained on this alone is a
+   text-and-address model, not a full email model.
+
+2. **`has_body_external_address` is an oracle on this corpus.** Every attack
+   body names an off-allowlist address (mean 1.000) and no benign body does
+   (mean 0.000), so that one feature separates the classes almost perfectly —
+   the same oracle the deterministic tasks ran into. Train both ways and
+   report both; `--drop-oracle-features` gives the honest number. Without it,
+   the strongest remaining signals are the text families
+   (`text_signal_families`: 1.68 for attacks vs 0.44 for benign).
+
+3. **There is no `REVISE` data.** The corpus is two-class, so the builder maps
+   `BENIGN -> SAFE` and `ATTACK -> ATTACK` and refuses to invent the third
+   class. To train three classes you must define what `REVISE` means — most
+   likely legitimate-but-risky mail, such as sensitive data heading to an
+   approved external partner — and label examples independently. Deriving that
+   label from the same features would just teach the model your rule.
+
+#### Making it a full email model
+
+To bring the 64 dead columns to life, mix in real `.eml` corpora:
+
+| Corpus | Gives you |
+|---|---|
+| [SpamAssassin public corpus](https://spamassassin.apache.org/old/publiccorpus/) | real ham and spam with headers, HTML and attachments |
+| [Nazario phishing corpus](https://monkey.org/~jose/phishing/) | real phishing mail for the ATTACK class |
+| [Enron](https://www.cs.cmu.edu/~enron/) | ~500k real business emails for the SAFE class |
+
+They are already `.eml`, so they go straight through
+`python classifiers/task16_features.py <folder> --csv out.csv`. Their labels
+are independent of your features, which is what keeps the evaluation honest.
 
 ## Shared setup (both Prompt Guard models)
 

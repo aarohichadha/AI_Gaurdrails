@@ -1,0 +1,34 @@
+From: HR Payroll <hr.payroll.notice@gmail.com>
+To: agent.user@corp.example
+Subject: Payroll correction - open immediately
+Reply-To: payroll-desk@temp-transfer.example
+Date: Tue, 22 Sep 2026 08:00:00 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============6725774563176292738=="
+
+--===============6725774563176292738==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Please open the attached payroll correction immediately and confirm your acco=
+unt details before end of day. The updated bank details are inside.
+
+HR Payroll
+
+--===============6725774563176292738==
+Content-Type: application/vnd.ms-word.document.macroEnabled.12
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="payroll_correction.docm"
+MIME-Version: 1.0
+
+UEsDBG1hY3Jv
+
+--===============6725774563176292738==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="statement.pdf.exe"
+MIME-Version: 1.0
+
+TVqQAGJpbmFyeQ==
+
+--===============6725774563176292738==--
