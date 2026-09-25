@@ -1,0 +1,274 @@
+{
+  "dataset": "generated",
+  "csv": "C:\\Users\\ASUS\\Desktop\\AI_Gaurdrails\\classifiers\\results\\task17_generated_features.csv",
+  "rows": 3000,
+  "features": 95,
+  "dropped_oracle_features": true,
+  "classes": {
+    "SAFE": 1350,
+    "REVISE": 750,
+    "ATTACK": 900
+  },
+  "models": {
+    "random_forest": {
+      "train_seconds": 0.78,
+      "cv_macro_f1_mean": 0.7756,
+      "cv_macro_f1_std": 0.0096,
+      "test": {
+        "n": 750,
+        "accuracy": 0.812,
+        "macro_f1": 0.8034819502822327,
+        "weighted_f1": 0.8127731943996849,
+        "per_class": {
+          "SAFE": {
+            "precision": 0.805,
+            "recall": 0.8576,
+            "f1": 0.8305,
+            "support": 337
+          },
+          "REVISE": {
+            "precision": 0.6968,
+            "recall": 0.6968,
+            "f1": 0.6968,
+            "support": 188
+          },
+          "ATTACK": {
+            "precision": 0.931,
+            "recall": 0.84,
+            "f1": 0.8832,
+            "support": 225
+          }
+        },
+        "confusion_matrix": [
+          [
+            289,
+            38,
+            10
+          ],
+          [
+            53,
+            131,
+            4
+          ],
+          [
+            17,
+            19,
+            189
+          ]
+        ],
+        "labels": [
+          "SAFE",
+          "REVISE",
+          "ATTACK"
+        ]
+      },
+      "attack_recall": 0.9244444444444444,
+      "hard_vs_easy": {
+        "hard": 0.695,
+        "easy": 0.8545454545454545
+      },
+      "stress_sets": {},
+      "importances": {
+        "impurity": [
+          [
+            "uppercase_ratio",
+            0.05548
+          ],
+          [
+            "instruction_density",
+            0.05482
+          ],
+          [
+            "body_length",
+            0.0477
+          ],
+          [
+            "body_word_count",
+            0.04587
+          ],
+          [
+            "instruction_verb_count",
+            0.04208
+          ],
+          [
+            "text_signal_density",
+            0.04177
+          ],
+          [
+            "subject_length",
+            0.03758
+          ],
+          [
+            "has_credential_path_link",
+            0.03563
+          ],
+          [
+            "body_line_count",
+            0.0337
+          ],
+          [
+            "sender_is_internal",
+            0.03044
+          ],
+          [
+            "has_suspicious_language",
+            0.02551
+          ],
+          [
+            "reply_to_differs_from_sender",
+            0.02471
+          ],
+          [
+            "has_body_address",
+            0.02304
+          ],
+          [
+            "reply_to_domain_differs",
+            0.02246
+          ],
+          [
+            "attachment_total_kb",
+            0.02233
+          ]
+        ],
+        "permutation": []
+      },
+      "latency_batch1": {
+        "samples": 200,
+        "mean_ms": 78.078,
+        "p50_ms": 80.799,
+        "p95_ms": 95.752
+      }
+    },
+    "xgboost": {
+      "train_seconds": 2.73,
+      "cv_macro_f1_mean": 0.8099,
+      "cv_macro_f1_std": 0.0093,
+      "test": {
+        "n": 750,
+        "accuracy": 0.8266666666666667,
+        "macro_f1": 0.81906410125895,
+        "weighted_f1": 0.8269617224880382,
+        "per_class": {
+          "SAFE": {
+            "precision": 0.83,
+            "recall": 0.8546,
+            "f1": 0.8421,
+            "support": 337
+          },
+          "REVISE": {
+            "precision": 0.7287,
+            "recall": 0.7287,
+            "f1": 0.7287,
+            "support": 188
+          },
+          "ATTACK": {
+            "precision": 0.907,
+            "recall": 0.8667,
+            "f1": 0.8864,
+            "support": 225
+          }
+        },
+        "confusion_matrix": [
+          [
+            288,
+            36,
+            13
+          ],
+          [
+            44,
+            137,
+            7
+          ],
+          [
+            15,
+            15,
+            195
+          ]
+        ],
+        "labels": [
+          "SAFE",
+          "REVISE",
+          "ATTACK"
+        ]
+      },
+      "attack_recall": 0.9333333333333333,
+      "hard_vs_easy": {
+        "hard": 0.735,
+        "easy": 0.86
+      },
+      "stress_sets": {},
+      "importances": {
+        "impurity": [
+          [
+            "reply_to_domain_differs",
+            0.12164
+          ],
+          [
+            "sender_domain_is_lookalike",
+            0.11149
+          ],
+          [
+            "has_credential_path_link",
+            0.05838
+          ],
+          [
+            "suspicious_language_hits",
+            0.04397
+          ],
+          [
+            "has_hidden_text",
+            0.04308
+          ],
+          [
+            "has_suspicious_exfiltration",
+            0.04287
+          ],
+          [
+            "reply_to_differs_from_sender",
+            0.04055
+          ],
+          [
+            "n_recipient_domains",
+            0.03488
+          ],
+          [
+            "has_external_link",
+            0.03452
+          ],
+          [
+            "has_suspicious_language",
+            0.03222
+          ],
+          [
+            "n_external_links",
+            0.03008
+          ],
+          [
+            "suspicious_exfiltration_hits",
+            0.02334
+          ],
+          [
+            "has_external_recipient",
+            0.02284
+          ],
+          [
+            "n_external_recipients",
+            0.02185
+          ],
+          [
+            "external_recipient_ratio",
+            0.01803
+          ]
+        ],
+        "permutation": []
+      },
+      "latency_batch1": {
+        "samples": 200,
+        "mean_ms": 0.453,
+        "p50_ms": 0.41,
+        "p95_ms": 0.708
+      }
+    }
+  }
+}

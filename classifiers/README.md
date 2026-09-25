@@ -9,9 +9,10 @@
 | [task16_features.py](task16_features.py) | 16 | CLI: `.eml` files in, feature vectors out |
 | [build_training_set.py](build_training_set.py) | 16/17 | Renders the corpus as `.eml` and builds a labelled feature matrix |
 | [emailgen/](emailgen/) + [generate_email_corpus.py](generate_email_corpus.py) | 16/17 | Generates a synthetic three-class `.eml` corpus (SAFE/REVISE/ATTACK) |
+| [task17_feature_models.py](task17_feature_models.py) | 17 | Trains and compares Random Forest and XGBoost on the feature vectors |
 | [tests/](tests/) | — | Pipeline tests. They don't need the gated model |
 
-Tasks 17 and 18 are not implemented here.
+Task 18 is not implemented here.
 
 ## Task 16 — Feature engineering (raw email)
 
@@ -227,6 +228,141 @@ To bring the 64 dead columns to life, mix in real `.eml` corpora:
 They are already `.eml`, so they go straight through
 `python classifiers/task16_features.py <folder> --csv out.csv`. Their labels
 are independent of your features, which is what keeps the evaluation honest.
+
+## Task 17 — Feature-based ML (Random Forest / XGBoost)
+
+```
+feature vector (Task 16)  ->  Random Forest / XGBoost  ->  SAFE / REVISE / ATTACK
+```
+
+```bash
+python classifiers/task17_feature_models.py                      # generated corpus, both models
+python classifiers/task17_feature_models.py --dataset corpus
+python classifiers/task17_feature_models.py --drop-oracle-features
+python classifiers/task17_feature_models.py --model xgb --no-permutation
+```
+
+Models are saved to `models/*.joblib` (git-ignored) with their encoder and
+feature order, so inference cannot drift from training. Metrics land in
+`results/task17_models_<dataset>[_no_oracle].json`.
+
+Reported per run: accuracy, macro F1, per-class precision/recall/F1, confusion
+matrix, 5-fold cross-validated macro F1 on train, accuracy split by hard vs
+easy case, feature importance (impurity **and** permutation), prediction
+latency, and any held-out stress sets the dataset carries.
+
+### Headline: the generated three-class corpus
+
+3,000 emails, 75/25 stratified split, balanced class weights.
+
+| Model | Accuracy | Macro F1 | CV macro F1 | Attack recall | ms/email |
+|---|---|---|---|---|---|
+| Random Forest | 0.852 | 0.842 | 0.821 ± 0.015 | 0.951 | 64.2 |
+| **XGBoost** | **0.864** | **0.856** | **0.849 ± 0.011** | **0.956** | **0.98** |
+
+XGBoost wins on every metric and is ~65× faster per prediction (400 RF trees
+are slow at batch size 1). Per class, XGBoost:
+
+| Class | Precision | Recall | F1 | Support |
+|---|---|---|---|---|
+| SAFE | 0.846 | 0.896 | 0.870 | 337 |
+| REVISE | 0.791 | 0.723 | 0.756 | 188 |
+| ATTACK | 0.950 | 0.933 | 0.942 | 225 |
+
+```
+confusion (rows = true)      SAFE  REVISE  ATTACK
+  SAFE                        302      31       4
+  REVISE                       45     136       7
+  ATTACK                       10       5     210
+```
+
+**Attack recall counts REVISE as a catch** (0.956): routing an attack to human
+review is a safe outcome, not a miss. Only 10 of 225 attacks were called SAFE.
+
+**`REVISE` is the weak class** (F1 0.756), and its errors go mostly to SAFE (45
+of 188). That is the expected result, not a tuning failure: `REVISE` is defined
+by what a message *fails to establish* — no authorisation reference, an unnamed
+destination — and a feature vector over the message often cannot see an absence.
+Catching it properly needs the case record, which is what the deterministic
+guardrails in [../deterministic/](../deterministic/README.md) read.
+
+**Hard cases cost about 2 points** for XGBoost (0.850 vs 0.869 on easy cases)
+but 6 for Random Forest (0.810 vs 0.867) — XGBoost generalises better to
+benign mail that looks alarming and attacks with no trigger wording.
+
+Dropping the body-address features costs ~4 points (XGBoost 0.864 → 0.827),
+a graceful degradation rather than a collapse.
+
+### The corpus dataset: 1.000 that means nothing
+
+| Dataset | Test accuracy | flow_test | adaptive_test |
+|---|---|---|---|
+| corpus, all features (XGB) | 1.000 | **0.000** | 1.000 |
+| corpus, oracle dropped (XGB) | 1.000 | **0.000** | 1.000 |
+| corpus, oracle dropped (RF) | 1.000 | 0.208 | 0.854 |
+
+Both models score a perfect 1.000 on the corpus test split — and **that number
+is worthless**. The held-out sheets show why:
+
+- **`flow_test` collapses to 0.000 for XGBoost** — every prediction exactly
+  inverted. Not a bug: the test split scores 1.000 with the same code. In
+  training, benign bodies are *longer* than attack bodies (33.1 vs 25.5 words);
+  in the flow-separation sheet that relationship flips (24.0 vs 33.0). The model
+  had leaned on message length, an artifact of how each sheet was templated, so
+  when the artifact inverts the model inverts with it.
+- **`adaptive_test` scoring 1.000 is vacuous** — that sheet is 100% ATTACK, so
+  always predicting ATTACK scores perfectly. Read it as attack recall only.
+
+The lesson: a perfect in-distribution score on a templated corpus measures the
+templates. The stress sets are what catch it, which is why they are reported
+separately rather than folded into the headline.
+
+### Model comparison
+
+| | Random Forest | XGBoost |
+|---|---|---|
+| Accuracy (generated) | 0.852 | **0.864** |
+| CV stability | ±0.015 | **±0.011** |
+| Hard-case accuracy | 0.810 | **0.850** |
+| Latency (batch 1) | 64 ms | **0.98 ms** |
+| Training time | **0.8 s** | 3.0 s |
+| Leaned on spurious length features | partly (flow_test 0.208) | heavily (flow_test 0.000) |
+
+XGBoost is the better model here on every quality metric and is far cheaper at
+inference. Random Forest trains faster and — on the corpus stress set —
+degrades less catastrophically, because bagging spread its weight across more
+features instead of committing to the length shortcut.
+
+Both are vastly cheaper than the Prompt Guard baselines: **0.98 ms per email
+for XGBoost against 264 ms for Prompt Guard 2 (86M)**, and far more accurate on
+this data. That comparison is not like-for-like — Prompt Guard was run
+zero-shot, while these models were trained on this distribution — but it does
+show what task-specific features buy for the cost.
+
+### What the models actually use
+
+XGBoost's permutation importance on the generated corpus, in order: addresses
+named in the body, body length, instruction density, sender trust, credential
+terms, instruction verbs, sender-is-freemail, reply-to mismatch. Both metadata
+and text features contribute — neither branch of the Task 16 pipeline is
+redundant.
+
+Impurity and permutation importance disagree noticeably (impurity favours
+`has_external_recipient`, permutation favours the body-address count), which is
+the usual impurity bias toward high-cardinality features. Trust the permutation
+column.
+
+### Caveats
+
+- **Trained on synthetic data.** The generated corpus is drawn from finite
+  pools of people, documents, domains and phrasings. These numbers describe a
+  controlled environment, not production mail. Validate on real corpora
+  (SpamAssassin, Nazario, Enron) before claiming anything operational.
+- **No threshold tuning or hyperparameter search.** Both models use sensible
+  fixed settings so the comparison is between model families rather than
+  between tuning budgets.
+- **The three-class definition is a policy choice**, so `REVISE` performance
+  measures agreement with *our* definition of it.
 
 ## Shared setup (both Prompt Guard models)
 

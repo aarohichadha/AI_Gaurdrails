@@ -6,3 +6,4 @@ __pycache__/
 *.log
 classifiers/data/eml/
 classifiers/data/generated/
+classifiers/models/

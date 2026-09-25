@@ -17,7 +17,7 @@ AI_Gaurdrails/
 │   └── evaluation.py      confusion matrix, breakdowns, formatting
 ├── deterministic/         🟨 C — rule-based guardrails (Tasks 10–13)   [done]
 ├── prompt/                🟦 B — prompt-defense agent (Tasks 7–9)      [foundation]
-├── classifiers/           🟧 D — ML classifiers (Tasks 14-16)     [15 run; 16 features done]
+├── classifiers/           🟧 D — ML classifiers (Tasks 14-17)     [14-17 done]
 └── results/               per-technique metrics land in <technique>/results/
 ```
 
@@ -64,6 +64,6 @@ techniques can be compared on their reasoning instead. See
 |---|---|---|
 | ✅ | [Deterministic guardrails](deterministic/README.md) | 10–13 |
 | 🟦 | [Prompt-defense agent](prompt/README.md) | 7–9 |
-| 🟧 | [ML classifiers — Prompt Guard 1 / 2, feature engineering](classifiers/README.md) | 14–16 |
+| 🟧 | [ML classifiers — Prompt Guard, features, RF/XGBoost](classifiers/README.md) | 14–17 |
 
 Prompt Guard 1 and 2 are both Hugging Face-gated models. The repository includes the Task 14 scaffold and the Task 15 baseline, but a valid HF token is required before the real model run can execute.

@@ -1,0 +1,377 @@
+{
+  "dataset": "corpus",
+  "csv": "C:\\Users\\ASUS\\Desktop\\AI_Gaurdrails\\classifiers\\results\\task17_training_set.csv",
+  "rows": 7200,
+  "features": 95,
+  "dropped_oracle_features": true,
+  "classes": {
+    "SAFE": 1800,
+    "ATTACK": 5400
+  },
+  "models": {
+    "random_forest": {
+      "train_seconds": 0.98,
+      "cv_macro_f1_mean": 1.0,
+      "cv_macro_f1_std": 0.0,
+      "test": {
+        "n": 480,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "per_class": {
+          "SAFE": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 60
+          },
+          "ATTACK": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 420
+          }
+        },
+        "confusion_matrix": [
+          [
+            60,
+            0
+          ],
+          [
+            0,
+            420
+          ]
+        ],
+        "labels": [
+          "SAFE",
+          "ATTACK"
+        ]
+      },
+      "attack_recall": 1.0,
+      "hard_vs_easy": {},
+      "stress_sets": {
+        "flow_test": {
+          "n": 1200,
+          "accuracy": 0.20833333333333334,
+          "macro_f1": 0.1724137931034483,
+          "weighted_f1": 0.1724137931034483,
+          "per_class": {
+            "SAFE": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 600
+            },
+            "ATTACK": {
+              "precision": 0.2941,
+              "recall": 0.4167,
+              "f1": 0.3448,
+              "support": 600
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              600
+            ],
+            [
+              350,
+              250
+            ]
+          ],
+          "labels": [
+            "SAFE",
+            "ATTACK"
+          ]
+        },
+        "adaptive_test": {
+          "n": 1200,
+          "accuracy": 0.8541666666666666,
+          "macro_f1": 0.4606741573033708,
+          "weighted_f1": 0.9213483146067417,
+          "per_class": {
+            "SAFE": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "ATTACK": {
+              "precision": 1.0,
+              "recall": 0.8542,
+              "f1": 0.9213,
+              "support": 1200
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              175,
+              1025
+            ]
+          ],
+          "labels": [
+            "SAFE",
+            "ATTACK"
+          ]
+        }
+      },
+      "importances": {
+        "impurity": [
+          [
+            "text_signal_density",
+            0.20154
+          ],
+          [
+            "body_word_count",
+            0.16046
+          ],
+          [
+            "uppercase_ratio",
+            0.15904
+          ],
+          [
+            "instruction_density",
+            0.09782
+          ],
+          [
+            "text_signal_families",
+            0.0868
+          ],
+          [
+            "body_length",
+            0.0428
+          ],
+          [
+            "authorization_claim_hits",
+            0.04267
+          ],
+          [
+            "has_authorization_claim",
+            0.03762
+          ],
+          [
+            "has_instruction_override",
+            0.03197
+          ],
+          [
+            "suspicious_language_hits",
+            0.02868
+          ],
+          [
+            "has_suspicious_language",
+            0.02852
+          ],
+          [
+            "instruction_override_hits",
+            0.02713
+          ],
+          [
+            "instruction_verb_count",
+            0.01424
+          ],
+          [
+            "suspicious_impersonation_hits",
+            0.00749
+          ],
+          [
+            "has_suspicious_impersonation",
+            0.00649
+          ]
+        ],
+        "permutation": []
+      },
+      "latency_batch1": {
+        "samples": 200,
+        "mean_ms": 61.896,
+        "p50_ms": 63.827,
+        "p95_ms": 74.458
+      }
+    },
+    "xgboost": {
+      "train_seconds": 1.92,
+      "cv_macro_f1_mean": 1.0,
+      "cv_macro_f1_std": 0.0,
+      "test": {
+        "n": 480,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "per_class": {
+          "SAFE": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 60
+          },
+          "ATTACK": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 420
+          }
+        },
+        "confusion_matrix": [
+          [
+            60,
+            0
+          ],
+          [
+            0,
+            420
+          ]
+        ],
+        "labels": [
+          "SAFE",
+          "ATTACK"
+        ]
+      },
+      "attack_recall": 1.0,
+      "hard_vs_easy": {},
+      "stress_sets": {
+        "flow_test": {
+          "n": 1200,
+          "accuracy": 0.0,
+          "macro_f1": 0.0,
+          "weighted_f1": 0.0,
+          "per_class": {
+            "SAFE": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 600
+            },
+            "ATTACK": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 600
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              600
+            ],
+            [
+              600,
+              0
+            ]
+          ],
+          "labels": [
+            "SAFE",
+            "ATTACK"
+          ]
+        },
+        "adaptive_test": {
+          "n": 1200,
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "weighted_f1": 1.0,
+          "per_class": {
+            "SAFE": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "ATTACK": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1200
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1200
+            ]
+          ],
+          "labels": [
+            "SAFE",
+            "ATTACK"
+          ]
+        }
+      },
+      "importances": {
+        "impurity": [
+          [
+            "text_signal_density",
+            0.52377
+          ],
+          [
+            "body_word_count",
+            0.29594
+          ],
+          [
+            "uppercase_ratio",
+            0.18029
+          ],
+          [
+            "sender_is_internal",
+            0.0
+          ],
+          [
+            "sender_is_trusted_domain",
+            0.0
+          ],
+          [
+            "sender_is_freemail",
+            0.0
+          ],
+          [
+            "sender_is_unknown",
+            0.0
+          ],
+          [
+            "sender_domain_is_lookalike",
+            0.0
+          ],
+          [
+            "sender_domain_depth",
+            0.0
+          ],
+          [
+            "sender_domain_has_digits",
+            0.0
+          ],
+          [
+            "display_name_domain_mismatch",
+            0.0
+          ],
+          [
+            "display_name_claims_authority",
+            0.0
+          ],
+          [
+            "reply_to_differs_from_sender",
+            0.0
+          ],
+          [
+            "reply_to_domain_differs",
+            0.0
+          ],
+          [
+            "return_path_mismatch",
+            0.0
+          ]
+        ],
+        "permutation": []
+      },
+      "latency_batch1": {
+        "samples": 200,
+        "mean_ms": 0.515,
+        "p50_ms": 0.495,
+        "p95_ms": 0.66
+      }
+    }
+  }
+}
