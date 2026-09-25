@@ -49,6 +49,9 @@ class GeneratedEmail:
     notes: str = ""
     #: What made it this class, for auditing the corpus by hand.
     rationale: str = ""
+    #: Structured facts about the scenario (sender, destination, document,
+    #: intent), used to export these rows into the project dataset's schema.
+    meta: Dict[str, str] = field(default_factory=dict)
 
     def as_bytes(self) -> bytes:
         return self.message.as_bytes()
@@ -227,7 +230,8 @@ class EmailGenerator:
             + ([f"{self._pick(['review', 'audit'])}@{self._pick(C.PARTNER_DOMAINS)}"] if hard else [])
         )
         slots = self._slots(sender, destination, document)
-        body = self._compose_body(self._pick(C.SAFE_INTENTS), slots)
+        intent_index = self.random.randrange(len(C.SAFE_INTENTS))
+        body = self._compose_body(C.SAFE_INTENTS[intent_index], slots)
         # Legitimate mail is occasionally shouty too.
         subject = self._subject(slots, alarming_rate=0.06)
 
@@ -251,6 +255,19 @@ class EmailGenerator:
             message=message,
             rationale="within policy; destination approved and referenced where needed",
             notes="hard_case" if hard else "",
+            meta={
+                "intent_index": intent_index,
+                "sender": sender.address,
+                "sender_trust": "INTERNAL_VERIFIED" if sender.domain == C.ORG_DOMAIN else "EXTERNAL_KNOWN",
+                "document": document.name,
+                "destination": destination,
+                "authorized_destination": destination,
+                "project": slots["project"],
+                "case": slots["ref"],
+                "subject": subject,
+                "body": body,
+                "hard": hard,
+            },
         )
 
     # -- REVISE --------------------------------------------------------
@@ -265,7 +282,8 @@ class EmailGenerator:
             f"{self._pick(['team', 'all-hands'])}@{C.ORG_DOMAIN}",
         ])
         slots = self._slots(sender, destination, document)
-        body = self._compose_body(self._pick(C.REVISE_INTENTS), slots)
+        intent_index = self.random.randrange(len(C.REVISE_INTENTS))
+        body = self._compose_body(C.REVISE_INTENTS[intent_index], slots)
         subject = self._subject(slots, alarming_rate=0.10)
 
         attachments = []
@@ -285,6 +303,19 @@ class EmailGenerator:
             scenario="missing_authorisation",
             message=message,
             rationale="legitimate sender and intent, but authorisation, destination or scope is unresolved",
+            meta={
+                "intent_index": intent_index,
+                "sender": sender.address,
+                "sender_trust": "INTERNAL_VERIFIED" if sender.domain == C.ORG_DOMAIN else "EXTERNAL_KNOWN",
+                "document": document.name,
+                "destination": destination,
+                "authorized_destination": "",
+                "project": slots["project"],
+                "case": slots["ref"],
+                "subject": subject,
+                "body": body,
+                "hard": False,
+            },
         )
 
     # -- ATTACK --------------------------------------------------------
@@ -318,8 +349,10 @@ class EmailGenerator:
 
         # "Quiet" intents carry no wording the lexicons match; a hard attack
         # draws only from those, so only the destination betrays it.
-        quiet = [C.ATTACK_INTENTS[i] for i in (4, 5, 6, 8, 10)]
-        body = self._compose_body(self._pick(quiet if hard else C.ATTACK_INTENTS), slots)
+        quiet_indices = (4, 5, 6, 8, 10)
+        choices = quiet_indices if hard else range(len(C.ATTACK_INTENTS))
+        intent_index = self._pick(list(choices))
+        body = self._compose_body(C.ATTACK_INTENTS[intent_index], slots)
         subject = self._subject(slots, alarming_rate=0.10 if hard else 0.45)
 
         attachments = []
@@ -358,10 +391,30 @@ class EmailGenerator:
             in_reply_to=self._msgid() if self._chance(self.config.thread_rate) else "",
             return_path=destination if (not hard and self._chance(0.3)) else "",
         )
+        if hard:
+            trust = "INTERNAL_VERIFIED"
+        elif any(sender_address.endswith("@" + d) for d in C.LOOKALIKE_DOMAINS):
+            trust = "EXTERNAL_LOOKALIKE"
+        else:
+            trust = "EXTERNAL_UNKNOWN"
+
         return GeneratedEmail(
             record_id=self._next_id("ATTACK"), label="ATTACK",
             scenario="quiet_exfiltration" if hard else "overt_attack",
             message=message,
             rationale="adversarial: data directed to a mailbox outside the organisation's control",
             notes="hard_case" if hard else "",
+            meta={
+                "intent_index": intent_index,
+                "sender": sender_address,
+                "sender_trust": trust,
+                "document": document.name,
+                "destination": destination,
+                "authorized_destination": f"{self._pick(['finance', 'legal', 'ops'])}@{C.ORG_DOMAIN}",
+                "project": slots["project"],
+                "case": slots["ref"],
+                "subject": subject,
+                "body": body,
+                "hard": hard,
+            },
         )

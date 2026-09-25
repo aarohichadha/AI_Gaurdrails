@@ -117,6 +117,24 @@ False-positive rate — share of benign work refused:
    instruction at all, and CI-norm is the default-deny backstop. A deployed
    guardrail should run all three and take the most restrictive decision.
 
+## REVISE rows (three-class scoring)
+
+`common/evaluation.py` also scores `expected_decision == "REVISE"`: legitimate
+but under-specified requests, where the right answer is FLAG. Run
+`python deterministic/task13_compare.py --include-generated` to include the
+750 synthetic REVISE rows.
+
+| Guardrail | FLAG | BLOCK | ALLOW | Escalated | Contained |
+|---|---|---|---|---|---|
+| basic_rules | 19 | 333 | **398** | 0.025 | 0.469 |
+| provenance_rules | **318** | 432 | 0 | **0.424** | 1.000 |
+| ci_norm | 0 | 750 | 0 | 0.000 | 1.000 |
+
+The same three failure modes as the ablations: basic rules let 53% of
+under-specified requests run (no bad value to match on — the problem is a
+*missing* authorisation), CI-norm contains everything but cannot express "ask
+first", and provenance is the only variant that produces the third outcome.
+
 ### Honest caveats
 
 - **The corroboration cue is doing real work.** In the blind views the

@@ -23,6 +23,12 @@ from .schema import Action, Channel, InstructionSource
 ROOT = Path(__file__).resolve().parents[1]
 DATASET = ROOT / "data" / "email_agent_security_dataset.xlsx"
 
+#: Synthetic three-class rows written by `classifiers/export_to_dataset.py`.
+#: Deliberately NOT in DATA_SHEETS: including it by default would take the
+#: record count from 7,200 to 10,200 and silently move every number Tasks
+#: 10-17 have already reported. Opt in with `load_actions(include_generated=True)`.
+GENERATED_SHEET = "Generated Three-Class"
+
 #: The six scenario sheets (the workbook also holds Validation + Taxonomy).
 DATA_SHEETS = [
     "Base Dataset",
@@ -90,12 +96,21 @@ def _to_action(row, sheet: str) -> Action:
     )
 
 
-@lru_cache(maxsize=1)
-def load_actions(path: str = str(DATASET)) -> List[Action]:
-    """Read every scenario sheet once and cache the result."""
+@lru_cache(maxsize=4)
+def load_actions(path: str = str(DATASET), include_generated: bool = False) -> List[Action]:
+    """Read every scenario sheet once and cache the result.
+
+    `include_generated=True` also reads the synthetic three-class sheet. Those
+    rows carry `expected_decision == "REVISE"`, which the two-class scoring in
+    `common/evaluation.py` does not understand - check that before mixing them
+    into an existing evaluation.
+    """
     workbook = pd.ExcelFile(path)
+    sheets = list(DATA_SHEETS)
+    if include_generated and GENERATED_SHEET in workbook.sheet_names:
+        sheets.append(GENERATED_SHEET)
     actions: List[Action] = []
-    for sheet in DATA_SHEETS:
+    for sheet in sheets:
         if sheet not in workbook.sheet_names:
             continue
         frame = workbook.parse(sheet)

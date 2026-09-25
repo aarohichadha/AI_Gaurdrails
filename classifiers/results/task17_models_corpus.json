@@ -10,7 +10,7 @@
   },
   "models": {
     "random_forest": {
-      "train_seconds": 0.84,
+      "train_seconds": 0.99,
       "cv_macro_f1_mean": 1.0,
       "cv_macro_f1_std": 0.0,
       "test": {
@@ -186,13 +186,13 @@
       },
       "latency_batch1": {
         "samples": 200,
-        "mean_ms": 60.008,
-        "p50_ms": 62.324,
-        "p95_ms": 77.9
+        "mean_ms": 53.989,
+        "p50_ms": 54.26,
+        "p95_ms": 67.77
       }
     },
     "xgboost": {
-      "train_seconds": 2.0,
+      "train_seconds": 1.94,
       "cv_macro_f1_mean": 1.0,
       "cv_macro_f1_std": 0.0,
       "test": {
@@ -368,9 +368,9 @@
       },
       "latency_batch1": {
         "samples": 200,
-        "mean_ms": 0.393,
-        "p50_ms": 0.37,
-        "p95_ms": 0.564
+        "mean_ms": 0.43,
+        "p50_ms": 0.418,
+        "p95_ms": 0.583
       }
     }
   }

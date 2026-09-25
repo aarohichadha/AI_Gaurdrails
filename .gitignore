@@ -7,3 +7,4 @@ __pycache__/
 classifiers/data/eml/
 classifiers/data/generated/
 classifiers/models/
+data/backups/

@@ -9,7 +9,8 @@ One folder per **technique**, so variants can be compared on identical data:
 
 ```
 AI_Gaurdrails/
-├── data/                  email_agent_security_dataset.xlsx  (7,200 records)
+├── data/                  email_agent_security_dataset.xlsx  (7,200 records
+│                          + a 3,000-row Generated Three-Class sheet, opt-in)
 ├── common/                shared across every technique
 │   ├── schema.py          Action, Decision, provenance channels, GuardrailResult
 │   ├── policy.py          domains, sensitivity tiers, action classes, markers

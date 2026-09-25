@@ -320,12 +320,16 @@ def main(argv: Optional[Sequence[str]] = None) -> dict:
             "  python classifiers/build_training_set.py        (corpus)"
         )
 
+    # Name outputs after the actual file when one is supplied, so a custom
+    # --csv run cannot overwrite the artifacts of a standard one.
+    run_name = args.dataset if args.csv is None else path.stem.replace("task17_", "")
+
     X, y, names, meta = load_dataset(path, args.drop_oracle_features)
     train_index, test_index, extra_sets = split_data(X, y, meta, args.seed, args.test_size)
     labels = [c for c in CLASS_ORDER if c in set(y)]
 
     print("=" * 79)
-    print(f"TASK 17 - FEATURE-BASED ML   ({args.dataset})")
+    print(f"TASK 17 - FEATURE-BASED ML   ({run_name})")
     print("=" * 79)
     print(f"  data            {path.name}")
     print(f"  rows            {len(y)}   train {len(train_index)}   test {len(test_index)}")
@@ -413,7 +417,7 @@ def main(argv: Optional[Sequence[str]] = None) -> dict:
 
             MODELS_DIR.mkdir(parents=True, exist_ok=True)
             suffix = "_no_oracle" if args.drop_oracle_features else ""
-            target = MODELS_DIR / f"task17_{args.dataset}_{name}{suffix}.joblib"
+            target = MODELS_DIR / f"task17_{run_name}_{name}{suffix}.joblib"
             joblib.dump({"model": model, "encoder": encoder, "features": names}, target)
             print(f"  saved {target}")
 
@@ -431,7 +435,7 @@ def main(argv: Optional[Sequence[str]] = None) -> dict:
                   f"{data['latency_batch1']['mean_ms']:>10.3f}")
 
     suffix = "_no_oracle" if args.drop_oracle_features else ""
-    out = RESULTS_DIR / f"task17_models_{args.dataset}{suffix}.json"
+    out = RESULTS_DIR / f"task17_models_{run_name}{suffix}.json"
     out.write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(f"\nwrote {out}")
     return summary

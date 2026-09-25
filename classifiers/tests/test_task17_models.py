@@ -124,9 +124,11 @@ def test_training_run_reports_both_models_and_saves_them(tiny_csv, tmp_path, mon
         assert 0.0 <= data["test"]["accuracy"] <= 1.0
         assert data["test"]["per_class"]
         assert data["latency_batch1"]["samples"] > 0
-        assert (tmp_path / "models" / f"task17_generated_{name}.joblib").exists()
+        # a custom --csv run is named after the file, so it cannot overwrite
+        # the artifacts of a standard --dataset run
+        assert (tmp_path / "models" / f"task17_tiny_{name}.joblib").exists()
 
-    written = json.loads((tmp_path / "task17_models_generated.json").read_text(encoding="utf-8"))
+    written = json.loads((tmp_path / "task17_models_tiny.json").read_text(encoding="utf-8"))
     assert written["rows"] == 90
 
 
@@ -138,7 +140,7 @@ def test_saved_model_carries_its_feature_order(tiny_csv, tmp_path, monkeypatch):
     monkeypatch.setattr(task17, "MODELS_DIR", tmp_path / "models")
     task17.main(["--csv", str(tiny_csv), "--model", "rf", "--no-permutation"])
 
-    bundle = joblib.load(tmp_path / "models" / "task17_generated_random_forest.joblib")
+    bundle = joblib.load(tmp_path / "models" / "task17_tiny_random_forest.joblib")
     assert bundle["features"] == FEATURES
     assert set(bundle["encoder"].classes_) == {"SAFE", "REVISE", "ATTACK"}
 

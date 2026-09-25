@@ -58,8 +58,14 @@ def test_written_eml_round_trips_through_the_parser(tmp_path):
 def test_labels_map_to_the_task_17_classes():
     assert builder.LABEL_MAP["BENIGN"] == "SAFE"
     assert builder.LABEL_MAP["ATTACK"] == "ATTACK"
-    # REVISE has no examples in this corpus and must not be invented.
-    assert "REVISE" not in builder.LABEL_MAP.values()
+    # REVISE rows exist only in the exported synthetic sheet, which is read
+    # solely when --include-generated is passed.
+    assert builder.LABEL_MAP["REVISE"] == "REVISE"
+
+
+def test_generated_rows_are_excluded_unless_asked_for(tmp_path):
+    summary = builder.main(["--limit", "40", "--csv", str(tmp_path / "t.csv")])
+    assert "REVISE" not in summary["classes"]
 
 
 def test_csv_has_one_row_per_record_and_stable_columns(tmp_path):

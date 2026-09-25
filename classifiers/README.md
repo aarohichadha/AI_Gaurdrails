@@ -10,6 +10,7 @@
 | [build_training_set.py](build_training_set.py) | 16/17 | Renders the corpus as `.eml` and builds a labelled feature matrix |
 | [emailgen/](emailgen/) + [generate_email_corpus.py](generate_email_corpus.py) | 16/17 | Generates a synthetic three-class `.eml` corpus (SAFE/REVISE/ATTACK) |
 | [task17_feature_models.py](task17_feature_models.py) | 17 | Trains and compares Random Forest and XGBoost on the feature vectors |
+| [export_to_dataset.py](export_to_dataset.py) | 16/17 | Writes the generated rows into the project workbook in its own 36-column format |
 | [tests/](tests/) | — | Pipeline tests. They don't need the gated model |
 
 Task 18 is not implemented here.
@@ -229,6 +230,83 @@ They are already `.eml`, so they go straight through
 `python classifiers/task16_features.py <folder> --csv out.csv`. Their labels
 are independent of your features, which is what keeps the evaluation honest.
 
+### Exporting the generated rows into the project dataset
+
+[export_to_dataset.py](export_to_dataset.py) writes the synthetic three-class
+emails into `data/email_agent_security_dataset.xlsx` as a new sheet,
+**Generated Three-Class**, using the same 36 columns as every existing sheet.
+
+```bash
+python classifiers/export_to_dataset.py                 # 3,000 rows -> new sheet
+python classifiers/export_to_dataset.py --n 1500 --seed 2
+python classifiers/export_to_dataset.py --csv-only      # preview, workbook untouched
+```
+
+| | |
+|---|---|
+| Rows | 3,000 |
+| `label` | BENIGN 1,350 · REVISE 750 · ATTACK 900 |
+| `expected_decision` | ALLOW 1,350 · REVISE 750 · BLOCK 900 |
+| `split` | train 2,100 · validation 600 · test 300 |
+| `task_id` | `TASK7` |
+| `record_id` | `GEN-S…` / `GEN-R…` / `GEN-A…` |
+
+Field mapping follows the existing conventions exactly: `authorization_rule`
+uses the same sentence pattern, `authorization_evidence` names the approved
+destination, `expected_tool_calls_json` holds the call for ALLOW rows and `[]`
+otherwise, and `prohibited_action` / `ground_truth_reason` are filled the way
+the original sheets fill them. Attack rows draw `attack_category` and
+`attack_technique` only from the taxonomy the workbook already defines.
+
+`REVISE` rows put the policy gap in `attack_technique`
+(`missing_authorization_reference`, `unnamed_destination`,
+`unverified_new_contact`, `personal_mailbox`, `broad_distribution`,
+`approval_scope_creep`, `skipped_verification`, `retention_without_ticket`),
+keep `attack_category` as `NONE`, and leave `authorized_destination` empty —
+because having nothing recorded to compare against is the whole point of
+the class.
+
+#### Two new vocabulary values
+
+| Column | New value | Where |
+|---|---|---|
+| `label` / `expected_decision` | `REVISE` | 750 rows |
+| `requested_action` | `DELETE_FILE` | retention-request scenario only |
+
+`common/schema.py` already has `Decision.FLAG` for the middle outcome, so
+guardrail *output* needs nothing new. But `common/evaluation.py` scores
+two classes — it treats `expected_decision == "BLOCK"` as the positive class
+and everything else as benign, so a `REVISE` row would silently count as
+benign. **Anything scoring these rows needs three-class handling first.**
+
+#### Nothing existing changed
+
+- The six original sheets are byte-identical after the write (asserted in
+  `tests/test_export_to_dataset.py`).
+- The workbook is copied to `data/backups/` before every write.
+- `common/dataset.py` still reads only the six original sheets, so
+  `load_actions()` returns 7,200 records exactly as before and every number
+  Tasks 10–17 have reported stays reproducible. Opt in explicitly:
+
+```python
+load_actions()                          # 7,200 - unchanged
+load_actions(include_generated=True)    # 10,200, including 750 REVISE rows
+```
+
+#### What the schema cannot carry
+
+The 36 columns have no place for **attachments, links, HTML parts or hidden
+text** — exactly the signals the generated corpus was built to add. Those are
+dropped in this view. `classifiers/data/generated/*.eml` stays the source of
+truth for Task 16/17; this sheet is the text-level view of the same scenarios,
+for tooling built around the dataset's fields.
+
+One cosmetic side effect: the Validation sheet's `Status` column is
+formula-driven (`=IF(B5=C5,"PASS","FAIL")`). Saving with openpyxl preserves the
+formulas but clears their cached results, so pandas reads blanks there until
+the file is opened in Excel once. The Validation counts also still describe the
+original 7,200 records; they are not updated for the new sheet.
+
 ## Task 17 — Feature-based ML (Random Forest / XGBoost)
 
 ```
@@ -363,6 +441,87 @@ column.
   between tuning budgets.
 - **The three-class definition is a policy choice**, so `REVISE` performance
   measures agreement with *our* definition of it.
+
+### Running with REVISE included
+
+`common/evaluation.py` now scores three outcomes. ALLOW/BLOCK rows are scored
+exactly as before — every number Tasks 10–17 reported is unchanged — while
+REVISE rows go to their own counters, because "correct" for them is a third
+outcome rather than a positive or a negative:
+
+| Guardrail decision on a REVISE row | Meaning |
+|---|---|
+| `FLAG` | the right call — escalate to a human (`revise_accuracy`) |
+| `BLOCK` | over-strict, but safe (counted in `revise_contained`) |
+| `ALLOW` | a miss: an under-specified action ran unsupervised |
+
+```bash
+python deterministic/task13_compare.py --include-generated
+python classifiers/build_training_set.py --include-generated \
+    --csv classifiers/results/task17_training_set_with_revise.csv
+python classifiers/task17_feature_models.py \
+    --csv classifiers/results/task17_training_set_with_revise.csv
+```
+
+#### How the deterministic guardrails handle REVISE (750 rows)
+
+| Guardrail | FLAG | BLOCK | ALLOW | Escalated | Contained |
+|---|---|---|---|---|---|
+| basic_rules | 19 | 333 | **398** | 0.025 | 0.469 |
+| provenance_rules | **318** | 432 | 0 | **0.424** | 1.000 |
+| ci_norm | 0 | 750 | 0 | 0.000 | 1.000 |
+
+This is the Task 13 story again, now visible on a third class:
+
+- **Basic rules let 53% of under-specified requests run.** They only recognise
+  known-bad values, and a REVISE row has no bad value — its problem is a
+  *missing* authorisation, which a blocklist cannot see.
+- **CI-norm contains everything but escalates nothing.** Default-deny cannot
+  express "ask first": an unaffirmable flow is simply denied. Safe, but it
+  turns 750 legitimate requests into 750 refusals.
+- **Provenance rules are the only variant that produces the third outcome**,
+  escalating 42% and containing the rest. Its FLAG path exists precisely for
+  authority that cannot be traced, which is what a REVISE row is.
+
+#### Feature-based models on the combined 10,200 rows
+
+Corpus rows plus the 3,000 exported synthetic rows, three classes:
+
+| Model | Accuracy | Macro F1 | CV macro F1 | Attack recall | REVISE F1 | ms/email |
+|---|---|---|---|---|---|---|
+| Random Forest | 0.921 | 0.846 | 0.860 ± 0.017 | 0.983 | 0.691 | 58.6 |
+| **XGBoost** | **0.942** | **0.887** | **0.879 ± 0.012** | **0.986** | **0.770** | **0.46** |
+
+XGBoost per class:
+
+| Class | Precision | Recall | F1 | Support |
+|---|---|---|---|---|
+| SAFE | 0.901 | 0.920 | 0.910 | 188 |
+| REVISE | 0.721 | 0.827 | 0.770 | 75 |
+| ATTACK | 0.996 | 0.967 | 0.981 | 517 |
+
+**Adding the REVISE rows fixed the length shortcut.** The two-class corpus run
+collapsed on `flow_test` (XGBoost 0.000 — every prediction inverted, because it
+had learned that benign bodies are longer). With the synthetic rows mixed in,
+the same stress set scores **1.000** for both models: the added length
+diversity destroys the spurious correlation, so the models have to use real
+signal instead.
+
+`adaptive_test` still scores 1.000 for a boring reason — that sheet is 100%
+ATTACK, so it only measures attack recall.
+
+REVISE remains the hardest class (F1 0.770, mostly confused with SAFE), which
+is the same finding as on the generated corpus and for the same reason: a
+feature vector over the message cannot see an authorisation that is absent.
+
+#### Nothing had to be re-run
+
+The six original sheets are untouched and `load_actions()` still defaults to
+7,200 records, so every earlier result stands. `--include-generated` is the
+only way to pull the REVISE rows in, and
+`deterministic/tests/test_revise_scoring.py` asserts both halves of that: the
+new counters work, and a two-class run still produces the identical
+confusion matrix and the same result-file shape.
 
 ## Shared setup (both Prompt Guard models)
 

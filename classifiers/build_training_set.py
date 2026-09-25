@@ -49,10 +49,10 @@ CORPUS_CONFIG = ExtractorConfig(
     trusted_domains={"partner-a.example", "counsel.example", "audit-approved.example"},
 )
 
-#: Corpus labels -> Task 17 classes. The corpus is two-class; `REVISE` has no
-#: examples here and must be defined and labelled separately before it can be
-#: trained (see the README).
-LABEL_MAP = {"BENIGN": "SAFE", "ATTACK": "ATTACK"}
+#: Corpus labels -> Task 17 classes. The six original sheets are two-class;
+#: `REVISE` rows come only from the exported synthetic sheet, which
+#: `--include-generated` pulls in.
+LABEL_MAP = {"BENIGN": "SAFE", "ATTACK": "ATTACK", "REVISE": "REVISE"}
 
 #: Features that are near-perfect predictors *on this corpus only*, because of
 #: how it was generated. Not dropped by default - surfaced so a run can
@@ -120,12 +120,17 @@ def _write_eml(path: Path, action: Action, message: RawEmail) -> None:
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
-def split_lookup() -> Dict[str, str]:
+def split_lookup(include_generated: bool = False) -> Dict[str, str]:
     import pandas as pd
 
+    from common.dataset import GENERATED_SHEET
+
     workbook = pd.ExcelFile(DATASET)
+    sheets = list(DATA_SHEETS)
+    if include_generated and GENERATED_SHEET in workbook.sheet_names:
+        sheets.append(GENERATED_SHEET)
     lookup: Dict[str, str] = {}
-    for sheet in DATA_SHEETS:
+    for sheet in sheets:
         frame = workbook.parse(sheet, usecols=["record_id", "split"])
         lookup.update(dict(zip(frame["record_id"].astype(str), frame["split"].astype(str))))
     return lookup
@@ -218,6 +223,8 @@ def parse_args(argv: Optional[Sequence[str]] = None):
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--drop-oracle-features", action="store_true",
                         help="exclude the body-address features that leak the label on this corpus")
+    parser.add_argument("--include-generated", action="store_true",
+                        help="also read the synthetic three-class sheet (adds REVISE rows)")
     parser.add_argument("--summary", type=Path, default=None, help="write a JSON summary here")
     return parser.parse_args(argv)
 
@@ -225,8 +232,8 @@ def parse_args(argv: Optional[Sequence[str]] = None):
 def main(argv: Optional[Sequence[str]] = None) -> dict:
     args = parse_args(argv)
 
-    actions = load_actions()
-    splits = split_lookup()
+    actions = load_actions(include_generated=args.include_generated)
+    splits = split_lookup(include_generated=args.include_generated)
     if args.split:
         actions = [a for a in actions if splits.get(a.record_id) == args.split]
     if args.limit:
