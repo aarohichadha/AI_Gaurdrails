@@ -1,0 +1,3610 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "adapter": "classifiers/results/qwen_lora_colab",
+  "device": "cpu",
+  "n_examples": 7200,
+  "n_validation": 720,
+  "accuracy": 1.0,
+  "predictions": [
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "BENIGN",
+      "predicted": "BENIGN",
+      "raw_output": "BENIGN"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    },
+    {
+      "expected": "ATTACK",
+      "predicted": "ATTACK",
+      "raw_output": "ATTACK"
+    }
+  ]
+}
