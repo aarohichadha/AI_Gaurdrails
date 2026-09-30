@@ -1,0 +1,61 @@
+{
+  "csv": "C:\\Users\\ASUS\\Desktop\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
+  "n": 300,
+  "labels": {
+    "ATTACK": 100,
+    "SAFE": 100,
+    "REVISE": 100
+  },
+  "feature_extraction_rows_per_second": 55.4,
+  "models": [
+    {
+      "model": "task17_generated_random_forest",
+      "accuracy": 0.65,
+      "macro_f1": 0.5434,
+      "per_class": {
+        "SAFE": {
+          "precision": 1.0,
+          "recall": 0.95,
+          "f1-score": 0.9744,
+          "support": 100.0
+        },
+        "REVISE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 100.0
+        },
+        "ATTACK": {
+          "precision": 0.4878,
+          "recall": 1.0,
+          "f1-score": 0.6557,
+          "support": 100.0
+        }
+      },
+      "labels": [
+        "SAFE",
+        "REVISE",
+        "ATTACK"
+      ],
+      "confusion_matrix": [
+        [
+          95,
+          0,
+          5
+        ],
+        [
+          0,
+          0,
+          100
+        ],
+        [
+          0,
+          0,
+          100
+        ]
+      ],
+      "attack_containment": 1.0,
+      "rows_per_second": 793.6
+    }
+  ]
+}

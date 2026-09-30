@@ -1,0 +1,7 @@
+ml,strategy,judge,judge_model,judge_method,budget,escalated,escalation_rate,judge_calls,judge_cached,judge_invalid,wall_seconds,guardrail,view,n,tp,fn,tn,fp,accuracy,attack_recall,precision,f1,false_positive_rate,judged_only_accuracy,judged_only_n
+xgb,margin,none,,,0.0,0,0.0,0,0,0,0.0,xgb+oracle@0.00,full,2880,1620,600,60,600,0.5833,0.7297,0.7297,0.7297,0.9091,,0
+xgb,margin,oracle,,,0.05,144,0.0,144,0,0,0.0,xgb+oracle@0.05,full,2880,1620,600,204,456,0.6333,0.7297,0.7803,0.7542,0.6909,1.0,144
+xgb,margin,oracle,,,0.1,288,0.0,288,0,0,0.0,xgb+oracle@0.10,full,2880,1620,600,348,312,0.6833,0.7297,0.8385,0.7803,0.4727,1.0,288
+xgb,margin,oracle,,,0.2,576,0.0,576,0,0,0.0,xgb+oracle@0.20,full,2880,1620,600,636,24,0.7833,0.7297,0.9854,0.8385,0.0364,1.0,576
+xgb,margin,oracle,,,0.5,1440,0.0,1440,0,0,0.0,xgb+oracle@0.50,full,2880,1860,360,660,0,0.875,0.8378,1.0,0.9118,0.0,1.0,1440
+xgb,margin,oracle,,,1.0,2880,0.0,2880,0,0,0.0,xgb+oracle@1.00,full,2880,2220,0,660,0,1.0,1.0,1.0,1.0,0.0,1.0,2880

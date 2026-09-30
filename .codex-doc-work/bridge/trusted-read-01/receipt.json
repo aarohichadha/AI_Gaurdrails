@@ -1,0 +1,32 @@
+{
+  "bridgeVersion": "3.6",
+  "kind": "google-docs-trusted-read-receipt",
+  "status": "complete",
+  "target": {
+    "documentId": "1NevKXm7OHbwKPoPQPifsDUS_o-SGDjEyjKqrT0kSKJo",
+    "title": "AI Guardrails",
+    "revisionId": "ANLCKQlDshpBOika0XNUGM4TpwEJIRHsB70LH4s5NdiOnvCUcBwJyHJCq_tmHqki6g49FfnFq-zdOuu7nJ6QfBOhnZwwJfnjPDavfSkQw2w",
+    "documentUrl": "https://docs.google.com/document/d/1NevKXm7OHbwKPoPQPifsDUS_o-SGDjEyjKqrT0kSKJo",
+    "selectedTabId": null
+  },
+  "dropdownMetadata": {
+    "status": "unavailable",
+    "resolvedTool": null,
+    "authoritative": false,
+    "count": 0
+  },
+  "controlAwareness": {
+    "hasProtectedControls": false,
+    "authoritativeDropdownCount": 0,
+    "opaqueControlCount": 0,
+    "affectedParagraphCount": 0,
+    "nativeElementCounts": {
+      "inlineObjectElement": 10,
+      "horizontalRule": 77
+    },
+    "preservationRequired": false,
+    "recommendedBehavior": "No protected controls were detected in the scanned scope."
+  },
+  "warnings": [],
+  "error": null
+}

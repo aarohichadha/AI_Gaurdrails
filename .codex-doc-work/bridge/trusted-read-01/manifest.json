@@ -1,0 +1,60 @@
+{
+  "bridgeVersion": "3.6",
+  "kind": "google-docs-trusted-read",
+  "status": "complete",
+  "outputDir": "/Users/joysajain/Desktop/minorProject/AI_Gaurdrails/.codex-doc-work/bridge/trusted-read-01",
+  "target": {
+    "documentId": "1NevKXm7OHbwKPoPQPifsDUS_o-SGDjEyjKqrT0kSKJo",
+    "title": "AI Guardrails",
+    "revisionId": "ANLCKQlDshpBOika0XNUGM4TpwEJIRHsB70LH4s5NdiOnvCUcBwJyHJCq_tmHqki6g49FfnFq-zdOuu7nJ6QfBOhnZwwJfnjPDavfSkQw2w",
+    "documentUrl": "https://docs.google.com/document/d/1NevKXm7OHbwKPoPQPifsDUS_o-SGDjEyjKqrT0kSKJo",
+    "selectedTabId": null
+  },
+  "dropdownMetadata": {
+    "status": "unavailable",
+    "resolvedTool": null,
+    "authoritative": false,
+    "count": 0
+  },
+  "controlAwareness": {
+    "hasProtectedControls": false,
+    "authoritativeDropdownCount": 0,
+    "opaqueControlCount": 0,
+    "affectedParagraphCount": 0,
+    "nativeElementCounts": {
+      "inlineObjectElement": 10,
+      "horizontalRule": 77
+    },
+    "preservationRequired": false,
+    "recommendedBehavior": "No protected controls were detected in the scanned scope."
+  },
+  "warnings": [],
+  "files": {
+    "document_result": {
+      "path": "/Users/joysajain/Desktop/minorProject/AI_Gaurdrails/.codex-doc-work/bridge/trusted-read-01/document-result.json",
+      "bytes": 3139635,
+      "sha256": "0d177598f235d78a789b6936440546a37cc8c2c7309cf9a58c7acd4f0a3ca5f6"
+    },
+    "control_inventory": {
+      "path": "/Users/joysajain/Desktop/minorProject/AI_Gaurdrails/.codex-doc-work/bridge/trusted-read-01/control-inventory.json",
+      "bytes": 51201,
+      "sha256": "681a8faaf7c1dfb4b12717502699809a97841dc7d83acbe53c0cc931c4e8349a"
+    },
+    "document_outline": {
+      "path": "/Users/joysajain/Desktop/minorProject/AI_Gaurdrails/.codex-doc-work/bridge/trusted-read-01/document-outline.json",
+      "bytes": 977546,
+      "sha256": "d02d10a55ab73c7b0a3ba4aecbadd367a9bf5dedf76446b83f0aaa17b9a930a9"
+    },
+    "document_text": {
+      "path": "/Users/joysajain/Desktop/minorProject/AI_Gaurdrails/.codex-doc-work/bridge/trusted-read-01/document-text.md",
+      "bytes": 197125,
+      "sha256": "fb18f27ecd37308396cfd0a7719a8839371e09a17f7ef34e392e2e55d8c3f986"
+    },
+    "receipt": {
+      "path": "/Users/joysajain/Desktop/minorProject/AI_Gaurdrails/.codex-doc-work/bridge/trusted-read-01/receipt.json",
+      "bytes": 1014,
+      "sha256": "134251ea3e4149367e7dc078580a124db9ef8109c0146ac4e6ff35aff341a0fe"
+    }
+  },
+  "error": null
+}

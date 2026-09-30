@@ -1,0 +1,9 @@
+ml,strategy,judge,judge_model,judge_method,budget,escalated,routed_rate,judge_calls,judge_cached,judge_invalid,wall_seconds,guardrail,view,n,tp,fn,tn,fp,accuracy,attack_recall,precision,f1,false_positive_rate,escalation_rate,judged_only_accuracy,judged_only_n
+xgb,margin,none,gemini-3.5-flash-lite,full_defense,0.0,0,0.0,0,0,0,0.0,xgb+gemini@0.00,full,2880,1620,600,60,600,0.5833,0.7297,0.7297,0.7297,0.9091,0.0,,0
+xgb,margin,gemini,gemini-3.5-flash-lite,full_defense,0.025,72,0.025,0,72,0,0.0,xgb+gemini@0.03,full,2880,1620,600,123,537,0.6052,0.7297,0.751,0.7402,0.8136,0.0,0.875,72
+xgb,margin,gemini,gemini-3.5-flash-lite,full_defense,0.05,144,0.05,0,144,0,0.0,xgb+gemini@0.05,full,2880,1620,600,186,474,0.6271,0.7297,0.7736,0.751,0.7182,0.0,0.875,144
+xgb,margin,gemini,gemini-3.5-flash-lite,full_defense,0.1,288,0.1,0,288,0,0.0,xgb+gemini@0.10,full,2880,1620,600,311,349,0.6705,0.7297,0.8228,0.7735,0.5288,0.0,0.8715,288
+rf,margin,none,gemini-3.5-flash-lite,full_defense,0.0,0,0.0,0,0,0,0.0,rf+gemini@0.00,full,2880,2220,0,410,250,0.9132,1.0,0.8988,0.9467,0.3788,0.0,,0
+rf,margin,gemini,gemini-3.5-flash-lite,full_defense,0.025,72,0.025,0,72,0,0.0,rf+gemini@0.03,full,2880,2220,0,475,185,0.9358,1.0,0.9231,0.96,0.2803,0.0,0.9028,72
+rf,margin,gemini,gemini-3.5-flash-lite,full_defense,0.05,144,0.05,0,144,0,0.0,rf+gemini@0.05,full,2880,2220,0,528,132,0.9542,1.0,0.9439,0.9711,0.2,0.0,0.8194,144
+rf,margin,gemini,gemini-3.5-flash-lite,full_defense,0.1,288,0.1,0,288,0,0.0,rf+gemini@0.10,full,2880,2220,0,632,28,0.9903,1.0,0.9875,0.9937,0.0424,0.0,0.9028,288

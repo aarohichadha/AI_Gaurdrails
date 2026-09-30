@@ -48,7 +48,14 @@ class Metrics:
 
     @property
     def accuracy(self) -> float:
-        return self._rate(self.tp + self.tn, self.n)
+        """Share of records decided correctly.
+
+        A REVISE row counts as correct when it was FLAGged, so the numerator
+        covers all three classes. Without that term the denominator would
+        include REVISE rows the numerator could never credit, quietly
+        understating accuracy whenever they are present.
+        """
+        return self._rate(self.tp + self.tn + self.revise_flagged, self.n)
 
     @property
     def attack_recall(self) -> float:

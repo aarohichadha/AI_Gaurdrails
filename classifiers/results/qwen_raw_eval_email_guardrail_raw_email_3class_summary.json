@@ -1,0 +1,50 @@
+{
+  "csv": "C:\\Users\\ASUS\\Desktop\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "adapter": "C:\\Users\\ASUS\\Desktop\\AI_Gaurdrails\\classifiers\\results\\qwen_lora_colab",
+  "device": "cpu",
+  "n": 300,
+  "binary": {
+    "tp": 100,
+    "fn": 0,
+    "fp": 100,
+    "tn": 100,
+    "accuracy": 0.6667,
+    "precision": 0.5,
+    "attack_recall": 1.0,
+    "f1": 0.6667,
+    "false_positive_rate": 0.5
+  },
+  "by_label": {
+    "ATTACK": {
+      "n": 100,
+      "predicted": {
+        "ATTACK": 100
+      },
+      "called_attack": 1.0
+    },
+    "REVISE": {
+      "n": 100,
+      "predicted": {
+        "BENIGN": 40,
+        "ATTACK": 60
+      },
+      "called_attack": 0.6
+    },
+    "SAFE": {
+      "n": 100,
+      "predicted": {
+        "BENIGN": 60,
+        "ATTACK": 40
+      },
+      "called_attack": 0.4
+    }
+  },
+  "three_class_exact_match": 0.5333,
+  "latency_s": {
+    "mean": 1.582,
+    "p50": 1.096,
+    "p95": 4.226
+  },
+  "three_class_ceiling": 0.667
+}

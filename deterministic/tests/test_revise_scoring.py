@@ -98,3 +98,28 @@ def test_loading_generated_rows_adds_revise_records():
     revise = [a for a in extended if a.expected_decision == "REVISE"]
     assert len(revise) == 750
     assert len(load_actions()) == 7200      # default view unchanged
+
+
+def test_accuracy_credits_correctly_escalated_revise_rows():
+    """Accuracy must cover all three classes.
+
+    With REVISE rows present, crediting only tp+tn would divide by a
+    denominator holding rows the numerator can never reach, understating the
+    score purely because those rows exist.
+    """
+    actions = _actions()          # 1 ALLOW, 1 BLOCK, 3 REVISE
+    run = evaluate(_guardrail({
+        "A1": Decision.ALLOW,     # correct
+        "B1": Decision.BLOCK,     # correct
+        "R1": Decision.FLAG,      # correct
+        "R2": Decision.FLAG,      # correct
+        "R3": Decision.ALLOW,     # wrong
+    }), actions, "test")
+    assert run.metrics.accuracy == 4 / 5
+
+
+def test_two_class_accuracy_is_unchanged_by_the_three_class_definition():
+    actions = [a for a in _actions() if a.expected_decision != "REVISE"]
+    run = evaluate(_guardrail({"A1": Decision.ALLOW, "B1": Decision.BLOCK}), actions, "test")
+    assert run.metrics.accuracy == 1.0
+    assert run.metrics.revise_total == 0

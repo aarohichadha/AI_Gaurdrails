@@ -9,3 +9,7 @@ classifiers/data/generated/
 classifiers/models/
 cascade/models/
 data/backups/
+combination/ml_llm/cache/
+
+# Excel lock files, created while a workbook is open
+~$*
