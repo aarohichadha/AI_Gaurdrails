@@ -19,6 +19,9 @@ AI_Gaurdrails/
 ├── deterministic/         🟨 C — rule-based guardrails (Tasks 10–13)   [done]
 ├── prompt/                🟦 B — prompt-defense agent (Tasks 7–9)      [foundation]
 ├── classifiers/           🟧 D — ML classifiers (Tasks 14-17)     [14-17 done]
+├── llm_judge/             Gemini-as-judge over real Task 7 agent proposals
+├── hybrid/                🟩 prompt agent x deterministic rules, most-restrictive-wins
+├── cascade/               🟪 Task 27 — Deterministic -> ML -> LLM Judge, uncertain-only escalation
 └── results/               per-technique metrics land in <technique>/results/
 ```
 
@@ -66,5 +69,7 @@ techniques can be compared on their reasoning instead. See
 | ✅ | [Deterministic guardrails](deterministic/README.md) | 10–13 |
 | 🟦 | [Prompt-defense agent](prompt/README.md) | 7–9 |
 | 🟧 | [ML classifiers — Prompt Guard, features, RF/XGBoost](classifiers/README.md) | 14–17 |
+| 🟩 | [Hybrid — prompt agent x deterministic rules](hybrid/README.md) | — |
+| 🟪 | [Cascade — Deterministic → ML → LLM Judge](cascade/README.md) | 27 |
 
 Prompt Guard 1 and 2 are both Hugging Face-gated models. The repository includes the Task 14 scaffold and the Task 15 baseline, but a valid HF token is required before the real model run can execute.

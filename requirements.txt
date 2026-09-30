@@ -18,3 +18,10 @@ sentencepiece>=0.2
 datasets>=2.20
 peft>=0.12
 accelerate>=0.33
+
+# classifiers/task17_feature_models.py (Random Forest / XGBoost) and cascade/
+xgboost>=2.0
+joblib>=1.3
+
+# llm_judge/ and cascade/ (Layer 3 - Gemini judge)
+google-genai>=0.5

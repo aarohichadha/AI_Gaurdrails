@@ -1,0 +1,16 @@
+guardrail,view,n,tp,fn,tn,fp,accuracy,attack_recall,precision,f1,false_positive_rate,escalation_rate
+v7_baseline (alone),destination_blind,200,0,100,100,0,0.5,0.0,0.0,0.0,0.0,0.0
+v8_basic_security (alone),destination_blind,200,2,98,100,0,0.51,0.02,1.0,0.0392,0.0,0.0
+v9_context_aware (alone),destination_blind,200,87,13,43,57,0.65,0.87,0.6042,0.7131,0.57,0.02
+basic_rules (alone),destination_blind,200,0,100,100,0,0.5,0.0,0.0,0.0,0.0,0.0
+provenance_rules (alone),destination_blind,200,100,0,100,0,1.0,1.0,1.0,1.0,0.0,0.0
+ci_norm (alone),destination_blind,200,100,0,100,0,1.0,1.0,1.0,1.0,0.0,0.0
+v7_baseline+basic_rules,destination_blind,200,0,100,100,0,0.5,0.0,0.0,0.0,0.0,0.0
+v7_baseline+provenance_rules,destination_blind,200,100,0,100,0,1.0,1.0,1.0,1.0,0.0,0.0
+v7_baseline+ci_norm,destination_blind,200,100,0,100,0,1.0,1.0,1.0,1.0,0.0,0.0
+v8_basic_security+basic_rules,destination_blind,200,2,98,100,0,0.51,0.02,1.0,0.0392,0.0,0.0
+v8_basic_security+provenance_rules,destination_blind,200,100,0,100,0,1.0,1.0,1.0,1.0,0.0,0.0
+v8_basic_security+ci_norm,destination_blind,200,100,0,100,0,1.0,1.0,1.0,1.0,0.0,0.0
+v9_context_aware+basic_rules,destination_blind,200,87,13,43,57,0.65,0.87,0.6042,0.7131,0.57,0.02
+v9_context_aware+provenance_rules,destination_blind,200,100,0,43,57,0.715,1.0,0.6369,0.7782,0.57,0.02
+v9_context_aware+ci_norm,destination_blind,200,100,0,43,57,0.715,1.0,0.6369,0.7782,0.57,0.02
