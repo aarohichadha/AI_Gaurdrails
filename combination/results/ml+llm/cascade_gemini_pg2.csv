@@ -1,0 +1,2 @@
+ml,strategy,judge,judge_model,judge_method,budget,escalated,routed_rate,judge_calls,judge_cached,judge_invalid,wall_seconds,guardrail,view,n,tp,fn,tn,fp,accuracy,attack_recall,precision,f1,false_positive_rate,escalation_rate,judged_only_accuracy,judged_only_n
+pg2_86m,margin,none,gemini-3.5-flash-lite,full_defense,0.0,0,0.0,0,0,0,0.0,pg2_86m+gemini@0.00,full,2880,0,2220,660,0,0.2292,0.0,0.0,0.0,0.0,0.0,,0

@@ -220,11 +220,11 @@ performance is real.
     )
 
 
-def save_results(runs) -> None:
+def save_results(runs, suffix: str = "") -> None:
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
     rows = [runs[view][name].metrics.as_dict() for view in VIEW_ORDER for name, _, _ in VARIANTS]
-    with (RESULTS_DIR / "comparison_metrics.csv").open("w", newline="", encoding="utf-8") as handle:
+    with (RESULTS_DIR / f"comparison_metrics{suffix}.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()))
         writer.writeheader()
         writer.writerows(rows)
@@ -244,7 +244,7 @@ def save_results(runs) -> None:
             for view in VIEW_ORDER
         },
     }
-    with (RESULTS_DIR / "comparison_results.json").open("w", encoding="utf-8") as handle:
+    with (RESULTS_DIR / f"comparison_results{suffix}.json").open("w", encoding="utf-8") as handle:
         json.dump(payload, handle, indent=2)
 
     print(f"\nwrote {RESULTS_DIR / 'comparison_metrics.csv'}")
@@ -263,7 +263,7 @@ def main(argv=None) -> None:
     print_disagreements(runs, "destination_blind")
     print_revise(runs)
     print_verdict()
-    save_results(runs)
+    save_results(runs, "_with_revise" if include_generated else "")
 
 
 if __name__ == "__main__":
