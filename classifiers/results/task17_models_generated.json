@@ -1,6 +1,6 @@
 {
   "dataset": "generated",
-  "csv": "C:\\Users\\ASUS\\Desktop\\AI_Gaurdrails\\classifiers\\results\\task17_generated_features.csv",
+  "csv": "C:\\Users\\niyat\\AI_Gaurdrails\\classifiers\\results\\task17_generated_features.csv",
   "rows": 3000,
   "features": 99,
   "dropped_oracle_features": false,
@@ -11,7 +11,7 @@
   },
   "models": {
     "random_forest": {
-      "train_seconds": 0.68,
+      "train_seconds": 2.09,
       "cv_macro_f1_mean": 0.8207,
       "cv_macro_f1_std": 0.0154,
       "test": {
@@ -131,115 +131,54 @@
             0.0212
           ]
         ],
-        "permutation": [
-          [
-            "n_body_external_addresses",
-            0.032
-          ],
-          [
-            "has_body_external_address",
-            0.02961
-          ],
-          [
-            "instruction_verb_count",
-            0.02372
-          ],
-          [
-            "has_body_freemail_address",
-            0.02205
-          ],
-          [
-            "sender_is_internal",
-            0.02107
-          ],
-          [
-            "instruction_density",
-            0.019
-          ],
-          [
-            "n_body_addresses",
-            0.01427
-          ],
-          [
-            "has_credential_path_link",
-            0.01295
-          ],
-          [
-            "reply_to_differs_from_sender",
-            0.01237
-          ],
-          [
-            "has_body_address",
-            0.01237
-          ],
-          [
-            "attachment_total_kb",
-            0.01212
-          ],
-          [
-            "subject_length",
-            0.01134
-          ],
-          [
-            "sender_domain_is_lookalike",
-            0.0105
-          ],
-          [
-            "body_line_count",
-            0.01029
-          ],
-          [
-            "uppercase_ratio",
-            0.00965
-          ]
-        ]
+        "permutation": []
       },
       "latency_batch1": {
         "samples": 200,
-        "mean_ms": 64.227,
-        "p50_ms": 66.699,
-        "p95_ms": 79.913
+        "mean_ms": 176.816,
+        "p50_ms": 174.92,
+        "p95_ms": 260.924
       }
     },
     "xgboost": {
-      "train_seconds": 2.89,
-      "cv_macro_f1_mean": 0.8493,
-      "cv_macro_f1_std": 0.0106,
+      "train_seconds": 1.75,
+      "cv_macro_f1_mean": 0.8504,
+      "cv_macro_f1_std": 0.0087,
       "test": {
         "n": 750,
-        "accuracy": 0.864,
-        "macro_f1": 0.8558588647706132,
-        "weighted_f1": 0.8629662433164997,
+        "accuracy": 0.856,
+        "macro_f1": 0.8464944939062676,
+        "weighted_f1": 0.8545717844895594,
         "per_class": {
           "SAFE": {
-            "precision": 0.8459,
-            "recall": 0.8961,
-            "f1": 0.8703,
+            "precision": 0.8403,
+            "recall": 0.8902,
+            "f1": 0.8646,
             "support": 337
           },
           "REVISE": {
-            "precision": 0.7907,
-            "recall": 0.7234,
-            "f1": 0.7556,
+            "precision": 0.7765,
+            "recall": 0.7021,
+            "f1": 0.7374,
             "support": 188
           },
           "ATTACK": {
-            "precision": 0.9502,
+            "precision": 0.9417,
             "recall": 0.9333,
-            "f1": 0.9417,
+            "f1": 0.9375,
             "support": 225
           }
         },
         "confusion_matrix": [
           [
-            302,
-            31,
+            300,
+            33,
             4
           ],
           [
-            45,
-            136,
-            7
+            47,
+            132,
+            9
           ],
           [
             10,
@@ -255,141 +194,80 @@
       },
       "attack_recall": 0.9555555555555556,
       "hard_vs_easy": {
-        "hard": 0.85,
-        "easy": 0.8690909090909091
+        "hard": 0.845,
+        "easy": 0.86
       },
       "stress_sets": {},
       "importances": {
         "impurity": [
           [
             "has_external_recipient",
-            0.11378
+            0.09766
           ],
           [
             "reply_to_domain_differs",
-            0.06705
+            0.088
+          ],
+          [
+            "n_recipient_domains",
+            0.04859
           ],
           [
             "n_external_recipients",
-            0.05944
-          ],
-          [
-            "has_body_external_address",
-            0.05269
-          ],
-          [
-            "n_body_external_addresses",
-            0.04779
+            0.04704
           ],
           [
             "sender_domain_is_lookalike",
-            0.04144
+            0.04197
           ],
           [
-            "suspicious_exfiltration_hits",
-            0.03364
-          ],
-          [
-            "n_external_links",
-            0.03346
-          ],
-          [
-            "suspicious_language_hits",
-            0.03196
-          ],
-          [
-            "has_external_link",
-            0.03186
-          ],
-          [
-            "has_credential_path_link",
-            0.03122
-          ],
-          [
-            "has_hidden_text",
-            0.02808
-          ],
-          [
-            "reply_to_differs_from_sender",
-            0.02686
+            "n_body_external_addresses",
+            0.04046
           ],
           [
             "has_suspicious_exfiltration",
-            0.0252
+            0.03806
           ],
           [
-            "has_sensitive_credential",
-            0.02314
+            "has_external_link",
+            0.03611
+          ],
+          [
+            "has_credential_path_link",
+            0.03378
+          ],
+          [
+            "external_recipient_ratio",
+            0.03286
+          ],
+          [
+            "has_body_external_address",
+            0.03098
+          ],
+          [
+            "suspicious_exfiltration_hits",
+            0.02901
+          ],
+          [
+            "n_external_links",
+            0.02827
+          ],
+          [
+            "has_hidden_text",
+            0.02427
+          ],
+          [
+            "has_suspicious_language",
+            0.02299
           ]
         ],
-        "permutation": [
-          [
-            "n_body_external_addresses",
-            0.13508
-          ],
-          [
-            "body_line_count",
-            0.07293
-          ],
-          [
-            "body_word_count",
-            0.06191
-          ],
-          [
-            "instruction_density",
-            0.03481
-          ],
-          [
-            "sender_is_trusted_domain",
-            0.03425
-          ],
-          [
-            "sensitive_credential_hits",
-            0.03121
-          ],
-          [
-            "instruction_verb_count",
-            0.02964
-          ],
-          [
-            "body_length",
-            0.02887
-          ],
-          [
-            "sender_is_internal",
-            0.02847
-          ],
-          [
-            "sender_is_freemail",
-            0.02581
-          ],
-          [
-            "n_body_addresses",
-            0.02523
-          ],
-          [
-            "reply_to_differs_from_sender",
-            0.01594
-          ],
-          [
-            "subject_length",
-            0.01436
-          ],
-          [
-            "has_body_freemail_address",
-            0.01423
-          ],
-          [
-            "authorization_claim_hits",
-            0.01397
-          ]
-        ]
+        "permutation": []
       },
       "latency_batch1": {
         "samples": 200,
-        "mean_ms": 0.983,
-        "p50_ms": 0.995,
-        "p95_ms": 1.374
+        "mean_ms": 1.577,
+        "p50_ms": 1.384,
+        "p95_ms": 2.927
       }
     }
   }

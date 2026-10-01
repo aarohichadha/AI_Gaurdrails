@@ -162,10 +162,111 @@ def cascade_rows() -> List[dict]:
     return out
 
 
+def _binary_accuracy(m: dict) -> Optional[float]:
+    total = m.get("tp", 0) + m.get("fn", 0) + m.get("fp", 0) + m.get("tn", 0)
+    return (m["tp"] + m["tn"]) / total if total else None
+
+
+def raw_email_300_rows() -> List[dict]:
+    """The second corpus: 300 raw .eml-style messages, 100 each of
+    SAFE/REVISE/ATTACK, no structured fields (no authorized-destination, no
+    case record). Every technique here that normally reads those fields was
+    re-implemented against a documented default policy instead of a literal
+    rerun - see classifiers/eval_raw_csv_*.py docstrings for exactly what was
+    assumed. Full report: results/raw_email_300_evaluation_report.pdf."""
+    out = []
+    results = ROOT / "classifiers" / "results"
+    dataset = "raw-email 300"
+
+    det = _load_json(results / "deterministic_raw_eval_email_guardrail_raw_email_3class_summary.json")
+    if det:
+        for name in ("basic", "provenance", "ci_norm"):
+            v = det.get("variants", {}).get(name, {})
+            tc, bm = v.get("three_class", {}), v.get("binary", {})
+            out.append(row(
+                "Deterministic, raw-email (10-12 adapted)", f"{name} [raw_email_300]",
+                dataset, det.get("n"), tc.get("accuracy"), bm.get("attack_recall"),
+                bm.get("false_positive_rate"), "3-class acc.; no destination field in this file",
+            ))
+
+    fm = _load_json(results / "feature_models_raw_eval_email_guardrail_raw_email_3class.json")
+    if fm:
+        for m in fm.get("models", []):
+            out.append(row(
+                "Feature ML (17), raw-email", f"{m['model']} [raw_email_300]",
+                dataset, fm.get("n"), m.get("accuracy"),
+                m.get("per_class", {}).get("ATTACK", {}).get("recall"), None,
+                f"macro-F1 {m.get('macro_f1', 0):.3f}; generated-corpus model, out-of-distribution",
+            ))
+
+    qwen = _load_json(results / "qwen_raw_eval_email_guardrail_raw_email_3class_summary.json")
+    if qwen:
+        bm = qwen.get("binary", {})
+        out.append(row(
+            "Qwen LoRA (18), raw-email", "Qwen2.5-0.5B-Instruct [raw_email_300]",
+            dataset, qwen.get("n"), _binary_accuracy(bm), bm.get("attack_recall"),
+            bm.get("false_positive_rate"), "binary vocab (no REVISE token)",
+        ))
+
+    pg2 = _load_json(results / "promptguard_pg2-86m_raw_eval_email_guardrail_raw_email_3class_summary.json")
+    if pg2:
+        m = pg2.get("metrics", {})
+        out.append(row(
+            "Prompt Guard (14-15), raw-email", "Llama-Prompt-Guard-2-86M [raw_email_300]",
+            dataset, pg2.get("n"), _binary_accuracy(m), m.get("attack_recall"),
+            m.get("false_positive_rate"), "zero-shot, untrusted text only; PG1 blocked (HF license)",
+        ))
+
+    agent = _load_json(results / "prompt_agent_v9_context_aware_raw_eval_email_guardrail_raw_email_3class_summary.json")
+    if agent:
+        tc, bm = agent.get("three_class", {}), agent.get("binary", {})
+        out.append(row(
+            "Prompt agent (7-9), raw-email", "v9_context_aware [raw_email_300]",
+            dataset, agent.get("n"), tc.get("accuracy"), bm.get("attack_recall"),
+            bm.get("false_positive_rate"), "default policy has no authorization fields -> blocks everything",
+        ))
+
+    gemini = _load_json(results / "gemini_raw_eval_email_guardrail_raw_email_3class_summary.json")
+    if gemini:
+        tc, bm = gemini.get("three_class", {}), gemini.get("binary", {})
+        out.append(row(
+            "LLM judge (19), raw-email", "gemini-3.5-flash-lite plain [raw_email_300]",
+            dataset, gemini.get("n"), tc.get("exact_match"), bm.get("attack_recall"),
+            bm.get("false_positive_rate"), "best single technique on this file",
+        ))
+
+    combos = _load_json(results / "combinations_raw_eval_email_guardrail_raw_email_3class.json")
+    if combos:
+        labels = {
+            "task23_prompt_or_deterministic": "23: agent v9 OR deterministic",
+            "task24_provenance_or_random_forest": "24: deterministic OR random forest",
+            "task24_provenance_or_promptguard2_86m": "24: deterministic OR prompt guard 2",
+            "task24_provenance_or_qwen_lora": "24: deterministic OR qwen lora",
+            "task25_ml_to_llm_on_disagreement": "25: RF -> Gemini (on disagreement)",
+            "task26_deterministic_to_llm_on_revise": "26: deterministic -> Gemini (on REVISE)",
+            "task27_full_cascade": "27: full cascade (det vote -> RF -> Gemini)",
+            "task28_parallel_vote": "28: parallel vote (det, RF, Gemini)",
+        }
+        for key, label in labels.items():
+            r = combos.get("results", {}).get(key, {})
+            if "three_class" not in r:
+                continue
+            tc, bm = r["three_class"], r["binary"]
+            note = f"escalated {r['escalation_rate']:.1%}" if "escalation_rate" in r else ""
+            out.append(row(
+                "Combinations (23-28), raw-email", f"{label} [raw_email_300]",
+                dataset, tc.get("n"), tc.get("accuracy"), bm.get("attack_recall"),
+                bm.get("false_positive_rate"), note,
+            ))
+
+    return out
+
+
 def build_table() -> str:
     groups = [
         deterministic_rows(), promptguard_rows(), feature_model_rows(),
         qwen_rows(), deterministic_ml_rows(), cascade_rows(),
+        raw_email_300_rows(),
     ]
     lines = [
         "| Technique | Variant | Data | n | Accuracy | Attack recall | FPR | Note |",

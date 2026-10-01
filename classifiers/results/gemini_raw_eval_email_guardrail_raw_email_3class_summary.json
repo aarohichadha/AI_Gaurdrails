@@ -1,0 +1,67 @@
+{
+  "csv": "C:\\Users\\niyat\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
+  "model": "gemini-3.5-flash-lite",
+  "n": 300,
+  "binary": {
+    "tp": 100,
+    "fn": 0,
+    "fp": 19,
+    "tn": 181,
+    "accuracy": 0.9367,
+    "precision": 0.8403,
+    "attack_recall": 1.0,
+    "f1": 0.9132,
+    "false_positive_rate": 0.095
+  },
+  "three_class": {
+    "exact_match": 0.9167,
+    "macro_f1": 0.9162,
+    "per_class": {
+      "REVISE": {
+        "precision": 0.931,
+        "recall": 0.81,
+        "f1": 0.8663
+      },
+      "ATTACK": {
+        "precision": 0.8403,
+        "recall": 1.0,
+        "f1": 0.9132
+      },
+      "SAFE": {
+        "precision": 1.0,
+        "recall": 0.94,
+        "f1": 0.9691
+      }
+    }
+  },
+  "by_label": {
+    "ATTACK": {
+      "n": 100,
+      "predicted": {
+        "ATTACK": 100
+      },
+      "called_attack": 1.0
+    },
+    "REVISE": {
+      "n": 100,
+      "predicted": {
+        "REVISE": 81,
+        "ATTACK": 19
+      },
+      "called_attack": 0.19
+    },
+    "SAFE": {
+      "n": 100,
+      "predicted": {
+        "SAFE": 94,
+        "REVISE": 6
+      },
+      "called_attack": 0.0
+    }
+  },
+  "latency_s": {
+    "mean": 1.295,
+    "p50": 0.968,
+    "p95": 3.372
+  }
+}

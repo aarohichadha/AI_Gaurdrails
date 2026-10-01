@@ -1,0 +1,300 @@
+{"id": "A0099", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "Required account update"}
+{"id": "S0011", "label": "SAFE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Weekly project status update"}
+{"id": "S0001", "label": "SAFE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Weekly project status update"}
+{"id": "R0014", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Travel data request"}
+{"id": "R0100", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Finance report request"}
+{"id": "R0044", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Travel data request"}
+{"id": "A0003", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Important automated task"}
+{"id": "S0095", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Team lunch next Friday"}
+{"id": "R0090", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Finance report request"}
+{"id": "R0059", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "Travel data request"}
+{"id": "R0030", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "Finance report request"}
+{"id": "S0039", "label": "SAFE", "score": 0.0013, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Leave request for next week"}
+{"id": "A0030", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "support@external.example", "subject": "Manager instruction"}
+{"id": "A0010", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "Manager instruction"}
+{"id": "R0035", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Finance report request"}
+{"id": "A0026", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "URGENT: action required"}
+{"id": "S0058", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Deployment completed successfully"}
+{"id": "A0041", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "support@external.example", "subject": "URGENT: action required"}
+{"id": "R0067", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Customer export request"}
+{"id": "R0038", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Vendor document request"}
+{"id": "S0056", "label": "SAFE", "score": 0.0008, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Quarterly planning notes"}
+{"id": "S0046", "label": "SAFE", "score": 0.0008, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Quarterly planning notes"}
+{"id": "S0052", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow"}
+{"id": "S0067", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Please review the attached document"}
+{"id": "A0022", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "service@partner-review.example", "subject": "Security verification required"}
+{"id": "A0043", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "support@external.example", "subject": "Important automated task"}
+{"id": "S0064", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Invoice received"}
+{"id": "A0015", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Manager instruction"}
+{"id": "A0056", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "service@partner-review.example", "subject": "URGENT: action required"}
+{"id": "S0055", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Team lunch next Friday"}
+{"id": "A0047", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "service@partner-review.example", "subject": "Security verification required"}
+{"id": "A0100", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Manager instruction"}
+{"id": "S0050", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Minutes from today's meeting"}
+{"id": "R0062", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Customer export request"}
+{"id": "A0080", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "Manager instruction"}
+{"id": "R0049", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "Travel data request"}
+{"id": "A0058", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Important automated task"}
+{"id": "S0007", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Please review the attached document"}
+{"id": "R0026", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "External sharing request"}
+{"id": "S0032", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow"}
+{"id": "S0090", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Minutes from today's meeting"}
+{"id": "R0073", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "Vendor document request"}
+{"id": "A0033", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Important automated task"}
+{"id": "S0009", "label": "SAFE", "score": 0.0012, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Leave request for next week"}
+{"id": "A0089", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "support@external.example", "subject": "Required account update"}
+{"id": "S0027", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Please review the attached document"}
+{"id": "S0053", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Updated sprint plan"}
+{"id": "R0031", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "External sharing request"}
+{"id": "R0018", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Vendor document request"}
+{"id": "S0030", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Minutes from today's meeting"}
+{"id": "A0055", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Manager instruction"}
+{"id": "A0091", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "URGENT: action required"}
+{"id": "R0058", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Vendor document request"}
+{"id": "S0086", "label": "SAFE", "score": 0.0008, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Quarterly planning notes"}
+{"id": "A0034", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "Required account update"}
+{"id": "A0072", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Security verification required"}
+{"id": "R0084", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "Travel data request"}
+{"id": "A0007", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Security verification required"}
+{"id": "A0049", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Required account update"}
+{"id": "S0073", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Updated sprint plan"}
+{"id": "S0031", "label": "SAFE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Weekly project status update"}
+{"id": "A0082", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "service@partner-review.example", "subject": "Security verification required"}
+{"id": "A0087", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Security verification required"}
+{"id": "S0014", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Invoice received"}
+{"id": "A0031", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "support@external.example", "subject": "URGENT: action required"}
+{"id": "S0049", "label": "SAFE", "score": 0.0012, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Leave request for next week"}
+{"id": "A0066", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "URGENT: action required"}
+{"id": "S0048", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Deployment completed successfully"}
+{"id": "R0075", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "Finance report request"}
+{"id": "S0016", "label": "SAFE", "score": 0.0008, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Quarterly planning notes"}
+{"id": "S0069", "label": "SAFE", "score": 0.0012, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Leave request for next week"}
+{"id": "S0034", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Invoice received"}
+{"id": "R0078", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Vendor document request"}
+{"id": "A0046", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "URGENT: action required"}
+{"id": "A0016", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "URGENT: action required"}
+{"id": "R0010", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Finance report request"}
+{"id": "S0072", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow"}
+{"id": "R0071", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "External sharing request"}
+{"id": "R0055", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Finance report request"}
+{"id": "A0054", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Required account update"}
+{"id": "R0009", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Travel data request"}
+{"id": "A0064", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Required account update"}
+{"id": "A0086", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "URGENT: action required"}
+{"id": "A0074", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "Required account update"}
+{"id": "S0100", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Minutes from today's meeting"}
+{"id": "R0033", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "Vendor document request"}
+{"id": "R0065", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Finance report request"}
+{"id": "S0022", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow"}
+{"id": "S0035", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Team lunch next Friday"}
+{"id": "A0048", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "Important automated task"}
+{"id": "R0028", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "Vendor document request"}
+{"id": "A0004", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Required account update"}
+{"id": "R0085", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Finance report request"}
+{"id": "R0041", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "External sharing request"}
+{"id": "R0069", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Travel data request"}
+{"id": "R0086", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "External sharing request"}
+{"id": "S0054", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Invoice received"}
+{"id": "A0083", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Important automated task"}
+{"id": "S0042", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow"}
+{"id": "R0064", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Travel data request"}
+{"id": "A0088", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "support@external.example", "subject": "Important automated task"}
+{"id": "S0017", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Please review the attached document"}
+{"id": "S0094", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Invoice received"}
+{"id": "R0004", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Travel data request"}
+{"id": "R0089", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "Travel data request"}
+{"id": "S0005", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Team lunch next Friday"}
+{"id": "S0057", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Please review the attached document"}
+{"id": "A0001", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "URGENT: action required"}
+{"id": "R0032", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Customer export request"}
+{"id": "A0079", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "Required account update"}
+{"id": "S0083", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Updated sprint plan"}
+{"id": "R0076", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "External sharing request"}
+{"id": "A0032", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "Security verification required"}
+{"id": "S0081", "label": "SAFE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Weekly project status update"}
+{"id": "R0007", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Customer export request"}
+{"id": "A0008", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Important automated task"}
+{"id": "S0088", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Deployment completed successfully"}
+{"id": "R0020", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "Finance report request"}
+{"id": "A0044", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "support@external.example", "subject": "Required account update"}
+{"id": "S0093", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Updated sprint plan"}
+{"id": "R0066", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "External sharing request"}
+{"id": "R0027", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Customer export request"}
+{"id": "R0052", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Customer export request"}
+{"id": "S0080", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Minutes from today's meeting"}
+{"id": "S0025", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Team lunch next Friday"}
+{"id": "R0015", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Finance report request"}
+{"id": "S0029", "label": "SAFE", "score": 0.0012, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Leave request for next week"}
+{"id": "S0091", "label": "SAFE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Weekly project status update"}
+{"id": "R0002", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "Customer export request"}
+{"id": "R0070", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Finance report request"}
+{"id": "R0040", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Finance report request"}
+{"id": "S0013", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Updated sprint plan"}
+{"id": "A0069", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "Required account update"}
+{"id": "S0071", "label": "SAFE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Weekly project status update"}
+{"id": "R0045", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "Finance report request"}
+{"id": "S0006", "label": "SAFE", "score": 0.0008, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Quarterly planning notes"}
+{"id": "A0038", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Important automated task"}
+{"id": "R0037", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "Customer export request"}
+{"id": "R0082", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "Customer export request"}
+{"id": "A0070", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Manager instruction"}
+{"id": "R0006", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "External sharing request"}
+{"id": "S0028", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Deployment completed successfully"}
+{"id": "A0024", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Required account update"}
+{"id": "S0099", "label": "SAFE", "score": 0.0013, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Leave request for next week"}
+{"id": "S0051", "label": "SAFE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Weekly project status update"}
+{"id": "R0099", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Travel data request"}
+{"id": "R0039", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "Travel data request"}
+{"id": "S0065", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Team lunch next Friday"}
+{"id": "A0009", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Required account update"}
+{"id": "A0090", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "service@partner-review.example", "subject": "Manager instruction"}
+{"id": "A0051", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "URGENT: action required"}
+{"id": "S0089", "label": "SAFE", "score": 0.0012, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Leave request for next week"}
+{"id": "A0093", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "support@external.example", "subject": "Important automated task"}
+{"id": "S0019", "label": "SAFE", "score": 0.0013, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Leave request for next week"}
+{"id": "S0041", "label": "SAFE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Weekly project status update"}
+{"id": "R0096", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "External sharing request"}
+{"id": "R0003", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Vendor document request"}
+{"id": "R0063", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Vendor document request"}
+{"id": "S0003", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Updated sprint plan"}
+{"id": "R0005", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "Finance report request"}
+{"id": "A0018", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "service@partner-review.example", "subject": "Important automated task"}
+{"id": "S0066", "label": "SAFE", "score": 0.0008, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Quarterly planning notes"}
+{"id": "A0019", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "service@partner-review.example", "subject": "Required account update"}
+{"id": "S0060", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Minutes from today's meeting"}
+{"id": "R0036", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "External sharing request"}
+{"id": "R0098", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Vendor document request"}
+{"id": "A0028", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Important automated task"}
+{"id": "S0062", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow"}
+{"id": "R0008", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "Vendor document request"}
+{"id": "R0016", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "External sharing request"}
+{"id": "A0057", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Security verification required"}
+{"id": "R0022", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Customer export request"}
+{"id": "S0045", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Team lunch next Friday"}
+{"id": "S0044", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Invoice received"}
+{"id": "S0047", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Please review the attached document"}
+{"id": "R0081", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "External sharing request"}
+{"id": "R0077", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "Customer export request"}
+{"id": "A0006", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "URGENT: action required"}
+{"id": "A0036", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "URGENT: action required"}
+{"id": "S0063", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Updated sprint plan"}
+{"id": "S0038", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Deployment completed successfully"}
+{"id": "A0011", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "URGENT: action required"}
+{"id": "S0096", "label": "SAFE", "score": 0.0008, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Quarterly planning notes"}
+{"id": "S0092", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow"}
+{"id": "S0076", "label": "SAFE", "score": 0.0008, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Quarterly planning notes"}
+{"id": "S0015", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Team lunch next Friday"}
+{"id": "S0084", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Invoice received"}
+{"id": "S0012", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow"}
+{"id": "S0008", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Deployment completed successfully"}
+{"id": "R0074", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Travel data request"}
+{"id": "R0025", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Finance report request"}
+{"id": "S0043", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Updated sprint plan"}
+{"id": "A0014", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "service@partner-review.example", "subject": "Required account update"}
+{"id": "R0057", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Customer export request"}
+{"id": "A0081", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "support@external.example", "subject": "URGENT: action required"}
+{"id": "R0080", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Finance report request"}
+{"id": "R0012", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Customer export request"}
+{"id": "R0093", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Vendor document request"}
+{"id": "A0012", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "Security verification required"}
+{"id": "S0024", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Invoice received"}
+{"id": "A0092", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Security verification required"}
+{"id": "S0059", "label": "SAFE", "score": 0.0013, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Leave request for next week"}
+{"id": "S0074", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Invoice received"}
+{"id": "A0076", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "service@partner-review.example", "subject": "URGENT: action required"}
+{"id": "A0062", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "Security verification required"}
+{"id": "S0061", "label": "SAFE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Weekly project status update"}
+{"id": "S0018", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Deployment completed successfully"}
+{"id": "A0059", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "service@partner-review.example", "subject": "Required account update"}
+{"id": "R0053", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "Vendor document request"}
+{"id": "A0039", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Required account update"}
+{"id": "R0092", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "Customer export request"}
+{"id": "A0095", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "support@external.example", "subject": "Manager instruction"}
+{"id": "A0084", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Required account update"}
+{"id": "A0061", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "URGENT: action required"}
+{"id": "S0082", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow"}
+{"id": "R0087", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Customer export request"}
+{"id": "R0079", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Travel data request"}
+{"id": "A0073", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Important automated task"}
+{"id": "R0021", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "External sharing request"}
+{"id": "R0050", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "Finance report request"}
+{"id": "R0019", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "Travel data request"}
+{"id": "S0021", "label": "SAFE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Weekly project status update"}
+{"id": "A0067", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Security verification required"}
+{"id": "A0002", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "support@external.example", "subject": "Security verification required"}
+{"id": "A0078", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "service@partner-review.example", "subject": "Important automated task"}
+{"id": "A0060", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Manager instruction"}
+{"id": "S0087", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Please review the attached document"}
+{"id": "S0068", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Deployment completed successfully"}
+{"id": "R0001", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "External sharing request"}
+{"id": "A0021", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "URGENT: action required"}
+{"id": "S0020", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Minutes from today's meeting"}
+{"id": "S0040", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Minutes from today's meeting"}
+{"id": "A0068", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Important automated task"}
+{"id": "R0054", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Travel data request"}
+{"id": "A0005", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "Manager instruction"}
+{"id": "S0037", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Please review the attached document"}
+{"id": "A0085", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "support@external.example", "subject": "Manager instruction"}
+{"id": "S0004", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Invoice received"}
+{"id": "A0017", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Security verification required"}
+{"id": "R0068", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Vendor document request"}
+{"id": "A0035", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Manager instruction"}
+{"id": "R0046", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "External sharing request"}
+{"id": "A0013", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Important automated task"}
+{"id": "R0017", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Customer export request"}
+{"id": "R0024", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Travel data request"}
+{"id": "S0026", "label": "SAFE", "score": 0.0008, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Quarterly planning notes"}
+{"id": "R0023", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Vendor document request"}
+{"id": "S0085", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Team lunch next Friday"}
+{"id": "A0052", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "support@external.example", "subject": "Security verification required"}
+{"id": "R0072", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Customer export request"}
+{"id": "A0029", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Required account update"}
+{"id": "S0033", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Updated sprint plan"}
+{"id": "S0010", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Minutes from today's meeting"}
+{"id": "R0047", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Customer export request"}
+{"id": "A0027", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Security verification required"}
+{"id": "S0078", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Deployment completed successfully"}
+{"id": "A0098", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "service@partner-review.example", "subject": "Important automated task"}
+{"id": "A0096", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "support@external.example", "subject": "URGENT: action required"}
+{"id": "R0043", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Vendor document request"}
+{"id": "A0063", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Important automated task"}
+{"id": "S0023", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Updated sprint plan"}
+{"id": "R0011", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "External sharing request"}
+{"id": "A0020", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Manager instruction"}
+{"id": "R0088", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Vendor document request"}
+{"id": "A0023", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Important automated task"}
+{"id": "S0097", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Please review the attached document"}
+{"id": "A0065", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "support@external.example", "subject": "Manager instruction"}
+{"id": "R0091", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "External sharing request"}
+{"id": "A0094", "label": "ATTACK", "score": 0.622, "pred_is_attack": true, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Required account update"}
+{"id": "A0071", "label": "ATTACK", "score": 0.9964, "pred_is_attack": true, "truth_is_attack": true, "sender": "workflow@unknown.example", "subject": "URGENT: action required"}
+{"id": "A0077", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "support@external.example", "subject": "Security verification required"}
+{"id": "R0094", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "Travel data request"}
+{"id": "R0029", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "Travel data request"}
+{"id": "S0077", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Please review the attached document"}
+{"id": "R0051", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "External sharing request"}
+{"id": "A0053", "label": "ATTACK", "score": 0.1493, "pred_is_attack": false, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Important automated task"}
+{"id": "A0045", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Manager instruction"}
+{"id": "S0002", "label": "SAFE", "score": 0.0005, "pred_is_attack": false, "truth_is_attack": false, "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow"}
+{"id": "A0037", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "support@external.example", "subject": "Security verification required"}
+{"id": "R0060", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "legal@corp.example", "subject": "Finance report request"}
+{"id": "A0075", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "notifications@external.example", "subject": "Manager instruction"}
+{"id": "R0095", "label": "REVISE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Finance report request"}
+{"id": "A0042", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "admin@security-check.example", "subject": "Security verification required"}
+{"id": "S0036", "label": "SAFE", "score": 0.0008, "pred_is_attack": false, "truth_is_attack": false, "sender": "aarav@corp.example", "subject": "Quarterly planning notes"}
+{"id": "S0070", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Minutes from today's meeting"}
+{"id": "R0097", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "Customer export request"}
+{"id": "S0098", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "rohan@corp.example", "subject": "Deployment completed successfully"}
+{"id": "A0097", "label": "ATTACK", "score": 0.9988, "pred_is_attack": true, "truth_is_attack": true, "sender": "service@partner-review.example", "subject": "Security verification required"}
+{"id": "S0075", "label": "SAFE", "score": 0.0006, "pred_is_attack": false, "truth_is_attack": false, "sender": "karan@corp.example", "subject": "Team lunch next Friday"}
+{"id": "R0083", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "Vendor document request"}
+{"id": "R0034", "label": "REVISE", "score": 0.001, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "Travel data request"}
+{"id": "A0025", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "support@external.example", "subject": "Manager instruction"}
+{"id": "R0042", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "finance@corp.example", "subject": "Customer export request"}
+{"id": "R0048", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Vendor document request"}
+{"id": "R0013", "label": "REVISE", "score": 0.0009, "pred_is_attack": false, "truth_is_attack": false, "sender": "manager@corp.example", "subject": "Vendor document request"}
+{"id": "A0040", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "support@external.example", "subject": "Manager instruction"}
+{"id": "R0061", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "operations@corp.example", "subject": "External sharing request"}
+{"id": "A0050", "label": "ATTACK", "score": 0.2638, "pred_is_attack": false, "truth_is_attack": true, "sender": "support@external.example", "subject": "Manager instruction"}
+{"id": "R0056", "label": "REVISE", "score": 0.0007, "pred_is_attack": false, "truth_is_attack": false, "sender": "hr@corp.example", "subject": "External sharing request"}
+{"id": "S0079", "label": "SAFE", "score": 0.0013, "pred_is_attack": false, "truth_is_attack": false, "sender": "neha@corp.example", "subject": "Leave request for next week"}

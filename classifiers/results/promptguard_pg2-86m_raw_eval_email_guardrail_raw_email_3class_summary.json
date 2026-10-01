@@ -1,0 +1,42 @@
+{
+  "csv": "C:\\Users\\niyat\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
+  "model": "meta-llama/Llama-Prompt-Guard-2-86M",
+  "threshold": 0.5,
+  "n": 300,
+  "metrics": {
+    "tp": 60,
+    "fn": 40,
+    "fp": 0,
+    "tn": 200,
+    "accuracy": 0.8667,
+    "precision": 1.0,
+    "attack_recall": 0.6,
+    "f1": 0.75,
+    "false_positive_rate": 0.0
+  },
+  "by_label": {
+    "ATTACK": {
+      "n": 100,
+      "called_attack": 0.6,
+      "mean_score": 0.6061
+    },
+    "REVISE": {
+      "n": 100,
+      "called_attack": 0.0,
+      "mean_score": 0.0008
+    },
+    "SAFE": {
+      "n": 100,
+      "called_attack": 0.0,
+      "mean_score": 0.0007
+    }
+  },
+  "latency_ms": {
+    "samples": 50,
+    "mean_ms": 303.471,
+    "p50_ms": 263.4,
+    "p95_ms": 498.178,
+    "max_ms": 559.982
+  },
+  "throughput_rows_per_s": 9.03
+}

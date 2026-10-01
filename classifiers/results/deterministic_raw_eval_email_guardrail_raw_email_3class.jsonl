@@ -1,0 +1,300 @@
+{"id": "A0099", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "Required account update", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0011", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Weekly project status update", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0001", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Weekly project status update", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0014", "label": "REVISE", "sender": "manager@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0100", "label": "REVISE", "sender": "hr@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0044", "label": "REVISE", "sender": "hr@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0003", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0095", "label": "SAFE", "sender": "karan@corp.example", "subject": "Team lunch next Friday", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0090", "label": "REVISE", "sender": "operations@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0059", "label": "REVISE", "sender": "legal@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0030", "label": "REVISE", "sender": "finance@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0039", "label": "SAFE", "sender": "neha@corp.example", "subject": "Leave request for next week", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0030", "label": "ATTACK", "sender": "support@external.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0010", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0035", "label": "REVISE", "sender": "manager@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0026", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0058", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Deployment completed successfully", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0041", "label": "ATTACK", "sender": "support@external.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0067", "label": "REVISE", "sender": "manager@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0038", "label": "REVISE", "sender": "operations@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0056", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Quarterly planning notes", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0046", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Quarterly planning notes", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0052", "label": "SAFE", "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0067", "label": "SAFE", "sender": "meera@corp.example", "subject": "Please review the attached document", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0022", "label": "ATTACK", "sender": "service@partner-review.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0043", "label": "ATTACK", "sender": "support@external.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0064", "label": "SAFE", "sender": "neha@corp.example", "subject": "Invoice received", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0015", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0056", "label": "ATTACK", "sender": "service@partner-review.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0055", "label": "SAFE", "sender": "karan@corp.example", "subject": "Team lunch next Friday", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0047", "label": "ATTACK", "sender": "service@partner-review.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0100", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0050", "label": "SAFE", "sender": "karan@corp.example", "subject": "Minutes from today's meeting", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0062", "label": "REVISE", "sender": "operations@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0080", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0049", "label": "REVISE", "sender": "legal@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0058", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0007", "label": "SAFE", "sender": "meera@corp.example", "subject": "Please review the attached document", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0026", "label": "REVISE", "sender": "legal@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0032", "label": "SAFE", "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0090", "label": "SAFE", "sender": "karan@corp.example", "subject": "Minutes from today's meeting", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0073", "label": "REVISE", "sender": "legal@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0033", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0009", "label": "SAFE", "sender": "neha@corp.example", "subject": "Leave request for next week", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0089", "label": "ATTACK", "sender": "support@external.example", "subject": "Required account update", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0027", "label": "SAFE", "sender": "meera@corp.example", "subject": "Please review the attached document", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0053", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Updated sprint plan", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0031", "label": "REVISE", "sender": "legal@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0018", "label": "REVISE", "sender": "operations@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0030", "label": "SAFE", "sender": "karan@corp.example", "subject": "Minutes from today's meeting", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0055", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0091", "label": "ATTACK", "sender": "notifications@external.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0058", "label": "REVISE", "sender": "operations@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0086", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Quarterly planning notes", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0034", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "Required account update", "basic": "REVISE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0072", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0084", "label": "REVISE", "sender": "legal@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0007", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0049", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Required account update", "basic": "REVISE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0073", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Updated sprint plan", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0031", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Weekly project status update", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0082", "label": "ATTACK", "sender": "service@partner-review.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0087", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0014", "label": "SAFE", "sender": "neha@corp.example", "subject": "Invoice received", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0031", "label": "ATTACK", "sender": "support@external.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0049", "label": "SAFE", "sender": "neha@corp.example", "subject": "Leave request for next week", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0066", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0048", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Deployment completed successfully", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0075", "label": "REVISE", "sender": "finance@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0016", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Quarterly planning notes", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0069", "label": "SAFE", "sender": "neha@corp.example", "subject": "Leave request for next week", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0034", "label": "SAFE", "sender": "neha@corp.example", "subject": "Invoice received", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0078", "label": "REVISE", "sender": "manager@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0046", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0016", "label": "ATTACK", "sender": "notifications@external.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0010", "label": "REVISE", "sender": "hr@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0072", "label": "SAFE", "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0071", "label": "REVISE", "sender": "finance@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0055", "label": "REVISE", "sender": "hr@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0054", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Required account update", "basic": "REVISE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0009", "label": "REVISE", "sender": "operations@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0064", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Required account update", "basic": "REVISE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0086", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0074", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "Required account update", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0100", "label": "SAFE", "sender": "karan@corp.example", "subject": "Minutes from today's meeting", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0033", "label": "REVISE", "sender": "legal@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0065", "label": "REVISE", "sender": "manager@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0022", "label": "SAFE", "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0035", "label": "SAFE", "sender": "karan@corp.example", "subject": "Team lunch next Friday", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0048", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0028", "label": "REVISE", "sender": "finance@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0004", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Required account update", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0085", "label": "REVISE", "sender": "operations@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0041", "label": "REVISE", "sender": "legal@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0069", "label": "REVISE", "sender": "hr@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0086", "label": "REVISE", "sender": "hr@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0054", "label": "SAFE", "sender": "neha@corp.example", "subject": "Invoice received", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0083", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0042", "label": "SAFE", "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0064", "label": "REVISE", "sender": "hr@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0088", "label": "ATTACK", "sender": "support@external.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0017", "label": "SAFE", "sender": "meera@corp.example", "subject": "Please review the attached document", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0094", "label": "SAFE", "sender": "neha@corp.example", "subject": "Invoice received", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0004", "label": "REVISE", "sender": "hr@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0089", "label": "REVISE", "sender": "finance@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0005", "label": "SAFE", "sender": "karan@corp.example", "subject": "Team lunch next Friday", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0057", "label": "SAFE", "sender": "meera@corp.example", "subject": "Please review the attached document", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0001", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0032", "label": "REVISE", "sender": "operations@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0079", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "Required account update", "basic": "REVISE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0083", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Updated sprint plan", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0076", "label": "REVISE", "sender": "hr@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0032", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0081", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Weekly project status update", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0007", "label": "REVISE", "sender": "manager@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0008", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0088", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Deployment completed successfully", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0020", "label": "REVISE", "sender": "finance@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0044", "label": "ATTACK", "sender": "support@external.example", "subject": "Required account update", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0093", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Updated sprint plan", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0066", "label": "REVISE", "sender": "operations@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0027", "label": "REVISE", "sender": "manager@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0052", "label": "REVISE", "sender": "hr@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0080", "label": "SAFE", "sender": "karan@corp.example", "subject": "Minutes from today's meeting", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0025", "label": "SAFE", "sender": "karan@corp.example", "subject": "Team lunch next Friday", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0015", "label": "REVISE", "sender": "operations@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0029", "label": "SAFE", "sender": "neha@corp.example", "subject": "Leave request for next week", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0091", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Weekly project status update", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0002", "label": "REVISE", "sender": "legal@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0070", "label": "REVISE", "sender": "hr@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0040", "label": "REVISE", "sender": "operations@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0013", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Updated sprint plan", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0069", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "Required account update", "basic": "REVISE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0071", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Weekly project status update", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0045", "label": "REVISE", "sender": "finance@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0006", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Quarterly planning notes", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0038", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0037", "label": "REVISE", "sender": "finance@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0082", "label": "REVISE", "sender": "legal@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0070", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0006", "label": "REVISE", "sender": "finance@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0028", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Deployment completed successfully", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0024", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Required account update", "basic": "REVISE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0099", "label": "SAFE", "sender": "neha@corp.example", "subject": "Leave request for next week", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0051", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Weekly project status update", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0099", "label": "REVISE", "sender": "manager@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0039", "label": "REVISE", "sender": "finance@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0065", "label": "SAFE", "sender": "karan@corp.example", "subject": "Team lunch next Friday", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0009", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Required account update", "basic": "REVISE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0090", "label": "ATTACK", "sender": "service@partner-review.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0051", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0089", "label": "SAFE", "sender": "neha@corp.example", "subject": "Leave request for next week", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0093", "label": "ATTACK", "sender": "support@external.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0019", "label": "SAFE", "sender": "neha@corp.example", "subject": "Leave request for next week", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0041", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Weekly project status update", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0096", "label": "REVISE", "sender": "legal@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0003", "label": "REVISE", "sender": "hr@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0063", "label": "REVISE", "sender": "hr@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0003", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Updated sprint plan", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0005", "label": "REVISE", "sender": "legal@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0018", "label": "ATTACK", "sender": "service@partner-review.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0066", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Quarterly planning notes", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0019", "label": "ATTACK", "sender": "service@partner-review.example", "subject": "Required account update", "basic": "REVISE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0060", "label": "SAFE", "sender": "karan@corp.example", "subject": "Minutes from today's meeting", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0036", "label": "REVISE", "sender": "manager@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0098", "label": "REVISE", "sender": "manager@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0028", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0062", "label": "SAFE", "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0008", "label": "REVISE", "sender": "finance@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0016", "label": "REVISE", "sender": "finance@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0057", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0022", "label": "REVISE", "sender": "hr@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0045", "label": "SAFE", "sender": "karan@corp.example", "subject": "Team lunch next Friday", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0044", "label": "SAFE", "sender": "neha@corp.example", "subject": "Invoice received", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0047", "label": "SAFE", "sender": "meera@corp.example", "subject": "Please review the attached document", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0081", "label": "REVISE", "sender": "finance@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0077", "label": "REVISE", "sender": "finance@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0006", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0036", "label": "ATTACK", "sender": "notifications@external.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0063", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Updated sprint plan", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0038", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Deployment completed successfully", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0011", "label": "ATTACK", "sender": "notifications@external.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0096", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Quarterly planning notes", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0092", "label": "SAFE", "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0076", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Quarterly planning notes", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0015", "label": "SAFE", "sender": "karan@corp.example", "subject": "Team lunch next Friday", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0084", "label": "SAFE", "sender": "neha@corp.example", "subject": "Invoice received", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0012", "label": "SAFE", "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0008", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Deployment completed successfully", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0074", "label": "REVISE", "sender": "hr@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0025", "label": "REVISE", "sender": "hr@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0043", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Updated sprint plan", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0014", "label": "ATTACK", "sender": "service@partner-review.example", "subject": "Required account update", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0057", "label": "REVISE", "sender": "manager@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0081", "label": "ATTACK", "sender": "support@external.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0080", "label": "REVISE", "sender": "manager@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0012", "label": "REVISE", "sender": "operations@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0093", "label": "REVISE", "sender": "manager@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0012", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0024", "label": "SAFE", "sender": "neha@corp.example", "subject": "Invoice received", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0092", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0059", "label": "SAFE", "sender": "neha@corp.example", "subject": "Leave request for next week", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0074", "label": "SAFE", "sender": "neha@corp.example", "subject": "Invoice received", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0076", "label": "ATTACK", "sender": "service@partner-review.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0062", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0061", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Weekly project status update", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0018", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Deployment completed successfully", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0059", "label": "ATTACK", "sender": "service@partner-review.example", "subject": "Required account update", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0053", "label": "REVISE", "sender": "legal@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0039", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Required account update", "basic": "REVISE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0092", "label": "REVISE", "sender": "legal@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0095", "label": "ATTACK", "sender": "support@external.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0084", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Required account update", "basic": "REVISE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0061", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0082", "label": "SAFE", "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0087", "label": "REVISE", "sender": "operations@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0079", "label": "REVISE", "sender": "operations@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0073", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0021", "label": "REVISE", "sender": "finance@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0050", "label": "REVISE", "sender": "legal@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0019", "label": "REVISE", "sender": "finance@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0021", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Weekly project status update", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0067", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0002", "label": "ATTACK", "sender": "support@external.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0078", "label": "ATTACK", "sender": "service@partner-review.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0060", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0087", "label": "SAFE", "sender": "meera@corp.example", "subject": "Please review the attached document", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0068", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Deployment completed successfully", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0001", "label": "REVISE", "sender": "legal@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0021", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0020", "label": "SAFE", "sender": "karan@corp.example", "subject": "Minutes from today's meeting", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0040", "label": "SAFE", "sender": "karan@corp.example", "subject": "Minutes from today's meeting", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0068", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0054", "label": "REVISE", "sender": "hr@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0005", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0037", "label": "SAFE", "sender": "meera@corp.example", "subject": "Please review the attached document", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0085", "label": "ATTACK", "sender": "support@external.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0004", "label": "SAFE", "sender": "neha@corp.example", "subject": "Invoice received", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0017", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0068", "label": "REVISE", "sender": "manager@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0035", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0046", "label": "REVISE", "sender": "operations@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0013", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0017", "label": "REVISE", "sender": "hr@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0024", "label": "REVISE", "sender": "hr@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0026", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Quarterly planning notes", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0023", "label": "REVISE", "sender": "hr@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0085", "label": "SAFE", "sender": "karan@corp.example", "subject": "Team lunch next Friday", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0052", "label": "ATTACK", "sender": "support@external.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0072", "label": "REVISE", "sender": "operations@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0029", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Required account update", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0033", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Updated sprint plan", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0010", "label": "SAFE", "sender": "karan@corp.example", "subject": "Minutes from today's meeting", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0047", "label": "REVISE", "sender": "manager@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0027", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0078", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Deployment completed successfully", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0098", "label": "ATTACK", "sender": "service@partner-review.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0096", "label": "ATTACK", "sender": "support@external.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0043", "label": "REVISE", "sender": "hr@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0063", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0023", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Updated sprint plan", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0011", "label": "REVISE", "sender": "finance@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0020", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0088", "label": "REVISE", "sender": "operations@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0023", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0097", "label": "SAFE", "sender": "meera@corp.example", "subject": "Please review the attached document", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0065", "label": "ATTACK", "sender": "support@external.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0091", "label": "REVISE", "sender": "finance@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0094", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Required account update", "basic": "REVISE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0071", "label": "ATTACK", "sender": "workflow@unknown.example", "subject": "URGENT: action required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0077", "label": "ATTACK", "sender": "support@external.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0094", "label": "REVISE", "sender": "finance@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0029", "label": "REVISE", "sender": "legal@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0077", "label": "SAFE", "sender": "meera@corp.example", "subject": "Please review the attached document", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0051", "label": "REVISE", "sender": "hr@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0053", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Important automated task", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "A0045", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0002", "label": "SAFE", "sender": "meera@corp.example", "subject": "Meeting agenda for tomorrow", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0037", "label": "ATTACK", "sender": "support@external.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0060", "label": "REVISE", "sender": "legal@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0075", "label": "ATTACK", "sender": "notifications@external.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0095", "label": "REVISE", "sender": "operations@corp.example", "subject": "Finance report request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0042", "label": "ATTACK", "sender": "admin@security-check.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0036", "label": "SAFE", "sender": "aarav@corp.example", "subject": "Quarterly planning notes", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "S0070", "label": "SAFE", "sender": "karan@corp.example", "subject": "Minutes from today's meeting", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0097", "label": "REVISE", "sender": "operations@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0098", "label": "SAFE", "sender": "rohan@corp.example", "subject": "Deployment completed successfully", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "A0097", "label": "ATTACK", "sender": "service@partner-review.example", "subject": "Security verification required", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "S0075", "label": "SAFE", "sender": "karan@corp.example", "subject": "Team lunch next Friday", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}
+{"id": "R0083", "label": "REVISE", "sender": "finance@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0034", "label": "REVISE", "sender": "hr@corp.example", "subject": "Travel data request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0025", "label": "ATTACK", "sender": "support@external.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0042", "label": "REVISE", "sender": "finance@corp.example", "subject": "Customer export request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0048", "label": "REVISE", "sender": "manager@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "R0013", "label": "REVISE", "sender": "manager@corp.example", "subject": "Vendor document request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0040", "label": "ATTACK", "sender": "support@external.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0061", "label": "REVISE", "sender": "operations@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "A0050", "label": "ATTACK", "sender": "support@external.example", "subject": "Manager instruction", "basic": "REVISE", "provenance": "ATTACK", "ci_norm": "ATTACK"}
+{"id": "R0056", "label": "REVISE", "sender": "hr@corp.example", "subject": "External sharing request", "basic": "SAFE", "provenance": "REVISE", "ci_norm": "ATTACK"}
+{"id": "S0079", "label": "SAFE", "sender": "neha@corp.example", "subject": "Leave request for next week", "basic": "SAFE", "provenance": "SAFE", "ci_norm": "SAFE"}

@@ -1,12 +1,12 @@
 {
-  "csv": "C:\\Users\\ASUS\\Desktop\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
+  "csv": "C:\\Users\\niyat\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
   "n": 300,
   "labels": {
     "ATTACK": 100,
     "SAFE": 100,
     "REVISE": 100
   },
-  "feature_extraction_rows_per_second": 55.4,
+  "feature_extraction_rows_per_second": 189.1,
   "models": [
     {
       "model": "task17_generated_random_forest",
@@ -55,7 +55,56 @@
         ]
       ],
       "attack_containment": 1.0,
-      "rows_per_second": 793.6
+      "rows_per_second": 799.2
+    },
+    {
+      "model": "task17_generated_xgboost",
+      "accuracy": 0.6167,
+      "macro_f1": 0.5214,
+      "per_class": {
+        "SAFE": {
+          "precision": 1.0,
+          "recall": 0.85,
+          "f1-score": 0.9189,
+          "support": 100.0
+        },
+        "REVISE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 100.0
+        },
+        "ATTACK": {
+          "precision": 0.4762,
+          "recall": 1.0,
+          "f1-score": 0.6452,
+          "support": 100.0
+        }
+      },
+      "labels": [
+        "SAFE",
+        "REVISE",
+        "ATTACK"
+      ],
+      "confusion_matrix": [
+        [
+          85,
+          5,
+          10
+        ],
+        [
+          0,
+          0,
+          100
+        ],
+        [
+          0,
+          0,
+          100
+        ]
+      ],
+      "attack_containment": 1.0,
+      "rows_per_second": 31026.0
     }
   ]
 }

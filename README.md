@@ -1,7 +1,9 @@
 # AI Guardrails — email agent security
 
 Guardrail techniques evaluated against a 7,200-record corpus of benign and
-attacking instructions aimed at an email agent.
+attacking instructions aimed at an email agent, plus a second, harder
+300-record corpus of raw `.eml`-style messages with no structured fields
+(see [Raw-email dataset](#raw-email-dataset-300-rows) below).
 
 ## Layout
 
@@ -73,6 +75,39 @@ techniques can be compared on their reasoning instead. See
 
 Prompt Guard 1 and 2 are both Hugging Face-gated models. The repository includes the Task 14 scaffold and the Task 15 baseline, but a valid HF token is required before the real model run can execute.
 
+## Raw-email dataset (300 rows)
+
+`data/email_guardrail_raw_email_3class.csv` — 300 full raw email messages,
+100 each of SAFE / REVISE / ATTACK, with only an `id`, the raw message, and
+the label. No authorized-destination field, no case record, no sensitivity
+tier — a harder, more realistic surface than the structured 7,200-row
+corpus, and a test of whether each technique's actual reasoning (not the
+destination oracle) carries over.
+
+Every technique that normally decides over those structured fields
+(deterministic rules, the prompt-defense agent) was re-implemented against a
+documented default policy instead of literally rerun — see the module
+docstrings in `classifiers/eval_raw_csv_deterministic.py` and
+`classifiers/eval_raw_csv_prompt_agent.py` for exactly what was assumed.
+
+```bash
+python classifiers/eval_raw_csv_deterministic.py
+python classifiers/eval_raw_csv_models.py
+python classifiers/eval_raw_csv_promptguard.py          # needs HF_TOKEN
+python classifiers/qwen/qwen_eval_raw_csv.py
+python classifiers/eval_raw_csv_gemini.py                # needs GEMINI_API_KEY
+python classifiers/eval_raw_csv_prompt_agent.py           # local Ollama, one call/row
+python classifiers/eval_raw_csv_combinations.py            # joins everything above
+python classifiers/generate_raw_eval_report.py              # results/raw_email_300_evaluation_report.pdf
+```
+
+Full write-up, including what was *not* run (Prompt Guard 1 — blocked on an
+unaccepted gated-repo license; the structured/4-way/revision-loop judge
+variants — not yet built) and why the v9 prompt agent blocks nearly
+everything on this file: **[results/raw_email_300_evaluation_report.pdf](results/raw_email_300_evaluation_report.pdf)**.
+Headline numbers are in the Overall metrics table below, rows marked
+`raw_email_300`.
+
 <!-- OVERALL-METRICS:START -->
 ## Overall metrics
 
@@ -105,7 +140,7 @@ the held-out stress sheets.
 | Feature ML (17) | `random_forest [corpus_no_oracle]` | 7,200 rows | 480 | 1.000 | 1.000 | 0.000 | macro-F1 1.000 |
 | Feature ML (17) | `xgboost [corpus_no_oracle]` | 7,200 rows | 480 | 1.000 | 1.000 | 0.000 | macro-F1 1.000 |
 | Feature ML (17) | `random_forest [generated]` | 3,000 rows | 750 | 0.852 | 0.951 | 0.092 | macro-F1 0.842 |
-| Feature ML (17) | `xgboost [generated]` | 3,000 rows | 750 | 0.864 | 0.956 | 0.104 | macro-F1 0.856 |
+| Feature ML (17) | `xgboost [generated]` | 3,000 rows | 750 | 0.856 | 0.956 | 0.110 | macro-F1 0.846 |
 | Feature ML (17) | `random_forest [generated_no_oracle]` | 3,000 rows | 750 | 0.812 | 0.924 | 0.142 | macro-F1 0.803 |
 | Feature ML (17) | `xgboost [generated_no_oracle]` | 3,000 rows | 750 | 0.827 | 0.933 | 0.145 | macro-F1 0.819 |
 | Feature ML (17) | `random_forest [training_set_with_revise]` | 10,200 rows | 780 | 0.921 | 0.983 | 0.122 | macro-F1 0.846 |
@@ -127,6 +162,23 @@ the held-out stress sheets.
 | ML + LLM cascade (25) | `rf -> oracle @ 10%` | held-out 2,880 | 2880 | 1.000 | 1.000 | 0.000 | escalated 10.0% |
 | ML + LLM cascade (25) | `pg2_86m -> oracle @ 5%` | held-out 2,880 | 2880 | 0.279 | 0.065 | 0.000 | escalated 5.0% |
 | ML + LLM cascade (25) | `pg2_86m -> oracle @ 10%` | held-out 2,880 | 2880 | 0.329 | 0.130 | 0.000 | escalated 10.0% |
+| Deterministic, raw-email (10-12 adapted) | `basic [raw_email_300]` | raw-email 300 | 300 | 0.333 | 0.000 | 0.000 | 3-class acc.; no destination field in this file |
+| Deterministic, raw-email (10-12 adapted) | `provenance [raw_email_300]` | raw-email 300 | 300 | 0.960 | 0.880 | 0.000 | 3-class acc.; no destination field in this file |
+| Deterministic, raw-email (10-12 adapted) | `ci_norm [raw_email_300]` | raw-email 300 | 300 | 0.667 | 1.000 | 0.500 | 3-class acc.; no destination field in this file |
+| Feature ML (17), raw-email | `task17_generated_random_forest [raw_email_300]` | raw-email 300 | 300 | 0.650 | 1.000 | n/a | macro-F1 0.543; generated-corpus model, out-of-distribution |
+| Feature ML (17), raw-email | `task17_generated_xgboost [raw_email_300]` | raw-email 300 | 300 | 0.617 | 1.000 | n/a | macro-F1 0.521; generated-corpus model, out-of-distribution |
+| Qwen LoRA (18), raw-email | `Qwen2.5-0.5B-Instruct [raw_email_300]` | raw-email 300 | 300 | 0.667 | 1.000 | 0.500 | binary vocab (no REVISE token) |
+| Prompt Guard (14-15), raw-email | `Llama-Prompt-Guard-2-86M [raw_email_300]` | raw-email 300 | 300 | 0.867 | 0.600 | 0.000 | zero-shot, untrusted text only; PG1 blocked (HF license) |
+| Prompt agent (7-9), raw-email | `v9_context_aware [raw_email_300]` | raw-email 300 | 300 | 0.333 | 1.000 | 1.000 | default policy has no authorization fields -> blocks everything |
+| LLM judge (19), raw-email | `gemini-3.5-flash-lite plain [raw_email_300]` | raw-email 300 | 300 | 0.917 | 1.000 | 0.095 | best single technique on this file |
+| Combinations (23-28), raw-email | `23: agent v9 OR deterministic [raw_email_300]` | raw-email 300 | 300 | 0.333 | 1.000 | 1.000 |  |
+| Combinations (23-28), raw-email | `24: deterministic OR random forest [raw_email_300]` | raw-email 300 | 300 | 0.650 | 1.000 | 0.525 |  |
+| Combinations (23-28), raw-email | `24: deterministic OR prompt guard 2 [raw_email_300]` | raw-email 300 | 300 | 1.000 | 1.000 | 0.000 |  |
+| Combinations (23-28), raw-email | `24: deterministic OR qwen lora [raw_email_300]` | raw-email 300 | 300 | 0.667 | 1.000 | 0.500 |  |
+| Combinations (23-28), raw-email | `25: RF -> Gemini (on disagreement) [raw_email_300]` | raw-email 300 | 300 | 0.937 | 1.000 | 0.095 | escalated 39.0% |
+| Combinations (23-28), raw-email | `26: deterministic -> Gemini (on REVISE) [raw_email_300]` | raw-email 300 | 300 | 0.937 | 1.000 | 0.095 | escalated 37.3% |
+| Combinations (23-28), raw-email | `27: full cascade (det vote -> RF -> Gemini) [raw_email_300]` | raw-email 300 | 300 | 0.747 | 1.000 | 0.380 |  |
+| Combinations (23-28), raw-email | `28: parallel vote (det, RF, Gemini) [raw_email_300]` | raw-email 300 | 300 | 0.937 | 1.000 | 0.095 |  |
 
 Attack recall counts FLAG as a catch: escalating to a human is a safe
 outcome, not a miss.

@@ -1,0 +1,139 @@
+{
+  "csv": "C:\\Users\\niyat\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
+  "n": 300,
+  "variants": {
+    "basic": {
+      "three_class": {
+        "accuracy": 0.3333,
+        "macro_f1": 0.2222,
+        "per_class": {
+          "SAFE": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          },
+          "REVISE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "ATTACK": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "confusion": {
+          "SAFE": {
+            "SAFE": 100
+          },
+          "REVISE": {
+            "SAFE": 100
+          },
+          "ATTACK": {
+            "REVISE": 100
+          }
+        }
+      },
+      "binary": {
+        "tp": 0,
+        "fn": 100,
+        "fp": 0,
+        "tn": 200,
+        "attack_recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0
+      }
+    },
+    "provenance": {
+      "three_class": {
+        "accuracy": 0.96,
+        "macro_f1": 0.9599,
+        "per_class": {
+          "SAFE": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REVISE": {
+            "precision": 0.8929,
+            "recall": 1.0,
+            "f1": 0.9434
+          },
+          "ATTACK": {
+            "precision": 1.0,
+            "recall": 0.88,
+            "f1": 0.9362
+          }
+        },
+        "confusion": {
+          "SAFE": {
+            "SAFE": 100
+          },
+          "REVISE": {
+            "REVISE": 100
+          },
+          "ATTACK": {
+            "ATTACK": 88,
+            "REVISE": 12
+          }
+        }
+      },
+      "binary": {
+        "tp": 88,
+        "fn": 12,
+        "fp": 0,
+        "tn": 200,
+        "attack_recall": 0.88,
+        "precision": 1.0,
+        "f1": 0.9362,
+        "false_positive_rate": 0.0
+      }
+    },
+    "ci_norm": {
+      "three_class": {
+        "accuracy": 0.6667,
+        "macro_f1": 0.5556,
+        "per_class": {
+          "SAFE": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REVISE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "ATTACK": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          }
+        },
+        "confusion": {
+          "SAFE": {
+            "SAFE": 100
+          },
+          "REVISE": {
+            "ATTACK": 100
+          },
+          "ATTACK": {
+            "ATTACK": 100
+          }
+        }
+      },
+      "binary": {
+        "tp": 100,
+        "fn": 0,
+        "fp": 100,
+        "tn": 100,
+        "attack_recall": 1.0,
+        "precision": 0.5,
+        "f1": 0.6667,
+        "false_positive_rate": 0.5
+      }
+    }
+  }
+}

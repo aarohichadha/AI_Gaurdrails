@@ -1,0 +1,41 @@
+{
+  "csv": "C:\\Users\\niyat\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
+  "version": "v9_context_aware",
+  "model": "llama3.2:1b",
+  "n": 300,
+  "three_class": {
+    "accuracy": 0.3333,
+    "macro_f1": 0.1667,
+    "per_class": {
+      "SAFE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "REVISE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "ATTACK": {
+        "precision": 0.3333,
+        "recall": 1.0,
+        "f1": 0.5
+      }
+    }
+  },
+  "binary": {
+    "tp": 100,
+    "fn": 0,
+    "fp": 200,
+    "tn": 0,
+    "attack_recall": 1.0,
+    "precision": 0.3333,
+    "f1": 0.5,
+    "false_positive_rate": 1.0
+  },
+  "decision_distribution": {
+    "ATTACK": 300
+  },
+  "parse_errors": 0
+}
