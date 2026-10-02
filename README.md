@@ -75,7 +75,8 @@ techniques can be compared on their reasoning instead. See
 
 Prompt Guard 1 and 2 are both Hugging Face-gated models. The repository includes the Task 14 scaffold and the Task 15 baseline, but a valid HF token is required before the real model run can execute.
 
-## Raw-email dataset (300 rows)
+
+The LLM judge evaluates **all six methods on every record** (1,800 decisions). Gemini is the model; plain, delimited, sanitized, datamarked, provenance and full_defense are input methods. See [the complete technique table](results/individual_guardrail_techniques.md), [method definitions and results](llm_judge/results/raw_email_300/REPORT.md), and [all per-record judge predictions](llm_judge/results/raw_email_300/records.csv). The new evaluation uses uniform batches of 20 emails within each method; earlier isolated plain and combination scores are preserved separately.
 
 `data/email_guardrail_raw_email_3class.csv` — 300 full raw email messages,
 100 each of SAFE / REVISE / ATTACK, with only an `id`, the raw message, and
@@ -170,7 +171,12 @@ the held-out stress sheets.
 | Qwen LoRA (18), raw-email | `Qwen2.5-0.5B-Instruct [raw_email_300]` | raw-email 300 | 300 | 0.667 | 1.000 | 0.500 | binary vocab (no REVISE token) |
 | Prompt Guard (14-15), raw-email | `Llama-Prompt-Guard-2-86M [raw_email_300]` | raw-email 300 | 300 | 0.867 | 0.600 | 0.000 | zero-shot, untrusted text only; PG1 blocked (HF license) |
 | Prompt agent (7-9), raw-email | `v9_context_aware [raw_email_300]` | raw-email 300 | 300 | 0.333 | 1.000 | 1.000 | default policy has no authorization fields -> blocks everything |
-| LLM judge (19), raw-email | `gemini-3.5-flash-lite plain [raw_email_300]` | raw-email 300 | 300 | 0.917 | 1.000 | 0.095 | best single technique on this file |
+| LLM judge (19-22), raw-email | `gemini-3.5-flash-lite plain [raw_email_300]` | raw-email 300 | 300 | 1.000 | 1.000 | 0.000 | 3-class acc.; batch size 20; 300/300 successful |
+| LLM judge (19-22), raw-email | `gemini-3.5-flash-lite delimited [raw_email_300]` | raw-email 300 | 300 | 1.000 | 1.000 | 0.000 | 3-class acc.; batch size 20; 300/300 successful |
+| LLM judge (19-22), raw-email | `gemini-3.5-flash-lite sanitized [raw_email_300]` | raw-email 300 | 300 | 0.970 | 1.000 | 0.000 | 3-class acc.; batch size 20; 300/300 successful |
+| LLM judge (19-22), raw-email | `gemini-3.5-flash-lite datamarked [raw_email_300]` | raw-email 300 | 300 | 0.970 | 1.000 | 0.000 | 3-class acc.; batch size 20; 300/300 successful |
+| LLM judge (19-22), raw-email | `gemini-3.5-flash-lite provenance [raw_email_300]` | raw-email 300 | 300 | 0.963 | 1.000 | 0.010 | 3-class acc.; batch size 20; 300/300 successful |
+| LLM judge (19-22), raw-email | `gemini-3.5-flash-lite full_defense [raw_email_300]` | raw-email 300 | 300 | 1.000 | 1.000 | 0.000 | 3-class acc.; batch size 20; 300/300 successful |
 | Combinations (23-28), raw-email | `23: agent v9 OR deterministic [raw_email_300]` | raw-email 300 | 300 | 0.333 | 1.000 | 1.000 |  |
 | Combinations (23-28), raw-email | `24: deterministic OR random forest [raw_email_300]` | raw-email 300 | 300 | 0.650 | 1.000 | 0.525 |  |
 | Combinations (23-28), raw-email | `24: deterministic OR prompt guard 2 [raw_email_300]` | raw-email 300 | 300 | 1.000 | 1.000 | 0.000 |  |
