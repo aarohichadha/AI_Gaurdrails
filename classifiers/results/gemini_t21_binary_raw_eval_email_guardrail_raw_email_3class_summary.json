@@ -1,0 +1,46 @@
+{
+  "csv": "C:\\Users\\ASUS\\Desktop\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
+  "model": "gemini-3.5-flash-lite",
+  "task": "t21_binary",
+  "n": 300,
+  "three_class": {
+    "accuracy": 0.6633,
+    "macro_f1": 0.5322,
+    "per_class": {
+      "SAFE": {
+        "precision": 0.7279,
+        "recall": 0.99,
+        "f1": 0.839
+      },
+      "REVISE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "ATTACK": {
+        "precision": 0.6098,
+        "recall": 1.0,
+        "f1": 0.7576
+      }
+    }
+  },
+  "binary": {
+    "tp": 100,
+    "fn": 0,
+    "fp": 64,
+    "tn": 136,
+    "accuracy": 0.7867,
+    "precision": 0.6098,
+    "attack_recall": 1.0,
+    "f1": 0.7576,
+    "false_positive_rate": 0.32
+  },
+  "decision_distribution": {
+    "BLOCK": 164,
+    "ALLOW": 136
+  },
+  "latency_s": {
+    "mean": 1.34,
+    "p50": 1.041
+  }
+}

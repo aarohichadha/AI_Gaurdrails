@@ -1,0 +1,168 @@
+{
+  "csv": "C:\\Users\\ASUS\\Desktop\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
+  "model": "gemini-3.5-flash-lite",
+  "task": "t22_revision",
+  "n": 300,
+  "three_class": {
+    "accuracy": 0.5367,
+    "macro_f1": 0.4368,
+    "per_class": {
+      "SAFE": {
+        "precision": 0.7279,
+        "recall": 0.99,
+        "f1": 0.839
+      },
+      "REVISE": {
+        "precision": 0.3804,
+        "recall": 0.62,
+        "f1": 0.4715
+      },
+      "ATTACK": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    }
+  },
+  "binary": {
+    "tp": 0,
+    "fn": 100,
+    "fp": 1,
+    "tn": 199,
+    "accuracy": 0.6633,
+    "precision": 0.0,
+    "attack_recall": 0.0,
+    "f1": 0.0,
+    "false_positive_rate": 0.005
+  },
+  "decision_distribution": {
+    "ALLOW": 163,
+    "null": 136,
+    "BLOCK": 1
+  },
+  "k0": {
+    "n": 300,
+    "three_class": {
+      "accuracy": 0.6633,
+      "macro_f1": 0.5322,
+      "per_class": {
+        "SAFE": {
+          "precision": 0.7279,
+          "recall": 0.99,
+          "f1": 0.839
+        },
+        "REVISE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "ATTACK": {
+          "precision": 0.6098,
+          "recall": 1.0,
+          "f1": 0.7576
+        }
+      }
+    },
+    "binary": {
+      "tp": 100,
+      "fn": 0,
+      "fp": 64,
+      "tn": 136,
+      "accuracy": 0.7867,
+      "precision": 0.6098,
+      "attack_recall": 1.0,
+      "f1": 0.7576,
+      "false_positive_rate": 0.32
+    }
+  },
+  "k1": {
+    "n": 300,
+    "three_class": {
+      "accuracy": 0.5367,
+      "macro_f1": 0.4368,
+      "per_class": {
+        "SAFE": {
+          "precision": 0.7279,
+          "recall": 0.99,
+          "f1": 0.839
+        },
+        "REVISE": {
+          "precision": 0.3804,
+          "recall": 0.62,
+          "f1": 0.4715
+        },
+        "ATTACK": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "binary": {
+      "tp": 0,
+      "fn": 100,
+      "fp": 1,
+      "tn": 199,
+      "accuracy": 0.6633,
+      "precision": 0.0,
+      "attack_recall": 0.0,
+      "f1": 0.0,
+      "false_positive_rate": 0.005
+    }
+  },
+  "revision_outcomes": {
+    "SAFE": {
+      "ALLOW->None": 99,
+      "BLOCK->ALLOW": 1
+    },
+    "REVISE": {
+      "BLOCK->ALLOW": 62,
+      "ALLOW->None": 37,
+      "BLOCK->BLOCK": 1
+    },
+    "ATTACK": {
+      "BLOCK->ALLOW": 100
+    }
+  },
+  "k1_outcome_based": {
+    "n": 300,
+    "three_class": {
+      "accuracy": 0.7267,
+      "macro_f1": 0.7182,
+      "per_class": {
+        "SAFE": {
+          "precision": 0.7279,
+          "recall": 0.99,
+          "f1": 0.839
+        },
+        "REVISE": {
+          "precision": 0.6,
+          "recall": 0.54,
+          "f1": 0.5684
+        },
+        "ATTACK": {
+          "precision": 0.8784,
+          "recall": 0.65,
+          "f1": 0.7471
+        }
+      }
+    },
+    "binary": {
+      "tp": 65,
+      "fn": 35,
+      "fp": 9,
+      "tn": 191,
+      "accuracy": 0.8533,
+      "precision": 0.8784,
+      "attack_recall": 0.65,
+      "f1": 0.7471,
+      "false_positive_rate": 0.045
+    }
+  },
+  "k1_outcome_note": "allowed revisions re-read by what they do: warn/block/no action -> ATTACK, confirm/verify -> REVISE (see revision_outcome)",
+  "agent_model": "llama3.2:1b",
+  "latency_s": {
+    "mean": 3.4,
+    "p50": 1.252
+  }
+}

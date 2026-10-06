@@ -1,0 +1,83 @@
+{
+  "csv": "C:\\Users\\ASUS\\Desktop\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
+  "model": "gemini-3.5-flash-lite",
+  "task": "t20_triad",
+  "n": 300,
+  "three_class": {
+    "accuracy": 0.5367,
+    "macro_f1": 0.4582,
+    "per_class": {
+      "SAFE": {
+        "precision": 0.6525,
+        "recall": 0.77,
+        "f1": 0.7064
+      },
+      "REVISE": {
+        "precision": 0.15,
+        "recall": 0.03,
+        "f1": 0.05
+      },
+      "ATTACK": {
+        "precision": 0.5,
+        "recall": 0.81,
+        "f1": 0.6183
+      }
+    }
+  },
+  "binary": {
+    "tp": 81,
+    "fn": 19,
+    "fp": 81,
+    "tn": 119,
+    "accuracy": 0.6667,
+    "precision": 0.5,
+    "attack_recall": 0.81,
+    "f1": 0.6183,
+    "false_positive_rate": 0.405
+  },
+  "decision_distribution": {
+    "REFUSE": 162,
+    "PROCEED": 118,
+    "UPDATE": 20
+  },
+  "outcome_based": {
+    "n": 300,
+    "three_class": {
+      "accuracy": 0.6033,
+      "macro_f1": 0.5328,
+      "per_class": {
+        "SAFE": {
+          "precision": 1.0,
+          "recall": 0.77,
+          "f1": 0.8701
+        },
+        "REVISE": {
+          "precision": 0.1905,
+          "recall": 0.04,
+          "f1": 0.0661
+        },
+        "ATTACK": {
+          "precision": 0.495,
+          "recall": 1.0,
+          "f1": 0.6623
+        }
+      }
+    },
+    "binary": {
+      "tp": 100,
+      "fn": 0,
+      "fp": 102,
+      "tn": 98,
+      "accuracy": 0.66,
+      "precision": 0.495,
+      "attack_recall": 1.0,
+      "f1": 0.6623,
+      "false_positive_rate": 0.51
+    }
+  },
+  "outcome_note": "PROCEED re-read as the v7 agent's own handling (ALLOW->SAFE, FLAG->REVISE, BLOCK->ATTACK) - see triad_outcome",
+  "latency_s": {
+    "mean": 2.78,
+    "p50": 1.605
+  }
+}

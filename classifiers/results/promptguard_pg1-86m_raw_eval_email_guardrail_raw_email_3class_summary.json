@@ -1,0 +1,42 @@
+{
+  "csv": "C:\\Users\\ASUS\\Desktop\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
+  "model": "meta-llama/Prompt-Guard-86M",
+  "threshold": 0.5,
+  "n": 300,
+  "metrics": {
+    "tp": 100,
+    "fn": 0,
+    "fp": 100,
+    "tn": 100,
+    "accuracy": 0.6667,
+    "precision": 0.5,
+    "attack_recall": 1.0,
+    "f1": 0.6667,
+    "false_positive_rate": 0.5
+  },
+  "by_label": {
+    "ATTACK": {
+      "n": 100,
+      "called_attack": 1.0,
+      "mean_score": 0.9994
+    },
+    "REVISE": {
+      "n": 100,
+      "called_attack": 0.8,
+      "mean_score": 0.7896
+    },
+    "SAFE": {
+      "n": 100,
+      "called_attack": 0.2,
+      "mean_score": 0.2322
+    }
+  },
+  "latency_ms": {
+    "samples": 50,
+    "mean_ms": 728.048,
+    "p50_ms": 730.453,
+    "p95_ms": 996.269,
+    "max_ms": 1082.385
+  },
+  "throughput_rows_per_s": 6.53
+}

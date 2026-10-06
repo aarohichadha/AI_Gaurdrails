@@ -1,0 +1,61 @@
+section,family,method,output,n,acc_3class,macro_f1,acc_binary,precision,attack_recall,f1,fpr,safe_recall,revise_recall
+Individual,Deterministic,Basic rules,3-class,300,0.3333,0.2222,0.6667,0.0,0.0,0.0,0.0,1.0,0.0
+Individual,Deterministic,Provenance rules,3-class,300,0.96,0.9599,0.96,1.0,0.88,0.9362,0.0,1.0,1.0
+Individual,Deterministic,CI-norm,3-class,300,0.6667,0.5556,0.6667,0.5,1.0,0.6667,0.5,1.0,0.0
+Individual,Deterministic,All deterministic rules,3-class,300,0.6667,0.5556,0.6667,0.5,1.0,0.6667,0.5,1.0,0.0
+Individual,ML,Random Forest,3-class,300,0.65,0.5434,0.65,0.4878,1.0,0.6557,0.525,0.95,0.0
+Individual,ML,XGBoost,3-class,300,0.6167,0.5214,0.6333,0.4762,1.0,0.6452,0.55,0.85,0.0
+Individual,ML,Prompt Guard 1 86M,binary,300,0.6,0.4889,0.6667,0.5,1.0,0.6667,0.5,0.8,0.0
+Individual,ML,Prompt Guard 2 22M,binary,300,0.5333,0.4461,0.8667,1.0,0.6,0.75,0.0,1.0,0.0
+Individual,ML,Prompt Guard 2 86M,binary,300,0.5333,0.4461,0.8667,1.0,0.6,0.75,0.0,1.0,0.0
+Individual,ML,Qwen LoRA 0.5B,binary,300,0.5333,0.4222,0.6667,0.5,1.0,0.6667,0.5,0.6,0.0
+Individual,ML,Random Forest (trained with REVISE),3-class,300,0.7367,0.7001,0.82,0.6494,1.0,0.7874,0.27,0.9,0.31
+Individual,ML,XGBoost (trained with REVISE),3-class,300,0.6333,0.5114,0.82,0.6494,1.0,0.7874,0.27,0.9,0.0
+Individual,Prompt defense,v7 baseline,3-class,300,0.4733,0.3765,0.73,0.6557,0.4,0.4969,0.105,1.0,0.02
+Individual,Prompt defense,v8 basic security,3-class,300,0.3367,0.1737,0.3367,0.3344,1.0,0.5013,0.995,0.01,0.0
+Individual,Prompt defense,v9 context-aware,3-class,300,0.3333,0.1667,0.3333,0.3333,1.0,0.5,1.0,0.0,0.0
+Individual,LLM judge,Gemini 3.5 Flash Lite,3-class,300,0.9167,0.9162,0.9367,0.8403,1.0,0.9132,0.095,0.94,0.81
+LLM judge (Tasks 19-22),LLM judge,"Task 19: basic judge, 3-way (SAFE/REVISE/ATTACK)",3-class,300,0.9167,0.9162,0.9367,0.8403,1.0,0.9132,0.095,0.94,0.81
+LLM judge (Tasks 19-22),LLM judge,Task 21: binary judge (ALLOW/BLOCK),binary,300,0.6633,0.5322,0.7867,0.6098,1.0,0.7576,0.32,0.99,0.0
+LLM judge (Tasks 19-22),LLM judge,Task 20: TRIAD-style judge (strict),3-class,300,0.5367,0.4582,0.6667,0.5,0.81,0.6183,0.405,0.77,0.03
+LLM judge (Tasks 19-22),LLM judge,Task 20: TRIAD-style judge (outcome-based),3-class,300,0.6033,0.5328,0.66,0.495,1.0,0.6623,0.51,0.77,0.04
+LLM judge (Tasks 19-22),LLM judge,Task 22: revision loop K=0,binary,300,0.6633,0.5322,0.7867,0.6098,1.0,0.7576,0.32,0.99,0.0
+LLM judge (Tasks 19-22),LLM judge,Task 22: revision loop K=1 (strict),3-class,300,0.5367,0.4368,0.6633,0.0,0.0,0.0,0.005,0.99,0.62
+LLM judge (Tasks 19-22),LLM judge,Task 22: revision loop K=1 (outcome-based),3-class,300,0.7267,0.7182,0.8533,0.8784,0.65,0.7471,0.045,0.99,0.54
+Prompt + Deterministic,Hybrid,v7 baseline + Basic rules,3-class,300,0.4733,0.4145,0.73,0.6557,0.4,0.4969,0.105,1.0,0.02
+Prompt + Deterministic,Hybrid,v7 baseline + Provenance rules,3-class,300,0.89,0.8898,0.89,0.8073,0.88,0.8421,0.105,1.0,0.79
+Prompt + Deterministic,Hybrid,v7 baseline + CI-norm,3-class,300,0.6667,0.5556,0.6667,0.5,1.0,0.6667,0.5,1.0,0.0
+Prompt + Deterministic,Hybrid,v8 basic security + Basic rules,3-class,300,0.3367,0.1737,0.3367,0.3344,1.0,0.5013,0.995,0.01,0.0
+Prompt + Deterministic,Hybrid,v8 basic security + Provenance rules,3-class,300,0.3367,0.1737,0.3367,0.3344,1.0,0.5013,0.995,0.01,0.0
+Prompt + Deterministic,Hybrid,v8 basic security + CI-norm,3-class,300,0.3367,0.1737,0.3367,0.3344,1.0,0.5013,0.995,0.01,0.0
+Prompt + Deterministic,Hybrid,v9 context-aware + Basic rules,3-class,300,0.3333,0.1667,0.3333,0.3333,1.0,0.5,1.0,0.0,0.0
+Prompt + Deterministic,Hybrid,v9 context-aware + Provenance rules,3-class,300,0.3333,0.1667,0.3333,0.3333,1.0,0.5,1.0,0.0,0.0
+Prompt + Deterministic,Hybrid,v9 context-aware + CI-norm,3-class,300,0.3333,0.1667,0.3333,0.3333,1.0,0.5,1.0,0.0,0.0
+Deterministic + ML,Hybrid,Basic rules + Random Forest,3-class,300,0.65,0.5434,0.65,0.4878,1.0,0.6557,0.525,0.95,0.0
+Deterministic + ML,Hybrid,Basic rules + XGBoost,3-class,300,0.6167,0.5214,0.6333,0.4762,1.0,0.6452,0.55,0.85,0.0
+Deterministic + ML,Hybrid,Basic rules + Prompt Guard 1 86M,3-class,300,0.6,0.4889,0.6667,0.5,1.0,0.6667,0.5,0.8,0.0
+Deterministic + ML,Hybrid,Basic rules + Prompt Guard 2 22M,3-class,300,0.5333,0.4722,0.8667,1.0,0.6,0.75,0.0,1.0,0.0
+Deterministic + ML,Hybrid,Basic rules + Prompt Guard 2 86M,3-class,300,0.5333,0.4722,0.8667,1.0,0.6,0.75,0.0,1.0,0.0
+Deterministic + ML,Hybrid,Basic rules + Qwen LoRA 0.5B,3-class,300,0.5333,0.4222,0.6667,0.5,1.0,0.6667,0.5,0.6,0.0
+Deterministic + ML,Hybrid,Provenance rules + Random Forest,3-class,300,0.65,0.5434,0.65,0.4878,1.0,0.6557,0.525,0.95,0.0
+Deterministic + ML,Hybrid,Provenance rules + XGBoost,3-class,300,0.6167,0.5214,0.6333,0.4762,1.0,0.6452,0.55,0.85,0.0
+Deterministic + ML,Hybrid,Provenance rules + Prompt Guard 1 86M,3-class,300,0.6667,0.6296,0.6667,0.5,1.0,0.6667,0.5,0.8,0.2
+Deterministic + ML,Hybrid,Provenance rules + Prompt Guard 2 22M,3-class,300,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0
+Deterministic + ML,Hybrid,Provenance rules + Prompt Guard 2 86M,3-class,300,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0
+Deterministic + ML,Hybrid,Provenance rules + Qwen LoRA 0.5B,3-class,300,0.6667,0.6627,0.6667,0.5,1.0,0.6667,0.5,0.6,0.4
+Deterministic + ML,Hybrid,CI-norm + Random Forest,3-class,300,0.65,0.5434,0.65,0.4878,1.0,0.6557,0.525,0.95,0.0
+Deterministic + ML,Hybrid,CI-norm + XGBoost,3-class,300,0.6167,0.5214,0.6333,0.4762,1.0,0.6452,0.55,0.85,0.0
+Deterministic + ML,Hybrid,CI-norm + Prompt Guard 1 86M,3-class,300,0.6,0.5046,0.6,0.4545,1.0,0.625,0.6,0.8,0.0
+Deterministic + ML,Hybrid,CI-norm + Prompt Guard 2 22M,3-class,300,0.6667,0.5556,0.6667,0.5,1.0,0.6667,0.5,1.0,0.0
+Deterministic + ML,Hybrid,CI-norm + Prompt Guard 2 86M,3-class,300,0.6667,0.5556,0.6667,0.5,1.0,0.6667,0.5,1.0,0.0
+Deterministic + ML,Hybrid,CI-norm + Qwen LoRA 0.5B,3-class,300,0.5333,0.4461,0.5333,0.4167,1.0,0.5882,0.7,0.6,0.0
+Deterministic + ML,Hybrid,All deterministic rules + Random Forest,3-class,300,0.65,0.5434,0.65,0.4878,1.0,0.6557,0.525,0.95,0.0
+Deterministic + ML,Hybrid,All deterministic rules + XGBoost,3-class,300,0.6167,0.5214,0.6333,0.4762,1.0,0.6452,0.55,0.85,0.0
+Deterministic + ML,Hybrid,All deterministic rules + Prompt Guard 1 86M,3-class,300,0.6,0.5046,0.6,0.4545,1.0,0.625,0.6,0.8,0.0
+Deterministic + ML,Hybrid,All deterministic rules + Prompt Guard 2 22M,3-class,300,0.6667,0.5556,0.6667,0.5,1.0,0.6667,0.5,1.0,0.0
+Deterministic + ML,Hybrid,All deterministic rules + Prompt Guard 2 86M,3-class,300,0.6667,0.5556,0.6667,0.5,1.0,0.6667,0.5,1.0,0.0
+Deterministic + ML,Hybrid,All deterministic rules + Qwen LoRA 0.5B,3-class,300,0.5333,0.4461,0.5333,0.4167,1.0,0.5882,0.7,0.6,0.0
+Cascades / voting,Hybrid,Task 25: RF -> Gemini on RF/provenance disagreement,3-class,300,0.9367,0.9361,0.9367,0.8403,1.0,0.9132,0.095,1.0,0.81
+Cascades / voting,Hybrid,Task 26: Provenance -> Gemini on REVISE,3-class,300,0.9367,0.9361,0.9367,0.8403,1.0,0.9132,0.095,1.0,0.81
+Cascades / voting,Hybrid,Task 27: Rules vote -> RF -> Gemini (full cascade),3-class,300,0.7467,0.7039,0.7467,0.5682,1.0,0.7246,0.38,1.0,0.24
+Cascades / voting,Hybrid,"Task 28: Parallel vote (provenance, RF, Gemini)",3-class,300,0.9367,0.9361,0.9367,0.8403,1.0,0.9132,0.095,1.0,0.81

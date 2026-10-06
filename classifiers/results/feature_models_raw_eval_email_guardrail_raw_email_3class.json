@@ -1,22 +1,22 @@
 {
-  "csv": "C:\\Users\\niyat\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
+  "csv": "C:\\Users\\ASUS\\Desktop\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
   "n": 300,
   "labels": {
     "ATTACK": 100,
     "SAFE": 100,
     "REVISE": 100
   },
-  "feature_extraction_rows_per_second": 189.1,
+  "feature_extraction_rows_per_second": 309.1,
   "models": [
     {
-      "model": "task17_generated_random_forest",
-      "accuracy": 0.65,
-      "macro_f1": 0.5434,
+      "model": "task17_training_set_with_revise_xgboost",
+      "accuracy": 0.6333,
+      "macro_f1": 0.5114,
       "per_class": {
         "SAFE": {
-          "precision": 1.0,
-          "recall": 0.95,
-          "f1-score": 0.9744,
+          "precision": 0.6383,
+          "recall": 0.9,
+          "f1-score": 0.7469,
           "support": 100.0
         },
         "REVISE": {
@@ -26,9 +26,9 @@
           "support": 100.0
         },
         "ATTACK": {
-          "precision": 0.4878,
+          "precision": 0.6494,
           "recall": 1.0,
-          "f1-score": 0.6557,
+          "f1-score": 0.7874,
           "support": 100.0
         }
       },
@@ -39,14 +39,14 @@
       ],
       "confusion_matrix": [
         [
-          95,
-          0,
+          90,
+          5,
           5
         ],
         [
+          51,
           0,
-          0,
-          100
+          49
         ],
         [
           0,
@@ -55,7 +55,56 @@
         ]
       ],
       "attack_containment": 1.0,
-      "rows_per_second": 799.2
+      "rows_per_second": 22166.2
+    },
+    {
+      "model": "task17_training_set_with_revise_random_forest",
+      "accuracy": 0.7367,
+      "macro_f1": 0.7001,
+      "per_class": {
+        "SAFE": {
+          "precision": 0.8182,
+          "recall": 0.9,
+          "f1-score": 0.8571,
+          "support": 100.0
+        },
+        "REVISE": {
+          "precision": 0.8611,
+          "recall": 0.31,
+          "f1-score": 0.4559,
+          "support": 100.0
+        },
+        "ATTACK": {
+          "precision": 0.6494,
+          "recall": 1.0,
+          "f1-score": 0.7874,
+          "support": 100.0
+        }
+      },
+      "labels": [
+        "SAFE",
+        "REVISE",
+        "ATTACK"
+      ],
+      "confusion_matrix": [
+        [
+          90,
+          5,
+          5
+        ],
+        [
+          20,
+          31,
+          49
+        ],
+        [
+          0,
+          0,
+          100
+        ]
+      ],
+      "attack_containment": 1.0,
+      "rows_per_second": 2077.5
     },
     {
       "model": "task17_generated_xgboost",
@@ -104,7 +153,56 @@
         ]
       ],
       "attack_containment": 1.0,
-      "rows_per_second": 31026.0
+      "rows_per_second": 71858.0
+    },
+    {
+      "model": "task17_generated_random_forest",
+      "accuracy": 0.65,
+      "macro_f1": 0.5434,
+      "per_class": {
+        "SAFE": {
+          "precision": 1.0,
+          "recall": 0.95,
+          "f1-score": 0.9744,
+          "support": 100.0
+        },
+        "REVISE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 100.0
+        },
+        "ATTACK": {
+          "precision": 0.4878,
+          "recall": 1.0,
+          "f1-score": 0.6557,
+          "support": 100.0
+        }
+      },
+      "labels": [
+        "SAFE",
+        "REVISE",
+        "ATTACK"
+      ],
+      "confusion_matrix": [
+        [
+          95,
+          0,
+          5
+        ],
+        [
+          0,
+          0,
+          100
+        ],
+        [
+          0,
+          0,
+          100
+        ]
+      ],
+      "attack_containment": 1.0,
+      "rows_per_second": 4150.7
     }
   ]
 }

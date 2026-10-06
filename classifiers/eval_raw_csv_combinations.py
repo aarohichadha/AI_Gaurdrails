@@ -10,8 +10,9 @@ vocabulary onto this file's own SAFE/REVISE/ATTACK labels, and computes five
 combination strategies with real per-row logic (no re-labelled ground truth,
 no invented predictions):
 
-  Task 23  prompt agent (v9) OR deterministic (provenance)   -- only over
-           rows the agent subsample actually covers
+  Task 23  each prompt agent (v7/v8/v9) OR each deterministic rule set
+           (basic/provenance/ci_norm) -- 9 pairs, over the rows each agent
+           run actually covers
   Task 24  deterministic (provenance) OR each ML classifier   -- most-
            restrictive-wins, mirrors combination/deterministic+ml/
   Task 25  ML (Random Forest) -> Gemini judge, escalated on RF/provenance
@@ -49,6 +50,7 @@ CSV_STEM = "email_guardrail_raw_email_3class"
 DATA_CSV = ROOT / "data" / f"{CSV_STEM}.csv"
 
 RANK = {"SAFE": 0, "REVISE": 1, "ATTACK": 2}
+AGENT_VERSIONS = ("v7_baseline", "v8_basic_security", "v9_context_aware")
 CONFIG = ExtractorConfig(
     internal_domains={"corp.example"},
     trusted_domains={"partner-a.example", "counsel.example", "audit-approved.example"},
@@ -127,7 +129,12 @@ def main() -> dict:
     pg2 = load_jsonl(RESULTS_DIR / f"promptguard_pg2-86m_raw_eval_{CSV_STEM}.jsonl")
     qwen = load_jsonl(RESULTS_DIR / f"qwen_raw_eval_{CSV_STEM}.jsonl")
     gemini = load_jsonl(RESULTS_DIR / f"gemini_raw_eval_{CSV_STEM}.jsonl")
-    agent = load_jsonl(RESULTS_DIR / f"prompt_agent_v9_context_aware_raw_eval_{CSV_STEM}.jsonl")
+    agents = {}
+    for version in AGENT_VERSIONS:
+        path = RESULTS_DIR / f"prompt_agent_{version}_raw_eval_{CSV_STEM}.jsonl"
+        if path.exists():
+            agents[version] = load_jsonl(path)
+    agent = agents.get("v9_context_aware", {})
     rf = rf_predictions()
 
     ids = sorted(det.keys())
@@ -148,8 +155,9 @@ def main() -> dict:
         if row_id in rf:
             entry["rf"] = rf[row_id]["prediction"]
             entry["rf_confidence"] = rf[row_id]["confidence"]
-        if row_id in agent:
-            entry["agent_v9"] = agent[row_id]["predicted_label"]
+        for version, runs in agents.items():
+            if row_id in runs:
+                entry[f"agent_{version[:2]}"] = runs[row_id]["predicted_label"]
         joined.append(entry)
 
     has_gemini = all("gemini" in e for e in joined)
@@ -239,6 +247,30 @@ def main() -> dict:
         }
     else:
         results["task23_prompt_or_deterministic"] = {"note": "v9 agent run not finished yet -- rerun this script once it is"}
+
+    # Task 23 matrix -- every prompt agent alone and OR'd with every rule set
+    for version in AGENT_VERSIONS:
+        key = f"agent_{version[:2]}"
+        rows = [e for e in joined if key in e]
+        if not rows:
+            results[f"task23_{version[:2]}_alone"] = {
+                "note": f"{version} agent run not found -- run eval_raw_csv_prompt_agent.py --version {version} --per-class 0"}
+            continue
+        results[f"task23_{version[:2]}_alone"] = {
+            "three_class": three_class_metrics(rows, "label", key),
+            "binary": binary_metrics(rows, "label", key),
+            "note": f"agent run, n={len(rows)}",
+        }
+        for rule in ("basic", "provenance", "ci_norm"):
+            for r in rows:
+                r["t23_tmp"] = most_restrictive(r[key], r[rule])
+            results[f"task23_{version[:2]}_or_{rule}"] = {
+                "three_class": three_class_metrics(rows, "label", "t23_tmp"),
+                "binary": binary_metrics(rows, "label", "t23_tmp"),
+                "note": f"agent run, n={len(rows)}",
+            }
+        for r in rows:
+            del r["t23_tmp"]
 
     print("\n" + "=" * 78)
     print("COMBINATIONS (raw-email adaptation)")

@@ -1,5 +1,5 @@
 {
-  "csv": "C:\\Users\\niyat\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
+  "csv": "C:\\Users\\ASUS\\Desktop\\AI_Gaurdrails\\data\\email_guardrail_raw_email_3class.csv",
   "n_joined": 300,
   "results": {
     "task24_provenance_or_random_forest": {
@@ -249,6 +249,378 @@
         "false_positive_rate": 1.0
       },
       "note": "agent subsample only, n=300"
+    },
+    "task23_v7_alone": {
+      "three_class": {
+        "n": 300,
+        "accuracy": 0.4733,
+        "macro_f1": 0.3765,
+        "per_class": {
+          "SAFE": {
+            "precision": 0.4219,
+            "recall": 1.0,
+            "f1": 0.5935
+          },
+          "REVISE": {
+            "precision": 1.0,
+            "recall": 0.02,
+            "f1": 0.0392
+          },
+          "ATTACK": {
+            "precision": 0.6557,
+            "recall": 0.4,
+            "f1": 0.4969
+          }
+        }
+      },
+      "binary": {
+        "attack_recall": 0.4,
+        "precision": 0.6557,
+        "f1": 0.4969,
+        "false_positive_rate": 0.105
+      },
+      "note": "agent run, n=300"
+    },
+    "task23_v7_or_basic": {
+      "three_class": {
+        "n": 300,
+        "accuracy": 0.4733,
+        "macro_f1": 0.4145,
+        "per_class": {
+          "SAFE": {
+            "precision": 0.565,
+            "recall": 1.0,
+            "f1": 0.722
+          },
+          "REVISE": {
+            "precision": 0.0323,
+            "recall": 0.02,
+            "f1": 0.0247
+          },
+          "ATTACK": {
+            "precision": 0.6557,
+            "recall": 0.4,
+            "f1": 0.4969
+          }
+        }
+      },
+      "binary": {
+        "attack_recall": 0.4,
+        "precision": 0.6557,
+        "f1": 0.4969,
+        "false_positive_rate": 0.105
+      },
+      "note": "agent run, n=300"
+    },
+    "task23_v7_or_provenance": {
+      "three_class": {
+        "n": 300,
+        "accuracy": 0.89,
+        "macro_f1": 0.8898,
+        "per_class": {
+          "SAFE": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REVISE": {
+            "precision": 0.8681,
+            "recall": 0.79,
+            "f1": 0.8272
+          },
+          "ATTACK": {
+            "precision": 0.8073,
+            "recall": 0.88,
+            "f1": 0.8421
+          }
+        }
+      },
+      "binary": {
+        "attack_recall": 0.88,
+        "precision": 0.8073,
+        "f1": 0.8421,
+        "false_positive_rate": 0.105
+      },
+      "note": "agent run, n=300"
+    },
+    "task23_v7_or_ci_norm": {
+      "three_class": {
+        "n": 300,
+        "accuracy": 0.6667,
+        "macro_f1": 0.5556,
+        "per_class": {
+          "SAFE": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "REVISE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "ATTACK": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          }
+        }
+      },
+      "binary": {
+        "attack_recall": 1.0,
+        "precision": 0.5,
+        "f1": 0.6667,
+        "false_positive_rate": 0.5
+      },
+      "note": "agent run, n=300"
+    },
+    "task23_v8_alone": {
+      "three_class": {
+        "n": 300,
+        "accuracy": 0.3367,
+        "macro_f1": 0.1737,
+        "per_class": {
+          "SAFE": {
+            "precision": 1.0,
+            "recall": 0.01,
+            "f1": 0.0198
+          },
+          "REVISE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "ATTACK": {
+            "precision": 0.3344,
+            "recall": 1.0,
+            "f1": 0.5013
+          }
+        }
+      },
+      "binary": {
+        "attack_recall": 1.0,
+        "precision": 0.3344,
+        "f1": 0.5013,
+        "false_positive_rate": 0.995
+      },
+      "note": "agent run, n=300"
+    },
+    "task23_v8_or_basic": {
+      "three_class": {
+        "n": 300,
+        "accuracy": 0.3367,
+        "macro_f1": 0.1737,
+        "per_class": {
+          "SAFE": {
+            "precision": 1.0,
+            "recall": 0.01,
+            "f1": 0.0198
+          },
+          "REVISE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "ATTACK": {
+            "precision": 0.3344,
+            "recall": 1.0,
+            "f1": 0.5013
+          }
+        }
+      },
+      "binary": {
+        "attack_recall": 1.0,
+        "precision": 0.3344,
+        "f1": 0.5013,
+        "false_positive_rate": 0.995
+      },
+      "note": "agent run, n=300"
+    },
+    "task23_v8_or_provenance": {
+      "three_class": {
+        "n": 300,
+        "accuracy": 0.3367,
+        "macro_f1": 0.1737,
+        "per_class": {
+          "SAFE": {
+            "precision": 1.0,
+            "recall": 0.01,
+            "f1": 0.0198
+          },
+          "REVISE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "ATTACK": {
+            "precision": 0.3344,
+            "recall": 1.0,
+            "f1": 0.5013
+          }
+        }
+      },
+      "binary": {
+        "attack_recall": 1.0,
+        "precision": 0.3344,
+        "f1": 0.5013,
+        "false_positive_rate": 0.995
+      },
+      "note": "agent run, n=300"
+    },
+    "task23_v8_or_ci_norm": {
+      "three_class": {
+        "n": 300,
+        "accuracy": 0.3367,
+        "macro_f1": 0.1737,
+        "per_class": {
+          "SAFE": {
+            "precision": 1.0,
+            "recall": 0.01,
+            "f1": 0.0198
+          },
+          "REVISE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "ATTACK": {
+            "precision": 0.3344,
+            "recall": 1.0,
+            "f1": 0.5013
+          }
+        }
+      },
+      "binary": {
+        "attack_recall": 1.0,
+        "precision": 0.3344,
+        "f1": 0.5013,
+        "false_positive_rate": 0.995
+      },
+      "note": "agent run, n=300"
+    },
+    "task23_v9_alone": {
+      "three_class": {
+        "n": 300,
+        "accuracy": 0.3333,
+        "macro_f1": 0.1667,
+        "per_class": {
+          "SAFE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "REVISE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "ATTACK": {
+            "precision": 0.3333,
+            "recall": 1.0,
+            "f1": 0.5
+          }
+        }
+      },
+      "binary": {
+        "attack_recall": 1.0,
+        "precision": 0.3333,
+        "f1": 0.5,
+        "false_positive_rate": 1.0
+      },
+      "note": "agent run, n=300"
+    },
+    "task23_v9_or_basic": {
+      "three_class": {
+        "n": 300,
+        "accuracy": 0.3333,
+        "macro_f1": 0.1667,
+        "per_class": {
+          "SAFE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "REVISE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "ATTACK": {
+            "precision": 0.3333,
+            "recall": 1.0,
+            "f1": 0.5
+          }
+        }
+      },
+      "binary": {
+        "attack_recall": 1.0,
+        "precision": 0.3333,
+        "f1": 0.5,
+        "false_positive_rate": 1.0
+      },
+      "note": "agent run, n=300"
+    },
+    "task23_v9_or_provenance": {
+      "three_class": {
+        "n": 300,
+        "accuracy": 0.3333,
+        "macro_f1": 0.1667,
+        "per_class": {
+          "SAFE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "REVISE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "ATTACK": {
+            "precision": 0.3333,
+            "recall": 1.0,
+            "f1": 0.5
+          }
+        }
+      },
+      "binary": {
+        "attack_recall": 1.0,
+        "precision": 0.3333,
+        "f1": 0.5,
+        "false_positive_rate": 1.0
+      },
+      "note": "agent run, n=300"
+    },
+    "task23_v9_or_ci_norm": {
+      "three_class": {
+        "n": 300,
+        "accuracy": 0.3333,
+        "macro_f1": 0.1667,
+        "per_class": {
+          "SAFE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "REVISE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "ATTACK": {
+            "precision": 0.3333,
+            "recall": 1.0,
+            "f1": 0.5
+          }
+        }
+      },
+      "binary": {
+        "attack_recall": 1.0,
+        "precision": 0.3333,
+        "f1": 0.5,
+        "false_positive_rate": 1.0
+      },
+      "note": "agent run, n=300"
     }
   }
 }
