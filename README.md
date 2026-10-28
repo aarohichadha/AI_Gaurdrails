@@ -39,29 +39,83 @@ python deterministic/run_all.py
 
 ## The corpus
 
-`data/email_agent_security_dataset.xlsx` — six scenario sheets of 1,200 records
-plus a taxonomy and a validation sheet.
+A synthetic dataset for evaluating guardrails on an email agent: given an
+inbox message and a case record (who sent it, what the user actually asked
+for, where data is allowed to go), should the agent act, flag for review, or
+block? Unlike single-turn prompt-injection datasets, every record describes
+a **complete agent situation** — sender details, user instructions, the
+data being handled, and the intended destination — not just a string to
+classify. Full methodology and derivation: [paper/04_dataset.md](paper/04_dataset.md).
 
-| Sheet | Focus |
-|---|---|
-| Base Dataset | Balanced benign/attack baseline |
-| Paired Benign-Attack | Matched twins differing only in the attack |
-| Contextual Manipulation | False authorization context (all attacks) |
-| Implement Flow Separation | Two flows in one message, one legitimate |
-| Attack Taxonomy | Even coverage of all 10 attack categories |
-| Adaptive Attack Generation | Mutations designed to evade named defenses |
+**Three files, three purposes:**
 
-Ground truth is `expected_decision` (ALLOW / BLOCK), balanced 1,800 benign to
-5,400 attack overall. Ten attack categories run from `DIRECT_INJECTION` to
-`CREDENTIAL_EXFILTRATION`.
+| File | Records | Labels | Purpose |
+|---|---:|---|---|
+| `data/email_agent_security_dataset.xlsx` — main corpus (6 scenario sheets) | 7,200 | 1,800 BENIGN / 5,400 ATTACK | Structured scenarios for rule-based, prompt, ML and judge experiments |
+| `data/email_agent_security_dataset.xlsx` — Generated Three-Class sheet | 3,000 | 1,350 SAFE / 750 REVISE / 900 ATTACK | Training data for feature-based and fine-tuned models, including a REVISE (needs human confirmation) class |
+| `data/email_guardrail_raw_email_3class.csv` | 300 | 100 SAFE / 100 REVISE / 100 ATTACK | Frozen, held-out final test set — full raw email messages, no structured fields |
+
+The raw-email CSV is the common final benchmark: every technique and
+combination of techniques is scored on the same 300 messages, since it's
+the only split with no structured fields through which the answer could
+leak.
+
+**How it was generated.** Scenario templates inspired by AgentDojo,
+deepset/prompt-injections, Lakera Mosscap, and Microsoft's LLMail-Inject
+(no records copied — every row names which applied via
+`inspiration_sources`). Each record starts from a fixed scenario — sender,
+user instruction, requested action, data asset and sensitivity,
+authorized destination, and for attacks, the attack category/technique —
+and the email text is written to fit it, so the label follows from the
+scenario, never from the email's wording. "Realism knobs" (attachments,
+links, HTML, Cc/Bcc, reply chains, urgency) are assigned independently of
+class so no structural feature gives the label away. Every record is
+normalized into a shared 36-column schema so every guardrail — rule-based,
+ML, or LLM — reads exactly the same input.
+
+**Main corpus sheets:**
+
+| Sheet | Records | Focus |
+|---|---:|---|
+| Base Dataset | 1,200 | Balanced benign/attack baseline |
+| Paired Benign-Attack | 1,200 (600 pairs) | Matched twins sharing sender/instruction/action/destination — differ only in the attack |
+| Contextual Manipulation | 1,200 | False authorization context, no obvious injection phrase (all attacks) |
+| Implement Flow Separation | 1,200 (600 two-flow contexts) | Two requests per message, one legitimate, one hidden-malicious |
+| Attack Taxonomy | 1,200 | Even coverage of all 10 attack categories |
+| Adaptive Attack Generation | 1,200 | 8 mutations × 5 named defense profiles, derived from existing attacks via `parent_id` |
+
+Ground truth is `expected_decision` (ALLOW / BLOCK in the main corpus;
+ALLOW / REVISE / BLOCK in the three-class sets), balanced 1,800 benign to
+5,400 attack overall in the main corpus. Ten attack categories run from
+`DIRECT_INJECTION` (300 records) through `CONTEXTUAL_MANIPULATION` (1,500,
+the largest) to `CREDENTIAL_EXFILTRATION` (420) — contextual manipulation
+and unauthorized data flow are treated as the most important, since
+neither needs an obvious injection phrase or technical trick to work.
+
+**Validation.** All 7,200 record IDs and scenario signatures are unique;
+every sheet has exactly 1,200 records; all 600 pairs and 600 two-flow
+contexts are complete; labels were fixed before any email text was
+written (no annotator ever reads-then-guesses). Splits: the four
+mixed-content sheets divide 840/240/120 (train/val/test) each
+(3,360/960/480 overall); Flow-Separation and Adaptive are held out
+entirely as `flow_test`/`adaptive_test`; the 300-row raw-email set is a
+frozen final test, confirmed to share no text with the other sets.
 
 **One property shapes every evaluation here:** in the corpus as given, the
 requested destination is a perfect oracle — every attack targets an
 off-allowlist address, every benign action targets its authorized one. A
-one-line allowlist check therefore scores 100%. `common/dataset.py` defines
-*views* that withhold that oracle, without modifying any label, so the
-techniques can be compared on their reasoning instead. See
-[deterministic/README.md](deterministic/README.md) for the results and caveats.
+one-line allowlist check therefore scores 100%. A second, independent
+oracle is a generation tracking marker that appears in every attack email
+and no benign one. Neither was fixed by changing labels — `common/dataset.py`
+defines *views* (`destination_blind`, `stale_allowlist`) that withhold the
+destination signal instead, so techniques can be compared on their
+reasoning rather than the shortcut. The raw-email set lacks both oracles
+entirely, which is why it's the common benchmark. See
+[deterministic/README.md](deterministic/README.md) for the results and caveats,
+and [paper/04_dataset.md](paper/04_dataset.md) for the full write-up,
+including the paired/flow-separation controls, the adaptive-attack defense
+profiles, and remaining leakage risk from the raw-email set's limited
+template variety.
 
 ## Techniques
 
